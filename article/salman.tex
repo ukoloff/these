@@ -2,7 +2,7 @@
 \section{Branch-and-bound algorithm}\label{sec:SA}
 
 To solve the PCGTSP instance
-$(G,\C,\Pi)$,
+$(G,\CX,\Pi)$,
 we traverse the search tree in
 Breadth First Search order
 (see Algorithm~\ref{alg:bnb}).
@@ -10,14 +10,14 @@ Each node of this tree is associated with
 a prefix
 $\sigma = \left(V_{i_1}, V_{i_2}, \dots V_{i_r} \right)$,
 where
-$V_{i_j} \in \C$,
+$V_{i_j} \in \CX$,
 $V_{i_1} = V_1$,
 and
 $r \in \{{1, \dots m}\}$.
 
 \begin{algorithm}[h!]
 \caption{BnB :: Main}\label{alg:bnb}
-\hspace*{\algorithmicindent}{\bf Input}: the graph $G$, clusters $\C$, the DAG $\Pi$ \\
+\hspace*{\algorithmicindent}{\bf Input}: the graph $G$, clusters $\CX$, the DAG $\Pi$ \\
 \hspace*{\algorithmicindent}{\bf Output}: the tour and cost of optimal solution
 \begin{algorithmic}[1]
     \STATE initialize $Q =$ empty queue
@@ -134,7 +134,7 @@ $$
 \hspace*{\algorithmicindent}{\bf Output}: the list of children prefixes to process
 \begin{algorithmic}[1]
     \STATE initialize $R =$ empty queue
-    \FORALL{$V \in \C$}
+    \FORALL{$V \in \CX$}
         \STATE $valid =$ \TRUE
         \FORALL{$W \in \sigma$}
             \IF{$W=V$ \OR $(V, W) \in \Pi$}

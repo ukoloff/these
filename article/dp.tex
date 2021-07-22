@@ -9,13 +9,13 @@ The branch-and-bound algorithm proposed in Section \ref{sec:SA} appears to be cl
 \hspace*{\algorithmicindent}\textbf{Output:} the $(k+1)$-th layer $\L_{k+1}$
 \begin{algorithmic}[1]
 \STATE initialize $\L_{k+1}=\varnothing$
-\FORALL{$\C'\in\I_k$}
-  \FORALL{cluster $V_l\in\C\setminus\C'$, s.t. $\C'\cup \{V_l\}\in\I_{k+1}$}
+\FORALL{$\CX'\in\I_k$}
+  \FORALL{cluster $V_l\in\CX\setminus\CX'$, s.t. $\CX'\cup \{V_l\}\in\I_{k+1}$}
     \FORALL{$v\in V_1$ and $u\in V_l$}
-      \IF{there exists a state $S=(\C',U,v,w)\in\L_k$, s.t. $(w,u)\in E$}
-      \STATE define new state $S'=(\C'\cup\{V_l\}, V_l, v, u)$
-      \STATE $S'[cost] = \min\{S[cost] + c(w,u)\colon S=(\C',U,v,w)\in\L_k\}$
-      \STATE $S'[pred] = \arg\min\{S[cost] + c(w,u)\colon S=(\C',U,v,w)\in\L_k\}$
+      \IF{there exists a state $S=(\CX',U,v,w)\in\L_k$, s.t. $(w,u)\in E$}
+      \STATE define new state $S'=(\CX'\cup\{V_l\}, V_l, v, u)$
+      \STATE $S'[cost] = \min\{S[cost] + c(w,u)\colon S=(\CX',U,v,w)\in\L_k\}$
+      \STATE $S'[pred] = \arg\min\{S[cost] + c(w,u)\colon S=(\CX',U,v,w)\in\L_k\}$
       \STATE $S'[LB] = S'[cost] + \max\{L_1,L_2,L_3\}$
       \IF{$S'[\LB] \leq \UB$}
         \STATE append $S'$ to $\L_{k+1}$
@@ -35,15 +35,15 @@ Like to the classic DP, our algorithm consists of two main stages.
   \item[(ii).] Here the optimal tour is reconstructed on the lookup table, in the backward direction.
 \end{itemize}
 
-Each DP state  (entry of the lookup table) corresponds to a partial $v$-$u$-path and is indexed by a tuple $(\C',V_l,v, u)$, where
+Each DP state  (entry of the lookup table) corresponds to a partial $v$-$u$-path and is indexed by a tuple $(\CX',V_l,v, u)$, where
 \begin{itemize}
-  \item[(i)] $\C'\subset \C$ is an \textit{ideal} of the partially ordered set of clusters $\C$, i.e.
+  \item[(i)] $\CX'\subset \CX$ is an \textit{ideal} of the partially ordered set of clusters $\CX$, i.e.
   \[
-    \forall (V\in\C', V'\in\C)\   (V',V)\in A) \Rightarrow (V'\in\C');
+    \forall (V\in\CX', V'\in\CX)\   (V',V)\in A) \Rightarrow (V'\in\CX');
   \]
-  obviously, in our setting, $V_1$ belongs to an arbitrary ideal $\C'\subset\C$
+  obviously, in our setting, $V_1$ belongs to an arbitrary ideal $\CX'\subset\CX$
 
-  \item[(ii)] $V_l\subset\C'$, for which there is no $V\in \C'$, such that $(V_l,V)\in A$
+  \item[(ii)] $V_l\subset\CX'$, for which there is no $V\in \CX'$, such that $(V_l,V)\in A$
   \item[(iii)] $v\in V_1$, $u\in V_l$.
 \end{itemize}
 Content of each DP entry $S$ consists of the reference $S[pred]$ to the predecessing state, the local lower bound $S[LB]$, and the cost $S[cost]$ of the corresponding partial $v$-$u$-path.
@@ -53,7 +53,7 @@ Let $\I_k$ be a subset of ideals of the same size $k\in\{1,\ldots,m\}$. Evidentl
 \subsection{Remarks}
 (i). The optimum of the given instance can be found by the classic Bellman's equation
 \[
-  \mathrm{OPT}=\min_{v\in V_1}\min\{S[cost]+c(u,v)\colon S=(\C',V_l, v, u)\in\L_m\}
+  \mathrm{OPT}=\min_{v\in V_1}\min\{S[cost]+c(u,v)\colon S=(\CX',V_l, v, u)\in\L_m\}
 \]
 
 \noindent
