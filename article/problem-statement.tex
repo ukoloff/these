@@ -1,0 +1,23 @@
+%!TEX root = KUP-optima2021.tex
+\section{Problem Statement}\label{sec:PS}
+We consider the general setting of the Precedence Constrained Generalized Traveling Problem (PCGTSP). An instance of this problem is given by a triplet $(G,\C,\Pi)$, where
+\begin{itemize}
+	\item[-] an edge-weighted digraph $G=(V,E,c)$ defines a groundset network supplemented with transportation costs $c(u,v)$ for any arc $(u,v)\in E$
+	\item[-] a partition $\C=\{V_1,\ldots,V_m\}$ splits the nodeset $V$ of the graph $G$ into $m$ non-empty pairwise-disjoint \textit{clusters}
+	\item[-] a directed acyclic graph $\Pi=(\C,A)$ defines a partial order (\textit{precedence constraints}) on the set of clusters $\C$.      
+\end{itemize}
+
+For any node $v\in V$, by $V(v)$ we denote the (only) cluster $V_p\in\C$, such that $v\in V_p$. Further, without loss of generality, we assume $\Pi$ to be \textit{transitively closed} (i.e.  $(V_i,V_j)\in A$ and $(V_j,V_k)\in A$ imply $(V_i,V_k)\in A$) and that $(V_1,V_p)\in A$ for any $p\in\{2,\ldots,m\}$.
+
+A closed $m$-tour $T$ is called a \textit{feasible} solution of the PCGTSP, if it
+\begin{itemize}
+	\item[-] departs for and arrives at some node $v_1\in V_1$
+	\item[-] visits each cluster $V_p\in\C$
+	\item[-] each arc $(v_i, v_j)$ of  $T$ (except the arc $(v_m,v_1)$) fulfills the precedence constraints, i.e. $(V(v_i),V(v_j))\in A$.
+\end{itemize} 
+
+To any tour $T=v_1, v_2, \ldots, v_m$, we assign its cost
+$$
+	cost(T) = c(v_m,v_1) + \sum_{i=1}^{m-1} c(v_i,v_{i+1}). 
+$$ 
+The goal is to find a feasible tour $T$ of the minimum cost $cost(T)$. 

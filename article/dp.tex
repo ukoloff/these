@@ -1,0 +1,67 @@
+%!TEX root = KUP-optima2021.tex
+\section{Dynamic Programming}\label{sec:DP}
+The branch-and-bound algorithm proposed in Section \ref{sec:SA} appears to be closely related to the classic Dynamic Programming (DP) scheme of Held and Karp  \cite{HeldKarp1962} adapted to take into account precedence constraints and augmented with one of the bounding strategies introduced in the seminal paper \cite{MorinMarsten1976}.
+
+\begin{algorithm}[t]
+\caption{DP ::  inductive construction of the lookup table}\label{alg:A2}
+\hspace*{\algorithmicindent}\textbf{Input:} the graph $G$, the DAG $\Pi$, the layer $\L_k$ of the lookup table, and the current best upper bound $\UB$\\
+% \hspace*{\algorithmicindent} \textbf{Parameters:} \textit{number\_of\_trials}, \textit{acceptance\_criterion}, \textit{termination\_criterion}\\
+\hspace*{\algorithmicindent}\textbf{Output:} the $(k+1)$-th layer $\L_{k+1}$
+\begin{algorithmic}[1]
+\STATE initialize $\L_{k+1}=\varnothing$
+\FORALL{$\C'\in\I_k$}
+  \FORALL{cluster $V_l\in\C\setminus\C'$, s.t. $\C'\cup \{V_l\}\in\I_{k+1}$}
+    \FORALL{$v\in V_1$ and $u\in V_l$}
+      \IF{there exists a state $S=(\C',U,v,w)\in\L_k$, s.t. $(w,u)\in E$}
+      \STATE define new state $S'=(\C'\cup\{V_l\}, V_l, v, u)$
+      \STATE $S'[cost] = \min\{S[cost] + c(w,u)\colon S=(\C',U,v,w)\in\L_k\}$
+      \STATE $S'[pred] = \arg\min\{S[cost] + c(w,u)\colon S=(\C',U,v,w)\in\L_k\}$
+      \STATE $S'[LB] = S'[cost] + \max\{L_1,L_2,L_3\}$
+      \IF{$S'[\LB] \leq \UB$}
+        \STATE append $S'$ to $\L_{k+1}$
+      \ENDIF
+    \ENDIF
+    \ENDFOR
+  \ENDFOR
+\ENDFOR
+\RETURN $\L_{k+1}$
+\end{algorithmic}
+\end{algorithm}
+
+Therefore, in this paper, we implement the revised version of this scheme to examine numerically the performance of our B-n-B algorithm.
+Like to the classic DP, our algorithm consists of two main stages.
+\begin{itemize}
+  \item[(i).] At this stage, the lookup table is constructed incrementally, in the forward direction, layer by layer. The optimum of the instance to be solved is computed after the construction of the last $m$-th layer.
+  \item[(ii).] Here the optimal tour is reconstructed on the lookup table, in the backward direction.
+\end{itemize}
+
+Each DP state  (entry of the lookup table) corresponds to a partial $v$-$u$-path and is indexed by a tuple $(\C',V_l,v, u)$, where
+\begin{itemize}
+  \item[(i)] $\C'\subset \C$ is an \textit{ideal} of the partially ordered set of clusters $\C$, i.e.
+  \[
+    \forall (V\in\C', V'\in\C)\   (V',V)\in A) \Rightarrow (V'\in\C');
+  \]
+  obviously, in our setting, $V_1$ belongs to an arbitrary ideal $\C'\subset\C$
+
+  \item[(ii)] $V_l\subset\C'$, for which there is no $V\in \C'$, such that $(V_l,V)\in A$
+  \item[(iii)] $v\in V_1$, $u\in V_l$.
+\end{itemize}
+Content of each DP entry $S$ consists of the reference $S[pred]$ to the predecessing state, the local lower bound $S[LB]$, and the cost $S[cost]$ of the corresponding partial $v$-$u$-path.
+
+Let $\I_k$ be a subset of ideals of the same size $k\in\{1,\ldots,m\}$. Evidently, $\I_1=\{\{V_1\}\}$, therefore, the 1st layer $\L_1$ of the lookup table can be constructed trivially. Inductive construction of other layers is defined in Algorithm \ref{alg:A2}.
+
+\subsection{Remarks}
+(i). The optimum of the given instance can be found by the classic Bellman's equation
+\[
+  \mathrm{OPT}=\min_{v\in V_1}\min\{S[cost]+c(u,v)\colon S=(\C',V_l, v, u)\in\L_m\}
+\]
+
+\noindent
+(ii). By construction, the size of the lookup table is $O(n^2m\cdot |\I|)$. Therefore, the running time of our algorithm is $O(n^3m^2\cdot |\I|)$. In particular, in the case of a partial order of any fixed \textit{width} $w$, $|\I|=O(m^w)$ \cite{Steiner-1990}. Therefore, the PCGTSP can be solved to optimality in a polynomial time, even without state fathoming at Steps 10-12.
+
+\noindent
+(iii) After construction of any current layer $\L_k$, we recalculate the global lower bound value, which leads to a decrease in the overall gap.
+
+\noindent
+(iv) In our implementation, to speed up the algorithm, we compute the bound $L_3$ at Step 9 only for a small number of states, with the smallest lower bounds.
+

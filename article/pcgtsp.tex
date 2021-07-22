@@ -1,0 +1,80 @@
+\documentclass[runningheads]{llncs}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage[caption=false]{subfig} 
+\graphicspath{{images/}}
+
+\usepackage{multirow}
+% \usepackage{array}
+% \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{longtable}
+
+% \title{Polynomial Time Approximation Scheme for the Capacitated Vehicle Routing Problem with Splittable Demand by capacity constraint $q=poly(n)$}
+\title{Problem-Specific Branch-and-Bound Algorithms for the Precedence Constrained\\ Generalized Traveling Salesman Problem }
+\titlerunning{BnB algorithms for PCGTSP}
+
+
+\author{Michael Khachay\inst{1}\orcidID{0000-0003-3555-0080} \and\\ Stanislav Ukolov\inst{2}\orcidID{0000-0002-9946-6446} \and\\ Alexander Petunin\inst{1,2}\orcidID{0000-0003-2540-1305}}
+
+\institute{Krasovsky Institute of Mathematics and Mechanics, Ekaterinburg, Russia \and Ural Federal University, Ekaterinburg, Russia\\
+  \email{mkhachay@imm.uran.ru},\ \  \email{s.s.ukolov@urfu.ru}, \  \ \email{aapetunin@gmail.com}}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+
+\floatname{algorithm}{Algorithm}
+\newcommand{\ITP}[1]{#1^{\mathrm{ITP}}}
+\newcommand{\DP}[1]{#1^{\mathrm{DP}}}
+
+\newcommand{\APP}[1]{#1_{\mathrm{APP}}}
+\newcommand{\CITP}[1]{#1_{\mathrm{CITP}}} 
+\newcommand{\OPT}[1]{\mathrm{OPT}({#1})}
+% \newcommand{\APP}[1]{\mathrm{APP}({#1})}
+\newcommand{\OP}{\mathrm{OPT}}
+\newcommand{\AP}{\mathrm{APP}} 
+\renewcommand{\le}{\leq}
+\renewcommand{\ge}{\geq}  
+
+\newcommand{\R}{\mathfrak{R}}
+\newcommand{\I}{\mathfrak{I}}
+\newcommand{\C}{\mathcal{C}}
+\renewcommand{\L}{\mathcal{L}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\LB}{\mathrm{LB}}
+\newcommand{\UB}{\mathrm{UB}}
+
+\renewcommand{\algorithmicforall}{\textbf{for each}}
+
+	
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The Generalized Traveling Salesman Problem (GTSP) is a well-known combinatorial optimization problem having numerous valuable practical applications in operations research. In the Precedence Constrained GTSP (PCGTSP), any feasible tour is restricted to visit all the clusters according to some given partial order. Unlike the common setting of the GTSP, the PCGTSP appears still weakly studied in terms of algorithmic design and implementation.
+To the best of our knowledge, all the known algorithmic results for this problem can be exhausted by Salmans's general branching framework, a few MILP models, and the PCGLNS meta-heuristic proposed by the authors recently. In this paper, we present the first problem-specific branch-and-bound algorithm designed with an extension of Salman's approach and exploiting PCGLNS as a powerful primal heuristic.   Using the public PCGTSPLIB testbench, we evaluate the performance of the proposed algorithm against the classic Held-Karp dynamic programming scheme with branch-and-bound node fathoming strategy and Gurobi state-of-the-art solver armed by our recently proposed MILP model and PCGLNS-based warm start. 
+\keywords{Generalized Traveling Salesman Problem \and precedence constraints \and Branch-and-Bound algorithm}\end{abstract}  
+
+\input{introduction}
+% \input{related-work}
+\input{problem-statement}
+\input{preliminaries}
+\input{salman}
+\input{dp}
+\input{experiments}
+\input{summary}
+
+% \clearpage
+\bibliographystyle{splncs04}
+\bibliography{biblio-omp-20200627}
+
+
+
+\end{document}
+

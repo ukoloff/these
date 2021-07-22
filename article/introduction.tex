@@ -1,0 +1,42 @@
+%!TEX root = KUP-optima2021.tex
+\section{Introduction}\label{sec:intro}
+The Generalized Traveling Salesman Problem (GTSP) is a well-known combinatorial optimization problem introduced in the seminal paper \cite{SKGS1969} by S. Srivastava et al. and attracted the attention of many researchers~(see the survey in~\cite{GutinPunnen2007}). 
+
+In the GTSP, for a given weighted digraph $G=(V,E,c)$ and partition $V_1\cup\ldots\cup V_m$ of the nodeset $V$ into non-empty mutually disjoint clusters, it is required to find a minimum cost closed tour $T$ that visits each cluster $V_i$ exactly once. 
+
+In this paper, we consider the Precedence Constrained Generalized Traveling Salesman Problem (PCGTSP), where the clusters should be visited according to some given partial order. This extended version of the GTSP has numerous relevant industrial applications including 
+\begin{itemize}
+	\item[-] toolpath optimization for Computer Numerical Control (CNC) machines \cite{CASTELINO2003173}
+	\item[-] \textit{air} time minimization in metal sheet cutting \cite{Petunin2018,Makarovskikh20181171}
+	\item[-] coordinate measuring machinery \cite{SALMAN2016138} 
+	\item[-] path optimization in multi-hole drilling \cite{DEWIL2019}.
+\end{itemize}
+
+\subsubsection{Related work.} The GTSP is an extension of the classic Traveling Salesman Problem (TSP). Therefore, any time when the number of clusters $m$ is a part of the input, the problem is strongly NP-hard even on the Euclidean plane \cite{Papa77}. On the other hand, the well-known Held and Karp dynamic programming scheme \cite{HeldKarp1962} adapted to the GTSP has running-time bound $O(n^3m^2\cdot 2^m)$, i.e. this algorithm belongs to FPT being parameterized by the number of clusters. Furthermore, the GTSP can be solved to optimality in polynomial time, provided $m=O(\log n)$.
+
+As it follows from the literature, algorithmic design for the GTSP developed in several ways. 
+
+The first approach is based on the reduction of the initial problem to some corresponding instance of the Asymmetric TSP, after that this auxiliary instance can be solved by an algorithm designed to the ATSP (\cite{LaporteSemet1999,NoonBean1993}). Despite its mathematical elegance, this approach suffers from a couple of shortcomings: 
+\begin{itemize}
+\item[(i)] the resulting ATSP instances have a rather unusual shape making their solution hard even for the state-of-the-art MIP solvers like Gurobi and CPLEX 
+\item[(ii)] close-to-optimal solutions of these instances can produce infeasible solutions of the initial problem \cite{KaraGut2012}.
+\end{itemize}
+
+Another approach deals with developing problem-specific exact algorithms and approximation algorithms with theoretical performance guarantees. Among them are branch-and-bound and branch-and-cut algorithms (see, e.g. \cite{FishGonToth1997,Yuan2020}) and Polynomial Time Approximation Schemes (PTAS) for several special settings \cite{FerGriSit2006,KhN-PSIM2017}.  
+
+Finally, the third approach is about designing various heuristics and meta-heuristics. Thus, G.Gutin and D.Karapetyan \cite{Gutin-2010} proposed an efficient memetic algorithm, in \cite{Helsgaun-2015}, the famous Lin-Kernighan-Helsgaun heuristic solver was extended to the GTSP, and in \cite{SMITH20171} the powerful Adaptive Large Neighborhood Search (ALNS) meta-heuristic was developed, which appear to be a best-performer to date. 
+
+Unfortunately, for the PCGTSP, algorithmic results still remain quite rare. To the best of our knowledge, the published results are exhausted by
+\begin{itemize}
+	\item[(i)] efficient algorithms for the Balas-type special precedence constraints \cite{Balas-Sim2001,ChenKhKh2016,CKK-IFAC2016} and the precedence constraints leading to quasi- and pseudo-pyramidal optimal tours \cite{KhN-AMAI-2020}
+	\item[(ii)] general idea of a problem-specific branch-and-bound algorithm for this problem \cite{SALMAN2020163}
+	\item[(iii)] recent PCGLNS heuristic proposed by the authors \cite{KKP-optima2020} as an extension of the results of \cite{SMITH20171}. 
+\end{itemize} 
+
+In this paper, we try to bridge this gap.
+\subsubsection{Contribution  of this paper} is three-fold:
+\begin{itemize}
+	\item[(i)] extending the idea proposed in \cite{SALMAN2020163}, we design and implement the first problem-specific algorithm for the PCGTSP
+	\item[(ii)] extending the classic branching approach \cite{MorinMarsten1976}, we implement the Held and Karp dynamic programming scheme supplemented with an original bounding strategy
+	\item[(iii)] to evaluate the proposed and implemented algorithms, we carry out numerical experiments on the public PCGTSPLIB test-bench \cite{SALMAN2020163}. We compare the performance of these algorithms against the state-of-the-art Gurobi MIP-solver armed with the best MIPS model. To put all the competitors on an equal footing, for any instance, we use the same approximate solution obtained by our recent heuristic PCGLNS \cite{PCGLNS} for the warm start.
+\end{itemize}  
