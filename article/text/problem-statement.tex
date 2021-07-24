@@ -1,23 +1,75 @@
 % !TeX root = ..
-\section{Problem Statement}\label{sec:PS}
-We consider the general setting of the Precedence Constrained Generalized Traveling Problem (PCGTSP). An instance of this problem is given by a triplet $(G,\CX,\Pi)$, where
+\section{Постановка задачи}\label{sec:PS}
+Мы рассматриваем общую постановку обобщённой задачи коммивояжера
+с ограничениями предшествования
+(PCGTSP). 
+Задача определяется тройкой
+$(G,\CX,\Pi)$, 
+где
 \begin{itemize}
-	\item[-] an edge-weighted digraph $G=(V,E,c)$ defines a groundset network supplemented with transportation costs $c(u,v)$ for any arc $(u,v)\in E$
-	\item[-] a partition $\CX=\{V_1,\ldots,V_m\}$ splits the nodeset $V$ of the graph $G$ into $m$ non-empty pairwise-disjoint \textit{clusters}
-	\item[-] a directed acyclic graph $\Pi=(\CX,A)$ defines a partial order (\textit{precedence constraints}) on the set of clusters $\CX$.      
+	\item
+	взвешенный ориентированный граф
+	$G=(V,E,c)$
+	определяет веса 
+	$c(u,v)$
+	для всех путей
+	$(u,v)\in E$
+	\item
+	разбиение
+	$\CX=\{V_1,\ldots,V_m\}$
+	делит множество вершин
+	$V$ графа $G$ на $m$ 
+	непустых попарно непересекающихся 
+	{\it кластеров}
+	\item
+	ориентированный ациклический граф 
+	$ \Pi = (\CX, A) $ 
+	определяет частичный порядок 
+	(\textit{ограничения предшествования}) 
+	на множестве кластеров $ \CX $.
 \end{itemize}
 
-For any node $v\in V$, by $V(v)$ we denote the (only) cluster $V_p\in\CX$, such that $v\in V_p$. Further, without loss of generality, we assume $\Pi$ to be \textit{transitively closed} (i.e.  $(V_i,V_j)\in A$ and $(V_j,V_k)\in A$ imply $(V_i,V_k)\in A$) and that $(V_1,V_p)\in A$ for any $p\in\{2,\ldots,m\}$.
+Для каждой вершины 
+$v\in V$, by $V(v)$ 
+обозначим (единственный) кластер 
+$V_p\in\CX$, 
+такой что
+$v\in V_p$. 
+Далее,
+без ограничения общности,
+полагаем
+$\Pi$ 
+\textit{транзитивно замкнутым} 
+(то есть из $(V_i,V_j)\in A$ и $(V_j,V_k)\in A$ следует $(V_i,V_k)\in A$) 
+и что
+$(V_1,V_p)\in A$ для каждого $p\in\{2,\ldots,m\}$.
 
-A closed $m$-tour $T$ is called a \textit{feasible} solution of the PCGTSP, if it
+замкнутый
+$m$-тур $T$ 
+называется \textit{допустимым} 
+решением задачи PCGTSP, 
+если он
 \begin{itemize}
-	\item[-] departs for and arrives at some node $v_1\in V_1$
-	\item[-] visits each cluster $V_p\in\CX$
-	\item[-] each arc $(v_i, v_j)$ of  $T$ (except the arc $(v_m,v_1)$) fulfills the precedence constraints, i.e. $(V(v_i),V(v_j))\in A$.
+	\item
+	начинается и заканчивается в некоторой вершине $v_1\in V_1$
+	\item
+	посещает каждый кластер $V_p\in\CX$
+	\item
+	каждое ребро
+	$(v_i, v_j)$ в $T$ 
+	(кроме ребра $(v_m,v_1)$) 
+	удовлетворяет ограничению предешствования,
+	то есть
+	 $(V(v_i),V(v_j))\in A$.
 \end{itemize} 
 
-To any tour $T=v_1, v_2, \ldots, v_m$, we assign its cost
+Каждому решению
+$T=v_1, v_2, \ldots, v_m$,
+мы назначаем стоимость
 $$
 	cost(T) = c(v_m,v_1) + \sum_{i=1}^{m-1} c(v_i,v_{i+1}). 
 $$ 
-The goal is to find a feasible tour $T$ of the minimum cost $cost(T)$. 
+
+Требуется найти допустимый тур 
+$ T $ 
+с минимальной стоимостью $ cost (T) $.
