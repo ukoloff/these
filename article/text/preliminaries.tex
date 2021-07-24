@@ -1,26 +1,74 @@
 % !TeX root = ..
-\section{Preliminaries}\label{sec:pre}
-Both algorithms, the branch-and-bound and dynamic programming designed and implemented in this paper exploit the similar main idea. 
+\section{Общие соображения}\label{sec:pre}
+Оба алгоритма,
+разработанные и реализованные в данной работе,
+используют общие основные идеи.
 
-\subsection{Instance decomposition}
-At any node of the search tree, we decompose the initial instance as follows: 
-\begin{itemize}
-	\item[(i)] consider a subset $\CX'\subset\CX$, such that $V_1\in\CX'$, fix some cluster $V_l\in\CX'$ and nodes $v\in V_1$ and $u\in V_l$, respectively
-	\item[(ii)] let $c_{\min}$ be a lower bound for the minimum cost of $v-u$-paths traversing all the clusters in $\CX'$ and fulfilling the precedence constraints\footnote{In our dynamic programming, this bound is tight} 
-	\item[(iii)] excluding from $\CX'$ all the inner clusters and connecting $V_1$ with $V_l$ directly by a zero-cost arc(s), we consider a smaller auxiliary subproblem $\P$, which inherits other transportation costs, clustering, and precedence constraints from the initial instance 
-	\item[(iv)] taking 
+\subsection{Разбиение задачи}
+В каждой вершине дерева поиска,
+мы разделяем исходную задачу следующим образом:
+\begin{enumerate}
+	\item
+	Рассмотрим подмножество
+	$\CX'\subset\CX$, 
+	такое что $V_1\in\CX'$, 
+	зафиксируем некоторый кластер $V_l\in\CX'$ 
+	и вершины $v\in V_1$ и $u\in V_l$ 
+	соответственно
+	\item
+	пусть $c_{\min}$ -- нижняя граница стоимости $v-u$-путей,
+	проходящих через все кластеры $\CX'$ 
+	и удовлетворяющих ограничению предшествования\footnote{В нашем варианте динамического программирования эта граница будет точной} 
+	\item
+	исключая из $\CX'$ все внутренние кластеры и соединяя 
+	$V_1$ с $V_l$ напрямую ребром нулевого (0) веса, 
+	мы тем самым создаём подзадачу $\P$, 
+	имеющую все те же остальные веса путей, разбиение на кластеры и ограничения предшествования,
+	что и исходная
+	\item
+	принимая
 	\begin{equation}\label{e:bounds}
 		\LB = c_{\min} + \OPT{\P_{rel}}
 	\end{equation}
-	as a lower bound, we fathom the current node each time when $\LB > \UB$. Here, $\OPT{\P_{rel}}$ is the optimum of some efficiently solvable relaxation of $\P$ and $\UB$ is the cost of the best known feasible solution.
-\end{itemize}
-\subsection{Lower bounds}\label{ssec:LBs}
-In this subsection, we compare the lower bounds obtained by several relaxations of the auxiliary problem $\P$. To relax $\P$, we use the two-stage approach proposed in \cite{SALMAN2020163}. 
+	за нижнюю границу,
+	мы отсекаем все узлы,
+	для которых
+	$\LB > \UB$. 
+	Здесь, $\OPT{\P_{rel}}$ 
+	это вес некоторого эффективно находимого решения упрощённой задачи $\P$
+	и $\UB$ -- стоимость наилучшего известного допустимого решения исходной задачи.
+\end{enumerate}
 
-At the first stage, we reduce $\P$ to the appropriate ATSP instance by one of the following ways:
-\begin{itemize}
-	\item[(i)] relax the initial precedence constraints by exclusion all the arcs $(v',v'')\in E$, for which $(V(v''),V(v'))\in A$. Then, reduce the obtained instance to ATSP using the classic Noon and Been transformation \cite{NoonBean1993}
-	\item[(ii)] after the same relaxation of the precedence constraints, reduce the relaxed problem to the ATSP instance defined by the auxiliary \textit{cluster} graph $H_1=(\tilde\CX',A_1, c_1)$, where
+\subsection{Нижние границы}\label{ssec:LBs}
+В этом разделе мы сравним разные способы получения нижних границ
+для вспомогательной проблемы
+$\P$.
+Рассмотрим несколько способов упростить
+$\P$, 
+используя двухэтапный подход,
+предложенный в
+\cite{SALMAN2020163}. 
+
+На первом этапе мы упрощаем 
+$\P$,
+превращая ее в задачу ATSP 
+одним из следующих способов:
+\begin{enumerate}
+	\item
+	ослабляя исходное ограничение предшествования,
+	исключаем все ребра
+	$(v',v'')\in E$, 
+	для которых 
+	$(V(v''),V(v'))\in A$. 
+	Затем, 
+	сводим полученную задачу к ATSP,
+	используя классическую трансформацию Нуна-Бина
+	\cite{NoonBean1993}
+	\item
+	тем же способом ослабив исходное ограничение предшествования,
+	сводим полученную задачу к ATSP,
+	определённой на вспомогательном графе {\it кластеров}
+	$H_1=(\tilde\CX',A_1, c_1)$, где
 	\[
 		\tilde\CX'=\CX\setminus\CX'\cup\{V_1,V_l\},
 	\]
@@ -30,29 +78,59 @@ At the first stage, we reduce $\P$ to the appropriate ATSP instance by one of th
 	\[
 	c_1(V_1,V_l) = 0,\ c_1(V_i,V_j) = \min\{c(v',v'')\colon v'\in V_i, v''\in V_j, (v',v'')\in E\}
 	\]
-	\item[(iii)] reduce the initial problem to the instance of ATSP defined by the digraph $H_2=(\tilde\CX',A_2, c_2)$, for which
+	\item
+	сводим исходную задачу к ATSP,
+	определённой на ориентированном графе
+	$H_2=(\tilde\CX',A_2, c_2)$, 
+	где 
 	\begin{multline*}
 	A_2=\{(V_1,V_l)\}\cup\{(V_i, V_k)\ |\ i>2,\\ \exists (j>1): \{V_i,V_j,V_k\}\subset\tilde\CX' \wedge (\{(V_j,V_i), (V_k,V_j), (V_k, V_i)\}\cap A=\varnothing)\\
 	 \wedge \exists (v'\in V_i, v''\in V_j, v'''\in V_k)\colon (\{(v',v''),(v'',v''')\}\subset E)\}\\
 	\cup \{(V_i, V_k)\ |\ i>2, (\{V_i,V_k\}\subset\tilde\CX')\wedge ((V_k,V_i)\not\in A)\\
 	\wedge \exists (v'\in V_i, v_1\in V_1, v''\in V_k)\colon \{(v',v_1), (v_1,v'')\}\subset E\},	
 	\end{multline*}
-	i.e., for any $V_i\in \tilde\CX'\setminus\{V_1\}$, the ordered pair $(V_i,V_k)\in A_2$, if there exists $V_j\in\tilde\CX'$ and nodes $v'\in V_i, v''\in V_j$ and $v'''\in V_k$, such that the path $\pi = v',v'', v'''$ is consistent with the initial preference constraints. 
-
-	Then,  
+	то есть, 
+	для любого 
+	$V_i\in \tilde\CX'\setminus\{V_1\}$, 
+	упорядоченная пара $(V_i,V_k)\in A_2$, 
+	если существует $V_j\in\tilde\CX'$ 
+	и вершины $v'\in V_i, v''\in V_j$ 
+	и 
+	$v'''\in V_k$, 
+	такие, что путь $\pi = v',v'', v'''$ 
+	не запрещён исходным ограничением предшествования
+	$\Pi$.
+	Далее,  
 	\[
-	\hspace*{-3ex} c_2(V_1,V_l) = 0,\ c_2(V_i,V_k) = \min\{c(v',v'')+c(v'',v''')\colon \pi=v',v'', v''' \text{ is consistent}\}.
+	\hspace*{-3ex} c_2(V_1,V_l) = 0,
+	\ c_2(V_i,V_k) = \min\{c(v',v'')+c(v'',v''')\colon \pi=v',v'', v''' \text{ -- допустимый путь}\}.
 	\]
-\end{itemize}
+\end{enumerate}
 
-At the second stage, relaxing the obtained ATSP instance by reduction either to the Minimum Spanning Arborescence Problem (MSAP) or to the Assignment Problem (AP), we compute the appropriate lower bounds by equation \eqref{e:bounds}. In addition,  to increase the tightness of our lower bounds, we compute optimum values for some ATSP instances obtained by option (ii), using the solver Gurobi. For convenience, we present the designations for all the used lower bounds in Table \ref{t:LBs}\subref{t:matrix}. 
+На втором этапе,
+мы находим приближенное решение полученной задачи ATSP,
+путем нахождения либо минимального остовного дерева
+(Minimum Spanning Arborescence Problem, MSAP),
+либо решения задачи о назначениях
+(Assignment Problem, AP)
+и тем самым получаем значение нижней границы по формуле
+\eqref{e:bounds}.
+Кроме того, 
+мы можем посчитать ещё более точную
+нижнюю границу,
+прямо решая вспомогательную задачу ATSP
+при помощи солвера Gurobi
+(на практике только для задач, полученных способом 2).
+Для удобства
+все способы получения нижних границ сведены в 
+табл.~\ref{t:LBs}\subref{t:matrix}. 
 
 \begin{table}[h!]
 
 \centering
 	\scriptsize
-    \caption{Lower bounds: (a) bound names; (b) for each bound we present 95\%-confidence interval for its averaged ratio to  $L_3$}\label{t:LBs}
-    \subfloat[]{\label{t:matrix}
+    \caption{Нижние границы}\label{t:LBs}
+    \subfloat[Обозначения]{\label{t:matrix}
     \begin{tabular}[t]{|c|c|c|c|}
     \hline
     & \textbf{Noon-Bean} & $\mathbf{H_1}$ & $\mathbf{H_2}$ \\
@@ -64,7 +142,7 @@ At the second stage, relaxing the obtained ATSP instance by reduction either to 
     \end{tabular}
     }
    \quad
-   \subfloat[]{\label{t:confid}
+   \subfloat[Оценки по сравнению с $L_3$]{\label{t:confid}
    \begin{tabular}[t]{|*{3}{c|}}
    \hline
    $E_1$ & $E_2 = E_3$ &$E_4$ \\ \hline
@@ -76,8 +154,21 @@ At the second stage, relaxing the obtained ATSP instance by reduction either to 
    }
 \end{table}
 
-Relying on results of the exploratory experiments, we shorten the list of lower bounds employed in the subsequent evaluation 
-(see Table \ref{t:LBs}\subref{t:confid}). Indeed, the bounds  $L_1$-$L_3$ appear to be tighter than others, which is statistically significant with a 95\% confidence level. Also, we skip bounds $E_5$ and $E_6$, whose computation leads to extremely high time consumption. Thus, in Section \ref{sec:experiments}, we restrict ourselves to the bounds 
+На основе результатов численных экспериментов,
+мы сократили полный список методов оценки нижней границы,
+см. табл.~\ref{t:LBs}\subref{t:confid}.
+На практике оценки 
+$L_1$--$L_3$
+оказываются почти всегда наиболее строгими,
+статистически значимо
+с доверительным интервалом 95\%.
+Мы также отказались от использования оценок
+$E_5$ и $E_6$
+ввиду того,
+что они требуют гораздо большего времени счета.
+Таким образом, 
+в разделе~\ref{sec:experiments}
+мы ограничились использованием оценок
 \[
 	\LB_i = c_{\min} + L_i,\ i\in\{1,2,3\}.
 \]    
