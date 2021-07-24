@@ -28,8 +28,31 @@
 \maketitle
 
 \begin{abstract}
-The Generalized Traveling Salesman Problem (GTSP) is a well-known combinatorial optimization problem having numerous valuable practical applications in operations research. In the Precedence Constrained GTSP (PCGTSP), any feasible tour is restricted to visit all the clusters according to some given partial order. Unlike the common setting of the GTSP, the PCGTSP appears still weakly studied in terms of algorithmic design and implementation.
-To the best of our knowledge, all the known algorithmic results for this problem can be exhausted by Salmans's general branching framework, a few MILP models, and the PCGLNS meta-heuristic proposed by the authors recently. In this paper, we present the first problem-specific branch-and-bound algorithm designed with an extension of Salman's approach and exploiting PCGLNS as a powerful primal heuristic.   Using the public PCGTSPLIB testbench, we evaluate the performance of the proposed algorithm against the classic Held-Karp dynamic programming scheme with branch-and-bound node fathoming strategy and Gurobi state-of-the-art solver armed by our recently proposed MILP model and PCGLNS-based warm start. 
+Обобщенная задача коммивояжера (Generalized Traveling Salesman Problem, GTSP) -- 
+это хорошо известная задача комбинаторной оптимизации, 
+имеющая множество важных практических приложений при исследовании операций. 
+В GTSP с ограничением предшествования (PCGTSP) 
+накладываются дополнительные ограничения на порядок 
+посещения кластеров в соответствии 
+с некоторым заранее заданным частичным порядком.
+В отличие от классической GTSP, 
+PCGTSP все еще слабо исследована с точки зрения разработки и реализации алгоритмов.
+Насколько нам известно, 
+все известные алгоритмические подходы для этой проблемы 
+исчерпываются общей структурой ветвления Салмана, 
+несколькими моделями MILP 
+и недавно предложенной авторами метаэвристикой PCGLNS. 
+В данной работе мы представляем первый специализированный алгоритм ветвей и границ, 
+разработанный с расширением подхода Салмана и использующий PCGLNS 
+в качестве мощной первичной эвристики. 
+Используя общедоступную тестовую библиотеку PCGTSPLIB, 
+мы оцениваем производительность предложенного алгоритма 
+по сравнению с классической схемой динамического программирования Хелда-Карпа,
+дополненный стратегией ветвления и границ,
+и современным решателем Gurobi, 
+использующим нашу недавнюю моделью MILP 
+и горячий старт на основе PCGLNS.
+
 % \keywords{Generalized Traveling Salesman Problem \and precedence constraints \and Branch-and-Bound algorithm}
 \end{abstract}  
 
