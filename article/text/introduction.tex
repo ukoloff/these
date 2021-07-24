@@ -1,42 +1,128 @@
 % !TeX root = ..
-\section{Introduction}\label{sec:intro}
-The Generalized Traveling Salesman Problem (GTSP) is a well-known combinatorial optimization problem introduced in the seminal paper \cite{SKGS1969} by S. Srivastava et al. and attracted the attention of many researchers~(see the survey in~\cite{GutinPunnen2007}). 
+\section{Введение}\label{sec:intro}
+Обобщенная задача коммивояжера (GTSP) -- 
+это хорошо известная задача комбинаторной оптимизации, 
+представленная в основополагающей статье \cite{SKGS1969} 
+Сриваставы и др. и привлекшая внимание многих исследователей
+(см. обзор в~\cite{GutinPunnen2007}).
 
-In the GTSP, for a given weighted digraph $G=(V,E,c)$ and partition $V_1\cup\ldots\cup V_m$ of the nodeset $V$ into non-empty mutually disjoint clusters, it is required to find a minimum cost closed tour $T$ that visits each cluster $V_i$ exactly once. 
+В GTSP для данного взвешенного орграфа 
+$ G = (V, E, c) $ 
+и разбиения $ V_1 \cup \ldots \cup V_m $ набора узлов $ V $ 
+на непустые взаимно непересекающиеся кластеры требуется найти замкнутый тур с минимальной стоимостью $ T $, 
+который посещает каждый кластер $ V_i $ ровно один раз.
 
-In this paper, we consider the Precedence Constrained Generalized Traveling Salesman Problem (PCGTSP), where the clusters should be visited according to some given partial order. This extended version of the GTSP has numerous relevant industrial applications including 
+В этой статье мы рассматриваем обобщенную задачу коммивояжера 
+с ограничением предшествования (PCGTSP), 
+в которой кластеры следует посещать в соответствии с некоторым заданным частичным порядком. 
+Эта расширенная версия GTSP имеет множество практический применений, включая
 \begin{itemize}
-	\item[-] toolpath optimization for Computer Numerical Control (CNC) machines \cite{CASTELINO2003173}
-	\item[-] \textit{air} time minimization in metal sheet cutting \cite{Petunin2018,Makarovskikh20181171}
-	\item[-] coordinate measuring machinery \cite{SALMAN2016138} 
-	\item[-] path optimization in multi-hole drilling \cite{DEWIL2019}.
+	\item
+	оптимизация траектории инструмента для станков с числовым программным управлением (ЧПУ) 
+	\cite{CASTELINO2003173}
+	\item
+	минимизация времени {\it холостого хода} при раскрое листового металла 
+	\cite{Petunin2018, Makarovskikh20181171}
+	\item
+	координатно-измерительное оборудование 
+	\cite{SALMAN2016138} 
+	\item
+	оптимизация траектории при многоствольном бурении
+	\cite{DEWIL2019}.
 \end{itemize}
 
-\subsubsection{Related work.} The GTSP is an extension of the classic Traveling Salesman Problem (TSP). Therefore, any time when the number of clusters $m$ is a part of the input, the problem is strongly NP-hard even on the Euclidean plane \cite{Papa77}. On the other hand, the well-known Held and Karp dynamic programming scheme \cite{HeldKarp1962} adapted to the GTSP has running-time bound $O(n^3m^2\cdot 2^m)$, i.e. this algorithm belongs to FPT being parameterized by the number of clusters. Furthermore, the GTSP can be solved to optimality in polynomial time, provided $m=O(\log n)$.
+\subsection{Связанные работы} 
+GTSP - это расширение классической задачи коммивояжера (TSP). 
+Следовательно, если оценивать размер задачи количеством кластеров 
+$ m $, 
+задача становится NP-сложной даже на евклидовой плоскости \cite{Papa77}. 
+С другой стороны, 
+хорошо известная схема динамического программирования Хелда и Карпа~\cite{HeldKarp1962}, 
+адаптированная к GTSP, 
+имеет временную сложность 
+$ O (n ^ 3m ^ 2 \cdot 2 ^ m) $, 
+то есть этот алгоритм принадлежит FPT,
+будучи параметризован количеством кластеров. 
+Следовательно, 
+оптимальное решение
+GTSP может быть найдено за полиномиальное время при условии 
+$ m = O (\log n) $.
 
-As it follows from the literature, algorithmic design for the GTSP developed in several ways. 
+Обзор литературы показывает, 
+что алгоритмическое проектирование GTSP развивалось по нескольким направлениям.
 
-The first approach is based on the reduction of the initial problem to some corresponding instance of the Asymmetric TSP, after that this auxiliary instance can be solved by an algorithm designed to the ATSP (\cite{LaporteSemet1999,NoonBean1993}). Despite its mathematical elegance, this approach suffers from a couple of shortcomings: 
+Первый подход основан на сведении исходной задачи к некоторой задаче асимметричной TSP, 
+после чего этот вспомогательный экземпляр может быть решен с помощью алгоритмов, 
+разработанного для ATSP 
+(\cite{LaporteSemet1999, NoonBean1993}). 
+Несмотря на математическую элегантность, 
+этот подход страдает несколькими недостатками:
+\begin{enumerate}
+\item
+Полученные экземпляры ATSP устроены довольно необычно, 
+что затрудняет их решение даже для современных решателей MIP, 
+таких как Gurobi и CPLEX.
+\item
+близкие к оптимальным решения задачи ATSP
+могут соответствовать недопустимым решениям исходной задачи 
+\cite{KaraGut2012}.
+\end{enumerate}
+
+Другой подход связан с разработкой точных алгоритмов для частных случаев 
+и алгоритмов аппроксимации с теоретическими гарантиями производительности. 
+Среди них есть алгоритмы ветвей и границ и ветвей и разрезов 
+(см., например, \cite{FishGonToth1997, Yuan2020}) 
+и приближенные схемы полиномиального времени (PTAS) 
+для некоторых специальных случаев 
+\cite{FerGriSit2006, KhN-PSIM2017}.
+
+Наконец, 
+третий подход заключается в разработке 
+различных эвристик и метаэвристик. 
+Так, Г.~Гутин и Д.~Карапетян \cite{Gutin-2010} 
+предложили эффективный меметический алгоритм, 
+в \cite{Helsgaun-2015} знаменитый эвристический решатель 
+Лина-Кернигана-Хельсгауна был расширен до GTSP, 
+а в \cite{SMITH20171} была разработана мощная метаэвристика 
+Adaptive Large Neighborhood Search (ALNS), 
+которая на сегодняшний день является наиболее эффективной.
+
+К сожалению, в случае PCGTSP 
+алгоритмические результаты все еще остаются довольно малочисленными. 
+Насколько нам известно, в открытых источниках доступны только
+\begin{enumerate}
+	\item
+	эффективные алгоритмы для специальных ограничений предшествования типа Баласа 
+	\cite {Balas-Sim2001, ChenKhKh2016, CKK-IFAC2016} 
+	и ограничения предшествования, приводящие к квази- и псевдопирамидальным оптимальным обходам	
+	\cite{KhN-AMAI-2020}
+	\item
+	общие идеи о специализированном (PCGTSP) алгоритме ветвей и границ
+	\cite{SALMAN2020163}
+	\item
+	недавняя эвристика PCGLNS, предложенная авторами 
+	\cite{KKP-optima2020} 
+	как расширение результатов
+	\cite{SMITH20171}. 
+\end{enumerate} 
+
+В этой статье мы пытаемся восполнить этот пробел.
+
+\subsection{Новизна данной работы}
 \begin{itemize}
-\item[(i)] the resulting ATSP instances have a rather unusual shape making their solution hard even for the state-of-the-art MIP solvers like Gurobi and CPLEX 
-\item[(ii)] close-to-optimal solutions of these instances can produce infeasible solutions of the initial problem \cite{KaraGut2012}.
-\end{itemize}
-
-Another approach deals with developing problem-specific exact algorithms and approximation algorithms with theoretical performance guarantees. Among them are branch-and-bound and branch-and-cut algorithms (see, e.g. \cite{FishGonToth1997,Yuan2020}) and Polynomial Time Approximation Schemes (PTAS) for several special settings \cite{FerGriSit2006,KhN-PSIM2017}.  
-
-Finally, the third approach is about designing various heuristics and meta-heuristics. Thus, G.Gutin and D.Karapetyan \cite{Gutin-2010} proposed an efficient memetic algorithm, in \cite{Helsgaun-2015}, the famous Lin-Kernighan-Helsgaun heuristic solver was extended to the GTSP, and in \cite{SMITH20171} the powerful Adaptive Large Neighborhood Search (ALNS) meta-heuristic was developed, which appear to be a best-performer to date. 
-
-Unfortunately, for the PCGTSP, algorithmic results still remain quite rare. To the best of our knowledge, the published results are exhausted by
-\begin{itemize}
-	\item[(i)] efficient algorithms for the Balas-type special precedence constraints \cite{Balas-Sim2001,ChenKhKh2016,CKK-IFAC2016} and the precedence constraints leading to quasi- and pseudo-pyramidal optimal tours \cite{KhN-AMAI-2020}
-	\item[(ii)] general idea of a problem-specific branch-and-bound algorithm for this problem \cite{SALMAN2020163}
-	\item[(iii)] recent PCGLNS heuristic proposed by the authors \cite{KKP-optima2020} as an extension of the results of \cite{SMITH20171}. 
-\end{itemize} 
-
-In this paper, we try to bridge this gap.
-\subsubsection{Contribution  of this paper} is three-fold:
-\begin{itemize}
-	\item[(i)] extending the idea proposed in \cite{SALMAN2020163}, we design and implement the first problem-specific algorithm for the PCGTSP
-	\item[(ii)] extending the classic branching approach \cite{MorinMarsten1976}, we implement the Held and Karp dynamic programming scheme supplemented with an original bounding strategy
-	\item[(iii)] to evaluate the proposed and implemented algorithms, we carry out numerical experiments on the public PCGTSPLIB test-bench \cite{SALMAN2020163}. We compare the performance of these algorithms against the state-of-the-art Gurobi MIP-solver armed with the best MIPS model. To put all the competitors on an equal footing, for any instance, we use the same approximate solution obtained by our recent heuristic PCGLNS \cite{PCGLNS} for the warm start.
+	\item
+	расширяя идею, предложенную в {SALMAN20163}, 
+	мы разрабатываем и реализуем первый специализированный алгоритм для PCGTSP
+	\item
+	расширяя классический подход к ветвлению \cite{MorinMarsten1976}, 
+	мы реализуем схему динамического программирования Хелда и Карпа, 
+	дополненную оригинальной ограничивающей стратегией
+	\item
+	для оценки предложенных и реализованных алгоритмов 
+	мы проводим численные эксперименты на общедоступной библиотеке PCGTSPLIB~\cite{SALMAN2020163}. 
+	Мы сравниваем производительность этих алгоритмов с современным MIP-решателем Gurobi, 
+	оснащенным лучшей моделью MIPS. 
+	Чтобы уравнять всех конкурентов, 
+	мы во всех случаях используем в качестве теплого старта приближенное решение, 
+	полученное нашей недавней эвристикой PCGLNS~\cite{PCGLNS}.
 \end{itemize}  
