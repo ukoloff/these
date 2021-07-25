@@ -14,7 +14,7 @@ $V_{i_1} = V_1$,
 и
 $r \in \{{1, \dots m}\}$.
 
-\begin{algorithm}[]
+\begin{algorithm}
 \caption{BnB :: Главная процедура}\label{alg:bnb}
 \hspace*{\algorithmicindent}{\bf Вход}: орграф $G$, кластеры $\CX$, частичный порядок $\Pi$ \\
 \hspace*{\algorithmicindent}{\bf Выход}: маршрут и его стоимость
@@ -36,7 +36,7 @@ $r \in \{{1, \dots m}\}$.
 \end{algorithmic}
 \end{algorithm}
 
-\begin{algorithm}[]
+\begin{algorithm}
 \caption{BnB :: Bound}\label{alg:bnb:bound}
 \hspace*{\algorithmicindent}{\bf Вход}: префикс $\sigma$ \\
 \hspace*{\algorithmicindent}{\bf Выход}: признак того, что префикс подлежит обработке
@@ -133,7 +133,7 @@ $$
     узел $\sigma$ отсекается, если $\LB > \UB$.
 \end{itemize}
 
-\begin{algorithm}[]
+\begin{algorithm}
 \caption{BnB :: Branch}\label{alg:bnb:branch}
 \hspace*{\algorithmicindent}{\bf Вход}: префикс $\sigma$ \\
 \hspace*{\algorithmicindent}{\bf Выход}: список потомков префикса для обработки
