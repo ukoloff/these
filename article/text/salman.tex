@@ -1,50 +1,49 @@
 % !TeX root = ..
-\section{Branch-and-bound algorithm}\label{sec:SA}
+\section{Алгоритм ветвей и границ}\label{sec:SA}
 
-To solve the PCGTSP instance
+Для решения задачи PCGTSP 
 $(G,\CX,\Pi)$,
-we traverse the search tree in
-Breadth First Search order
-(see Algorithm~\ref{alg:bnb}).
-Each node of this tree is associated with
-a prefix
+мы обходим дерево поиска в ширину
+(Breadth First Search),
+см.~Алгоритм~\ref{alg:bnb}.
+Каждый узел этого дерева связан с префиксом
 $\sigma = \left(V_{i_1}, V_{i_2}, \dots V_{i_r} \right)$,
-where
+где
 $V_{i_j} \in \CX$,
 $V_{i_1} = V_1$,
-and
+и
 $r \in \{{1, \dots m}\}$.
 
-\begin{algorithm}[h!]
-\caption{BnB :: Main}\label{alg:bnb}
-\hspace*{\algorithmicindent}{\bf Input}: the graph $G$, clusters $\CX$, the DAG $\Pi$ \\
-\hspace*{\algorithmicindent}{\bf Output}: the tour and cost of optimal solution
+\begin{algorithm}[]
+\caption{BnB :: Главная процедура}\label{alg:bnb}
+\hspace*{\algorithmicindent}{\bf Вход}: орграф $G$, кластеры $\CX$, частичный порядок $\Pi$ \\
+\hspace*{\algorithmicindent}{\bf Выход}: маршрут и его стоимость
 \begin{algorithmic}[1]
-    \STATE initialize $Q =$ empty queue
-    \STATE start from $Root = V_1$
+    \STATE инициализация $Q =$ empty queue
+    \STATE начинаем с $Root = V_1$
     \STATE $Q$.push($Root$)
-    \WHILE{not $Q$.empty()}
-        \STATE get prefix to process: $\sigma = Q$.pop()
+    \WHILE{\NOT $Q$.empty()}
+        \STATE берём следующий префикс для обработки: $\sigma = Q$.pop()
         \STATE $process = Bound(\sigma)$
         \IF{\NOT $process$}
-            \STATE prefix is fathomed; {\bf continue}
+            \STATE префикс отсекается; {\bf continue}
         \ENDIF
         \STATE $UpdateLowerBound(\sigma)$
         \FORALL{$child \in Branch(\sigma)$}
-            \STATE queue child prefix $Q$.push($child$)
+            \STATE помещаем префикс в очередь на обработку $Q$.push($child$)
         \ENDFOR
     \ENDWHILE
 \end{algorithmic}
 \end{algorithm}
 
-\begin{algorithm}[h!]
-\caption{BnB :: Bounding procedure}\label{alg:bnb:bound}
-\hspace*{\algorithmicindent}{\bf Input}: the prefix $\sigma$ \\
-\hspace*{\algorithmicindent}{\bf Output}: the flag if the prefix survives or is fathomed
+\begin{algorithm}[]
+\caption{BnB :: Bound}\label{alg:bnb:bound}
+\hspace*{\algorithmicindent}{\bf Вход}: префикс $\sigma$ \\
+\hspace*{\algorithmicindent}{\bf Выход}: признак того, что префикс подлежит обработке
 \begin{algorithmic}[1]
     \STATE {\bf global} $D_{ij}^{\mathcal T}$
     \STATE {\bf global} $Opt^{\mathcal T}$
-    \STATE calculate tuple $\mathcal T = \left(V_{i_1},
+    \STATE вычисляем кортеж $\mathcal T = \left(V_{i_1},
         \left\{V_{i_1}, V_{i_2}, \dots V_{i_r}\right\}, V_{i_r} \right)$
         \label{alg:bnb:bound:key}
     \STATE $D_{ij} = MinCosts(\sigma)$
@@ -52,12 +51,12 @@ $r \in \{{1, \dots m}\}$.
     \IF{$D_{ij}^{(\sigma)} \ge D_{ij}^{\mathcal T}[\mathcal T], \forall i, j$}
         \RETURN \FALSE
     \ENDIF
-    \STATE  update best weights $D_{ij}^{\mathcal T}[\mathcal T]  = \min \left(
+    \STATE  обновляем веса маршрутов $D_{ij}^{\mathcal T}[\mathcal T]  = \min \left(
         D_{ij}^{\mathcal T}[\mathcal T], D_{ij} \right),
         \forall i, j$
     \STATE  $c_{min} = \min\limits_{i, j} D_{ij}$
     \IF{$\mathcal T \notin Opt^{\mathcal T}$}
-        \STATE calculate bounds $Opt^{\mathcal T}[\mathcal T] = \max\left(L_1(\sigma), L_2(\sigma))\right)$
+        \STATE вычисляем нижнюю границу $Opt^{\mathcal T}[\mathcal T] = \max\left(L_1(\sigma), L_2(\sigma))\right)$
         \label{alg:bnb:bound:sfx}
     \ENDIF
     \STATE $\LB = c_{min} + Opt^{\mathcal T}[\mathcal T]$
@@ -69,71 +68,77 @@ $r \in \{{1, \dots m}\}$.
 \end{algorithmic}
 \end{algorithm}
 
-For each node of the search tree
-we apply
-the Bounding procedure
-(Algorithm~\ref{alg:bnb:bound})
-to perform the following actions:
+К каждому узлу дерева поиска
+мы применяем процедуру отсечения
+Bound
+(Алгоритм~\ref{alg:bnb:bound}),
+которая выполняет следующие действия:
 \begin{itemize}
     \item
-    for the prefix $\sigma$,
-    we assign the tuple
+    для префикса $\sigma$,
+    мы находим кортеж
     % $\mathcal T(\sigma)$
 $$
 \mathcal T(\sigma) = \left(V_{i_1},
         \left\{V_{i_1}, V_{i_2}, \dots V_{i_r}\right\}, V_{i_r} \right)
 $$
     \item
-    at step~\ref{alg:bnb:bound:pfx},
-    we compute the matrix $D(\sigma)$ of minimal pairwise costs by the following formula:
+    на шаге~\ref{alg:bnb:bound:pfx},
+    мы вычисляем матрицу $D(\sigma)$ 
+    минимальных попарных весов по формуле:
     $$
     \hspace{-2ex}
     D(\sigma)_{vu} = \min\left\{
       cost(P_{v,u})\colon
       v \in V_{i_1},
       u \in V_{i_r},
-      P_{v,u} \text{ is a partial $v$-$u$ path along } \sigma
+      P_{v,u} \text{ путь $v$-$u$ в порядке } \sigma
     \right\}.
     $$
-    This can be easily calculated
-    incrementally using
-    matrix $D(\sigma')$
-    of parent tree node
+    Эта матрица удобно вычисляется инкрементально
+    на основе матрицы
+    $D(\sigma')$
+    родительского узла дерева поиска
     \item
-    if, for some $\sigma_1$, $\mathcal T(\sigma) = \mathcal T(\sigma_1)$ and
+    если, для некоторого $\sigma_1$, $\mathcal T(\sigma) = \mathcal T(\sigma_1)$ 
+    и
     $$
     D(\sigma)_{vu} \ge D(\sigma_1)_{vu}, \quad
     (v \in V_{i_1}, u \in V_{i_r}),
     $$
-    then,
-    prefix $\sigma$ is dominated by $\sigma_1$
-    and is fathomed
+    то,
+    префикс $\sigma$ имеет веса в матрице$D(\sigma)$
+    больше, чем для префикса $\sigma_1$
+    и подлежит отсечению
     \item
-    at step~\ref{alg:bnb:bound:sfx},
-    we calculate bounds $L_1$ and $L_2$,
-    see Table~\ref{t:LBs} and assign the global variable
-    $Opt^{\mathcal T}$ by the formula
+    на шаге~\ref{alg:bnb:bound:sfx},
+    мы рассчитываем оценки $L_1$ и $L_2$,
+    см. табл.~\ref{t:LBs} 
+    и сохраняем их в глобальной переменной
+    $Opt^{\mathcal T}$,
+    используя формулу
     $$
     Opt^{\mathcal T(\sigma)} = \max(L_1, L_2)
     $$
     \item
-    for current node $\sigma$,
-    its lower bound is
-    calculated by the formula
+    для текущего узла 
+    $\sigma$,
+    рассчитываем нижнюю границу по формуле
     $$
     \LB(\sigma) = \min_{vu}D(\sigma)_{vu} + Opt^{\mathcal T(\sigma)}
     $$
-    at step~\ref{alg:bnb:bound:lb}
+    на шаге~\ref{alg:bnb:bound:lb}
     \item
-    finally, the node $\sigma$ is fathomed if $\LB > \UB$.
+    наконец, 
+    узел $\sigma$ отсекается, если $\LB > \UB$.
 \end{itemize}
 
-\begin{algorithm}
-\caption{BnB :: Branching procedure}\label{alg:bnb:branch}
-\hspace*{\algorithmicindent}{\bf Input}: the prefix $\sigma$ \\
-\hspace*{\algorithmicindent}{\bf Output}: the list of children prefixes to process
+\begin{algorithm}[]
+\caption{BnB :: Branch}\label{alg:bnb:branch}
+\hspace*{\algorithmicindent}{\bf Вход}: префикс $\sigma$ \\
+\hspace*{\algorithmicindent}{\bf Выход}: список потомков префикса для обработки
 \begin{algorithmic}[1]
-    \STATE initialize $R =$ empty queue
+    \STATE инициализация $R =$ empty queue
     \FORALL{$V \in \CX$}
         \STATE $valid =$ \TRUE
         \FORALL{$W \in \sigma$}
@@ -143,16 +148,20 @@ $$
             \ENDIF
         \ENDFOR
         \IF{$valid$}
-            \STATE append new prefix $R$.push($\sigma+V$)
+            \STATE добавляем новый префикс $R$.push($\sigma+V$)
         \ENDIF
     \ENDFOR
     \RETURN $R$
 \end{algorithmic}
 \end{algorithm}
 
-Nodes that survived are subjected to the
-$Branch$ procedure
-(Algorithm~\ref{alg:bnb:branch}),
-where we try to enlarge the current prefix
+Префиксы,
+которые избежали отсечения,
+обрабатываются процедурой 
+$Branch$
+(Алгоритм~\ref{alg:bnb:branch}),
+которая пытается удлинить префикс 
 $\sigma$
-taking into account the precedence constraint $\Pi$.
+на один кластер,
+соблюдая при этом ограничение предшествования
+$\Pi$.
