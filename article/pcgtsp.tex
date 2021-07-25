@@ -1,0 +1,75 @@
+\documentclass{article}
+
+% \documentclass[runningheads]{llncs}
+
+\input{control/ru.tex}
+\input{control/packages.tex}
+\input{control/algo.tex}
+\input{control/bib.tex}
+
+\author{М.Ю. Хачай, С.С. Уколов, А.А. Петунин}
+\title{
+Специализированный алгоритм ветвей и границ
+для обобщённой задачи коммивояжера
+с ограничениями предшествования
+}
+% \titlerunning{BnB algorithms for PCGTSP}
+
+
+% \author{Michael Khachay\inst{1}\orcidID{0000-0003-3555-0080} \and\\ Stanislav Ukolov\inst{2}\orcidID{0000-0002-9946-6446} \and\\ Alexander Petunin\inst{1,2}\orcidID{0000-0003-2540-1305}}
+
+% \institute{Krasovsky Institute of Mathematics and Mechanics, Ekaterinburg, Russia \and Ural Federal University, Ekaterinburg, Russia\\
+%   \email{mkhachay@imm.uran.ru},\ \  \email{s.s.ukolov@urfu.ru}, \  \ \email{aapetunin@gmail.com}}
+
+	
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Обобщенная задача коммивояжера (Generalized Traveling Salesman Problem, GTSP) -- 
+это хорошо известная задача комбинаторной оптимизации, 
+имеющая множество важных практических приложений при исследовании операций. 
+В GTSP с ограничением предшествования (PCGTSP) 
+накладываются дополнительные ограничения на порядок 
+посещения кластеров в соответствии 
+с некоторым заранее заданным частичным порядком.
+В отличие от классической GTSP, 
+PCGTSP все еще слабо исследована с точки зрения разработки и реализации алгоритмов.
+Насколько нам известно, 
+все известные алгоритмические подходы для этой проблемы 
+исчерпываются общей структурой ветвления Салмана, 
+несколькими моделями MILP 
+и недавно предложенной авторами метаэвристикой PCGLNS. 
+В данной работе мы представляем первый специализированный алгоритм ветвей и границ, 
+разработанный с расширением подхода Салмана и использующий PCGLNS 
+в качестве мощной первичной эвристики. 
+Используя общедоступную тестовую библиотеку PCGTSPLIB, 
+мы оцениваем производительность предложенного алгоритма 
+по сравнению с классической схемой динамического программирования Хелда-Карпа,
+дополненный стратегией ветвления и границ,
+и современным решателем Gurobi, 
+использующим нашу недавнюю моделью MILP 
+и горячий старт на основе PCGLNS.
+
+% \keywords{Generalized Traveling Salesman Problem \and precedence constraints \and Branch-and-Bound algorithm}
+\end{abstract}  
+
+\input{text/introduction}
+% \input{text/related-work}
+\input{text/problem-statement}
+\input{text/preliminaries}
+\input{text/salman}
+\input{text/dp}
+\input{text/experiments}
+\input{text/summary}
+
+% \clearpage
+% \bibliographystyle{splncs04}
+% \bibliographystyle{plain}
+% \bibliography{pcgtsp}
+\printbibliography[]
+
+\end{document}
+

@@ -1,0 +1,167 @@
+% !TeX root = ..
+\section{Алгоритм ветвей и границ}\label{sec:SA}
+
+Для решения задачи PCGTSP 
+$(G,\CX,\Pi)$,
+мы обходим дерево поиска в ширину
+(Breadth First Search),
+см.~Алгоритм~\ref{alg:bnb}.
+Каждый узел этого дерева связан с префиксом
+$\sigma = \left(V_{i_1}, V_{i_2}, \dots V_{i_r} \right)$,
+где
+$V_{i_j} \in \CX$,
+$V_{i_1} = V_1$,
+и
+$r \in \{{1, \dots m}\}$.
+
+\begin{algorithm}
+\caption{BnB :: Главная процедура}\label{alg:bnb}
+\hspace*{\algorithmicindent}{\bf Вход}: орграф $G$, кластеры $\CX$, частичный порядок $\Pi$ \\
+\hspace*{\algorithmicindent}{\bf Выход}: маршрут и его стоимость
+\begin{algorithmic}[1]
+    \STATE инициализация $Q =$ empty queue
+    \STATE начинаем с $Root = V_1$
+    \STATE $Q$.push($Root$)
+    \WHILE{\NOT $Q$.empty()}
+        \STATE берём следующий префикс для обработки: $\sigma = Q$.pop()
+        \STATE $process = Bound(\sigma)$
+        \IF{\NOT $process$}
+            \STATE префикс отсекается; {\bf continue}
+        \ENDIF
+        \STATE $UpdateLowerBound(\sigma)$
+        \FORALL{$child \in Branch(\sigma)$}
+            \STATE помещаем префикс в очередь на обработку $Q$.push($child$)
+        \ENDFOR
+    \ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{BnB :: Bound}\label{alg:bnb:bound}
+\hspace*{\algorithmicindent}{\bf Вход}: префикс $\sigma$ \\
+\hspace*{\algorithmicindent}{\bf Выход}: признак того, что префикс подлежит обработке
+\begin{algorithmic}[1]
+    \STATE {\bf global} $D_{ij}^{\mathcal T}$
+    \STATE {\bf global} $Opt^{\mathcal T}$
+    \STATE вычисляем кортеж $\mathcal T = \left(V_{i_1},
+        \left\{V_{i_1}, V_{i_2}, \dots V_{i_r}\right\}, V_{i_r} \right)$
+        \label{alg:bnb:bound:key}
+    \STATE $D_{ij} = MinCosts(\sigma)$
+        \label{alg:bnb:bound:pfx}
+    \IF{$D_{ij}^{(\sigma)} \geqslant D_{ij}^{\mathcal T}[\mathcal T], \forall i, j$}
+        \RETURN \FALSE
+    \ENDIF
+    \STATE  обновляем веса маршрутов $D_{ij}^{\mathcal T}[\mathcal T]  = \min \left(
+        D_{ij}^{\mathcal T}[\mathcal T], D_{ij} \right),
+        \forall i, j$
+    \STATE  $c_{min} = \min\limits_{i, j} D_{ij}$
+    \IF{$\mathcal T \notin Opt^{\mathcal T}$}
+        \STATE вычисляем нижнюю границу $Opt^{\mathcal T}[\mathcal T] = \max\left(L_1(\sigma), L_2(\sigma))\right)$
+        \label{alg:bnb:bound:sfx}
+    \ENDIF
+    \STATE $\LB = c_{min} + Opt^{\mathcal T}[\mathcal T]$
+        \label{alg:bnb:bound:lb}
+    \IF{$\LB > \UB$}
+        \RETURN \FALSE
+    \ENDIF
+    \RETURN \TRUE
+\end{algorithmic}
+\end{algorithm}
+
+К каждому узлу дерева поиска
+мы применяем процедуру отсечения
+Bound
+(Алгоритм~\ref{alg:bnb:bound}),
+которая выполняет следующие действия:
+\begin{itemize}
+    \item
+    для префикса $\sigma$,
+    мы находим кортеж
+    % $\mathcal T(\sigma)$
+$$
+\mathcal T(\sigma) = \left(V_{i_1},
+        \left\{V_{i_1}, V_{i_2}, \dots V_{i_r}\right\}, V_{i_r} \right)
+$$
+    \item
+    на шаге~\ref{alg:bnb:bound:pfx},
+    мы вычисляем матрицу $D(\sigma)$ 
+    минимальных попарных весов по формуле:
+    $$
+    \hspace{-2ex}
+    D(\sigma)_{vu} = \min\left\{
+      cost(P_{v,u})\colon
+      v \in V_{i_1},
+      u \in V_{i_r},
+      P_{v,u} \text{ путь $v$-$u$ в порядке } \sigma
+    \right\}.
+    $$
+    Эта матрица удобно вычисляется инкрементально
+    на основе матрицы
+    $D(\sigma')$
+    родительского узла дерева поиска
+    \item
+    если, для некоторого $\sigma_1$, $\mathcal T(\sigma) = \mathcal T(\sigma_1)$ 
+    и
+    $$
+    D(\sigma)_{vu} \geqslant D(\sigma_1)_{vu}, \quad
+    (v \in V_{i_1}, u \in V_{i_r}),
+    $$
+    то,
+    префикс $\sigma$ имеет веса в матрице$D(\sigma)$
+    больше, чем для префикса $\sigma_1$
+    и подлежит отсечению
+    \item
+    на шаге~\ref{alg:bnb:bound:sfx},
+    мы рассчитываем оценки $L_1$ и $L_2$,
+    см. табл.~\ref{t:LBs} 
+    и сохраняем их в глобальной переменной
+    $Opt^{\mathcal T}$,
+    используя формулу
+    $$
+    Opt^{\mathcal T(\sigma)} = \max(L_1, L_2)
+    $$
+    \item
+    для текущего узла 
+    $\sigma$,
+    рассчитываем нижнюю границу по формуле
+    $$
+    \LB(\sigma) = \min_{vu}D(\sigma)_{vu} + Opt^{\mathcal T(\sigma)}
+    $$
+    на шаге~\ref{alg:bnb:bound:lb}
+    \item
+    наконец, 
+    узел $\sigma$ отсекается, если $\LB > \UB$.
+\end{itemize}
+
+\begin{algorithm}
+\caption{BnB :: Branch}\label{alg:bnb:branch}
+\hspace*{\algorithmicindent}{\bf Вход}: префикс $\sigma$ \\
+\hspace*{\algorithmicindent}{\bf Выход}: список потомков префикса для обработки
+\begin{algorithmic}[1]
+    \STATE инициализация $R =$ empty queue
+    \FORALL{$V \in \CX$}
+        \STATE $valid =$ \TRUE
+        \FORALL{$W \in \sigma$}
+            \IF{$W=V$ \OR $(V, W) \in \Pi$}
+                \STATE $valid =$ \FALSE
+                \STATE {\bf break}
+            \ENDIF
+        \ENDFOR
+        \IF{$valid$}
+            \STATE добавляем новый префикс $R$.push($\sigma+V$)
+        \ENDIF
+    \ENDFOR
+    \RETURN $R$
+\end{algorithmic}
+\end{algorithm}
+
+Префиксы,
+которые избежали отсечения,
+обрабатываются процедурой 
+$Branch$
+(Алгоритм~\ref{alg:bnb:branch}),
+которая пытается удлинить префикс 
+$\sigma$
+на один кластер,
+соблюдая при этом ограничение предшествования
+$\Pi$.
