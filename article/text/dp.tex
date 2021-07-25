@@ -17,7 +17,7 @@ The branch-and-bound algorithm proposed in Section \ref{sec:SA} appears to be cl
       \STATE $S'[cost] = \min\{S[cost] + c(w,u)\colon S=(\CX',U,v,w)\in\L_k\}$
       \STATE $S'[pred] = \arg\min\{S[cost] + c(w,u)\colon S=(\CX',U,v,w)\in\L_k\}$
       \STATE $S'[LB] = S'[cost] + \max\{L_1,L_2,L_3\}$
-      \IF{$S'[\LB] \leq \UB$}
+      \IF{$S'[\LB] \leqslant \UB$}
         \STATE append $S'$ to $\L_{k+1}$
       \ENDIF
     \ENDIF

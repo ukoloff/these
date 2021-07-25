@@ -48,7 +48,7 @@ $r \in \{{1, \dots m}\}$.
         \label{alg:bnb:bound:key}
     \STATE $D_{ij} = MinCosts(\sigma)$
         \label{alg:bnb:bound:pfx}
-    \IF{$D_{ij}^{(\sigma)} \ge D_{ij}^{\mathcal T}[\mathcal T], \forall i, j$}
+    \IF{$D_{ij}^{(\sigma)} \geqslant D_{ij}^{\mathcal T}[\mathcal T], \forall i, j$}
         \RETURN \FALSE
     \ENDIF
     \STATE  обновляем веса маршрутов $D_{ij}^{\mathcal T}[\mathcal T]  = \min \left(
@@ -103,7 +103,7 @@ $$
     если, для некоторого $\sigma_1$, $\mathcal T(\sigma) = \mathcal T(\sigma_1)$ 
     и
     $$
-    D(\sigma)_{vu} \ge D(\sigma_1)_{vu}, \quad
+    D(\sigma)_{vu} \geqslant D(\sigma_1)_{vu}, \quad
     (v \in V_{i_1}, u \in V_{i_r}),
     $$
     то,
