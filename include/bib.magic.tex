@@ -1,0 +1,28 @@
+% From https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template
+%
+% biblatex for Synopsis:
+% Use \cite for self-reference
+% Use \autocite for others
+% Use \nocite{*}
+%
+\ExecuteBibliographyOptions{autocite=footnote}
+\newbibmacro*{cite:full}{%
+    \printtext[bibhypertarget]{%
+        \usedriver{%
+            \DeclareNameAlias{sortname}{default}%
+        }{%
+            \thefield{entrytype}%
+        }%
+    }%
+    \usebibmacro{shorthandintro}%
+}
+\DeclareCiteCommand{\smartcite}[\mkbibfootnote]{%
+    \usebibmacro{prenote}%
+}{%
+    \usebibmacro{citeindex}%
+    \usebibmacro{cite:full}%
+}{%
+    \multicitedelim%
+}{%
+    \usebibmacro{postnote}%
+}
