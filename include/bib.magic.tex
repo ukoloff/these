@@ -26,3 +26,14 @@
 }{%
     \usebibmacro{postnote}%
 }
+
+\DeclareSourcemap{ %модификация bib файла перед тем, как им займётся biblatex
+    \maps{
+        \map[overwrite]{ % добавляем ключевые слова, чтобы различать источники
+            \perdatasource{bib/self.bib}
+            \step[fieldset=keywords, fieldvalue={,self},append=true]
+        }
+    }
+}
+
+\nocite{*}
