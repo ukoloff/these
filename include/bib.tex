@@ -6,6 +6,8 @@
   defernumbers=true,
   movenames=false,
   maxnames=100,
+  isbn=false,
+  doi=false,
   % sorting=none,
 ]{biblatex}
 
@@ -14,3 +16,11 @@
 \addbibresource{bib/self.bib}
 \addbibresource{bib/others.bib}
 \addbibresource{article/pcgtsp.bib}
+
+\DeclareSourcemap{ %модификация bib файла перед тем, как им займётся biblatex
+    \maps{
+      \map[overwrite]{% стираем значения всех полей month
+        \step[fieldset=month, null]
+      }
+    }
+}
