@@ -66,13 +66,54 @@ JavaScript Object Notation
 формироваться даже без использования специализированных библиотек,
 но при этом достаточно выразителен.
 
+Для хранения и обмена информацией о геометрии деталей
+и раскройной карты
+была разработана наиболее простая схема JSON,
+не включающая сложности с копиями деталей и геометрическими
+преобразованиями.
+Пример такого файла для простейшей раскройной карты
+приведён в Листинге~\ref{lst:dbs}.
 
-% \lstinputlisting[
-%     language=Java,
-%     basicstyle=\footnotesize,
-%     showstringspaces=false,
-%     numbers=left,
-%     captionpos=b,
-%     caption=JSON-Схема для DBS-файлов
-%     ]
-%     {media/dbs.json}
+\lstinputlisting[
+    language=Java,
+    basicstyle=\footnotesize,
+    showstringspaces=false,
+    numbers=left,
+    label={lst:dbs},
+    captionpos=b,
+    caption=JSON-файл с геометрией простейшей раскройной карты
+    ]
+    {media/nesting.json}
+
+Использование JSON
+в качестве формата обмена данными
+оказалось удобным на практике,
+поэтому позднее были разработаны другие
+форматы файлов, в частности
+задания на резку и результатов резки.
+Все они были формально описаны в
+виде JSON Schema
+\autocite*[]{bi:json-schema}
+и доступны по адресу
+\url{https://ukoloff.github.io/dbs.js/json-schema/}.
+
+
+
+\lstinputlisting[
+  language=XML,
+  basicstyle=\footnotesize,
+  showstringspaces=false,
+  numbers=left,
+  label={lst:svg},
+  captionpos=b,
+  caption=SVG-файл для визуализации раскроя
+  ]
+  {media/nesting.svg}
+
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.82\textwidth]{nesting.png}
+  \label{fig:nesting}
+  \caption{Визуализация раскроя из Листинга~\ref{lst:dbs}}
+\end{figure}
