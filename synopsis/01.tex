@@ -6,6 +6,13 @@
 Описаны основные технологические особенности и ограничения термической резки,
 которые необходимо соблюдать при проектировании УП.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{toolpath.pdf}
+  \caption{Элементы маршрута резки}
+  \label{fig:toolpath}
+\end{figure}
+
 В общем случае маршрут инструмента содержит несколько компонент:
 начальную и возможно отличную от неё конечную точку маршрута $M_0$ и $M_{N+1}$,
 $N$ точек врезки $M_i$, $i \in \overline{1, N}$
@@ -22,13 +29,8 @@ $M_i^*$,
 представляющая собой перестановку
 $I = (i_1, i_2, ... i_N)$.
 
-\begin{figure}[]
-  \centering
-  \includegraphics[width=0.8\textwidth]{toolpath.pdf}
-  \caption{Элементы маршрута резки}
-  \label{fig:toolpath}
-\end{figure}
-
+На рис.~\ref{fig:cut-classes}
+представлена классификация задач резки\dots
 
 
 \begin{figure}
