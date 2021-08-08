@@ -16,9 +16,7 @@ jobs:
 
       - name: Build article
         working-directory: article
-        run:  |
-          latexmk -pdf
-          cp *.pdf ..
+        run:  latexmk -pdf -outdir=..
 
       - uses: actions/upload-artifact@v2
         with:
