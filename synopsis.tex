@@ -5,16 +5,20 @@
 \input{include/math.tex}
 \input{include/fig.tex}
 \input{include/bib.tex}
+\input{include/bib.magic.tex}
+\input{include/algo.tex}
+\input{include/packages.tex}
 
 \begin{document}
 
-\include{synopsis/general.tex}
-\include{synopsis/parts.tex}
-\include{synopsis/conclude.tex}
+\input{synopsis/title.tex}
+\input{synopsis/-title.tex}
+\input{synopsis/general.tex}
+\input{synopsis/parts.tex}
+\input{synopsis/conclude.tex}
 
 \section*{СПИСОК ПУБЛИКАЦИЙ ПО ТЕМЕ ДИССЕРТАЦИИ}
 
-\printbibliography[heading=none]
-\nocite{*}
+\printbibliography[heading=none,keyword=self]
 
 \end{document}
