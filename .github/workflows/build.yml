@@ -36,5 +36,5 @@ jobs:
           git add --all
           git config user.email "none"
           git config user.name "GitHub Pages Publisher"
-          git diff-index --quiet HEAD || git commit --ammend --no-edit
+          git diff-index --quiet HEAD || git commit --amend --no-edit
           git push --force-with-lease
