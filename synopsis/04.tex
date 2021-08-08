@@ -53,8 +53,8 @@ CAD/CAM-системах на примере
 открытые текстовые форматы для хранения и передачи данных.
 В качестве основного формата был выбран формат
 JavaScript Object Notation
-\autocite{bi:JSON}
-(JSON),
+(JSON
+\autocite{bi:JSON}),
 ввиду того, что
 он с одной стороны имеет готовые библиотеки для чтения и записи
 для практически всех современных языков
@@ -92,7 +92,7 @@ JavaScript Object Notation
 форматы файлов, в частности
 задания на резку и результатов резки.
 Все они были формально описаны в
-виде JSON Schema
+виде JSON-схемы
 \autocite*[]{bi:json-schema}
 и доступны по адресу
 \url{https://ukoloff.github.io/dbs.js/json-schema/}.
@@ -118,17 +118,6 @@ Scalable Vector Graphics
 сгенерированного для раскройной карты,
 представленной на Листинге~\ref{lst:dbs}.
 
-\lstinputlisting[
-  language=XML,
-  basicstyle=\footnotesize,
-  showstringspaces=false,
-  numbers=left,
-  label={lst:svg},
-  captionpos=b,
-  caption=SVG-файл для визуализации раскроя
-  ]
-  {media/nesting.svg}
-
 Переход к широкому использованию SVG
 позволяет также использовать зрелые современные технологии
 каскадных таблиц стилей
@@ -148,9 +137,20 @@ SVG-файла из Листинга~\ref{lst:svg}
 svg-pan-zoom
 \autocite*{bi:svg-pan-zoom}.
 
+\lstinputlisting[
+  language=XML,
+  basicstyle=\footnotesize,
+  showstringspaces=false,
+  numbers=left,
+  label={lst:svg},
+  captionpos=b,
+  caption=SVG-файл для визуализации раскроя
+  ]
+  {media/nesting.svg}
+
 \begin{figure}
   \centering
-  \includegraphics[width=0.61\textwidth]{nesting.png}
+  \includegraphics[width=0.5\textwidth]{nesting.png}
   \caption{Визуализация раскроя из Листинга~\ref{lst:dbs}}
   \label{fig:nesting}
 \end{figure}
@@ -175,7 +175,7 @@ Single Page Application
 Пример созданного ею изображения
 приведён на рис.~\ref{fig:pcgtsp.svg}.
 
-\begin{figure}[h]
+\begin{figure}
   \centering
   \includegraphics[width=0.95\textwidth]{34.png}
   \caption{Пример визуализации решения задачи PCGTSP}
