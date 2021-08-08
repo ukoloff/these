@@ -12,12 +12,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build synopsis
-        run:  latexmk -pdf synopsis.tex
+        run:  latexmk -pdf
 
       - name: Build article
         working-directory: article
         run:  |
-          latexmk -pdf pcgtsp.tex
+          latexmk -pdf
           cp *.pdf ..
 
       - uses: actions/upload-artifact@v2
