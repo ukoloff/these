@@ -11,6 +11,12 @@ jobs:
       - name: Check out
         uses: actions/checkout@v2
 
+      - name: Check out WWW
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: www
+
       - name: Build synopsis
         run:  latexmk -pdf
 
@@ -22,3 +28,13 @@ jobs:
         with:
           name: PDF
           path: ./*.pdf
+
+      - name: Publish to GitHub Pages
+        working-directory: www
+        run: |
+          git -C .. log -1 --format="[`date -Is`] %h: %s" >> .update.log.txt
+          git add --all
+          git config user.email "none"
+          git config user.name "GitHub Pages Publisher"
+          git diff-index --quiet HEAD || git commit --ammend --no-edit
+          git push --force-with-lease
