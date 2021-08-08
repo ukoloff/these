@@ -1,0 +1,24 @@
+name: build
+
+on:
+  push:
+
+jobs:
+  latex:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+
+      - name: Build synopsis
+        run:  latexmk -pdf
+
+      - name: Build article
+        working-directory: article
+        run:  latexmk -pdf -outdir=..
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: ./*.pdf
