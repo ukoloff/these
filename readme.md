@@ -1,5 +1,6 @@
 # These ~~d'Aramis~~
 
+- Русская версия статьи [PCGTSP](pcgtsp.pdf)
 - [Автореферат](synopsis.pdf)
 - Диссертация
 
