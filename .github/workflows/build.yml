@@ -6,10 +6,8 @@ on:
 jobs:
   latex:
     runs-on: ubuntu-latest
+    container: texlive/texlive:latest
     steps:
-      - name: Install LaTeX
-        run:  sudo apt-get install texlive-full
-
       - name: Check out
         uses: actions/checkout@v2
 
