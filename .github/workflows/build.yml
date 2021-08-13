@@ -23,6 +23,10 @@ jobs:
       - name: Build synopsis
         run:  latexmk -pdf
 
+      - name: Build booklet
+        working-directory: synopsis
+        run:  latexmk -pdf -outdir=.. booklet
+
       - name: Build article
         working-directory: article
         run:  latexmk -pdf -outdir=..
