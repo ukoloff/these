@@ -21,7 +21,7 @@ jobs:
       - name: Build these
         run:  latexmk -pdf these
 
-        - name: Build synopsis
+      - name: Build synopsis
         run:  latexmk -pdf synopsis
 
       - name: Build booklet
