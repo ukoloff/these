@@ -1,3 +1,5 @@
+%!TEX root = ../these.tex
+
 %%% Интервалы %%%
 %% По ГОСТ Р 7.0.11-2011, пункту 5.3.6 требуется полуторный интервал
 %% Реализация средствами класса (на основе setspace) ближе к типографской классике.
@@ -5,3 +7,20 @@
 %\DoubleSpacing*     % Двойной интервал
 \OnehalfSpacing*    % Полуторный интервал
 %\setSpacing{1.42}   % Полуторный интервал, подобный Ворду (возможно, стоит включать вместе с предыдущей строкой)
+
+%%% Колонтитулы %%%
+% Порядковый номер страницы печатают на середине верхнего поля страницы (ГОСТ Р 7.0.11-2011, 5.3.8)
+\makeevenhead{plain}{}{\rmfamily\thepage}{}
+\makeoddhead{plain}{}{\rmfamily\thepage}{}
+\makeevenfoot{plain}{}{}{}
+\makeoddfoot{plain}{}{}{}
+\pagestyle{plain}
+
+%%% Оглавление %%%
+\renewcommand{\cftchapterdotsep}{\cftdotsep}                % отбивка точками до номера страницы начала главы/раздела
+
+%% Переносить слова в заголовке не допускается (ГОСТ Р 7.0.11-2011, 5.3.5). Заголовки в оглавлении должны точно повторять заголовки в тексте (ГОСТ Р 7.0.11-2011, 5.2.3). Прямого указания на запрет переносов в оглавлении нет, но по той же логике невнесения искажений в смысл, лучше в оглавлении не переносить:
+\setrmarg{2.55em plus1fil}                             %To have the (sectional) titles in the ToC, etc., typeset ragged right with no hyphenation
+\renewcommand{\cftchapterpagefont}{\normalfont}        % нежирные номера страниц у глав в оглавлении
+\renewcommand{\cftchapterleader}{\cftdotfill{\cftchapterdotsep}}% нежирные точки до номеров страниц у глав в оглавлении
+%\renewcommand{\cftchapterfont}{}                       % нежирные названия глав в оглавлении
