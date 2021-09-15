@@ -2,8 +2,6 @@ name: build
 
 on:
   push:
-    branches:
-    - main
 
 jobs:
   latex:
@@ -40,6 +38,7 @@ jobs:
           path: ./*.pdf
 
       - name: Publish to GitHub Pages
+        if: false
         working-directory: www
         run: |
           cp -f ../*.pdf .
