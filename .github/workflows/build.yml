@@ -21,7 +21,7 @@ jobs:
           path: www
 
       - name: Build synopsis
-        run:  latexmk -pdf
+        run:  latexmk -pdf synopsis
 
       - name: Build booklet
         # working-directory: synopsis
