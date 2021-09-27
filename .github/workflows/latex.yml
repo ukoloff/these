@@ -12,11 +12,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build synopsis
-        run:  latexmk -pdf
+        run:  latexmk -pdf synopsis
 
       - name: Build booklet
-        working-directory: synopsis
-        run:  latexmk -pdf -outdir=.. booklet
+        # working-directory: synopsis
+        run:  latexmk -pdf booklet
 
       - uses: actions/upload-artifact@v2
         with:
