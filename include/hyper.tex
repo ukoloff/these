@@ -1,0 +1,16 @@
+% Should be the LAST package to use
+\usepackage{hyperref}
+
+\input{include/strings.tex}
+
+\hypersetup{
+  linktocpage=true,
+  pdfborder={0 0 0},
+  pdftitle={\theseTitle},
+  pdfauthor={\theseAuthor},
+  pdfsubject={\theseCode\ \theseCodeDesq},
+  pdflang={ru},
+}
+
+% Вывести информацию о версиях используемых библиотек в лог сборки
+\listfiles
