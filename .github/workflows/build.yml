@@ -27,8 +27,8 @@ jobs:
         run:  latexmk -pdf synopsis
 
       - name: Build booklet
-        working-directory: synopsis
-        run:  latexmk -pdf -outdir=.. booklet
+        # working-directory: synopsis
+        run:  latexmk -pdf booklet
 
       - name: Build article
         working-directory: article
