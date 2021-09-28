@@ -38,6 +38,7 @@ jobs:
             .ref.txt
 
   publish:
+    if: false
     needs: latex
     runs-on: ubuntu-latest
     steps:
@@ -53,7 +54,6 @@ jobs:
           path: .
 
       - name: Publish to GitHub Pages
-        # if: false
         run: |
           cat .ref.txt >> .update.log.txt
           rm .ref.txt
