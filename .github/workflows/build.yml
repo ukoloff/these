@@ -10,15 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     container: texlive/texlive:latest
     steps:
-      - name: Check out
-        uses: actions/checkout@v2
-
-      - name: Check out WWW
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 2
-          ref: gh-pages
-          path: www
+      - uses: actions/checkout@v2
 
       - name: Build these
         run:  latexmk -pdf these
@@ -39,8 +31,23 @@ jobs:
           name: PDF
           path: ./*.pdf
 
+  publish:
+    needs: latex
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          ref: gh-pagez
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: PDF
+          path: .
+
       - name: Publish to GitHub Pages
-        if: false
+        # if: false
         working-directory: www
         run: |
           cp -f ../*.pdf .
