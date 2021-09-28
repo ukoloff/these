@@ -48,10 +48,8 @@ jobs:
 
       - name: Publish to GitHub Pages
         # if: false
-        working-directory: www
         run: |
-          cp -f ../*.pdf .
-          git -C .. log -1 --format="[`date -Is`] %h: %s" >> .update.log.txt
+          # git -C .. log -1 --format="[`date -Is`] %h: %s" >> .update.log.txt
           git add --all
           git config user.email "none"
           git config user.name "GitHub Pages Publisher"
