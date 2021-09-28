@@ -26,10 +26,16 @@ jobs:
         working-directory: article
         run:  latexmk -pdf -outdir=..
 
+      - name: Save reference
+        run:  |
+          git log -1 --format="[`date -Is`] %h: %s" > .ref.txt
+
       - uses: actions/upload-artifact@v2
         with:
           name: PDF
-          path: ./*.pdf
+          path: |
+            *.pdf
+            .ref.txt
 
   publish:
     needs: latex
@@ -49,7 +55,8 @@ jobs:
       - name: Publish to GitHub Pages
         # if: false
         run: |
-          # git -C .. log -1 --format="[`date -Is`] %h: %s" >> .update.log.txt
+          cat .ref.txt >> .update.log.txt
+          rm .ref.txt
           git add --all
           git config user.email "none"
           git config user.name "GitHub Pages Publisher"
