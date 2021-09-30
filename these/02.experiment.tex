@@ -3,6 +3,8 @@
 \section{Численные эксперименты}
 \label{sec:ccp.exp}
 
+Результаты экспериментов см. в Табл.~\ref{tab:ccp-vs-gtsp}\dots
+
 \begin{table}[b]
   \centering
   \caption{Сравнение качества решений задач CCP и GTSP}
@@ -17,43 +19,24 @@
       Кол-во точек GTSP & 491 & 429 & 493 \\
       $\mathcal L_{GTSP}$, м & 7.729 & 4.743 & 4.557 \\
       $\mathcal L_{CCP}$, м & 7.727 & 4.706 & 4.536 \\
+      См. & Рис. \ref{fig:ccp-229} & Рис. \ref{fig:ccp-464} & Рис. \ref{fig:ccp-3211} \\
       \hline
   \end{tabular}
 \end{table}
 
-\begin{figure}
-  \centering
-  \subfloat[Точное решение задачи GTSP]{
-    \includegraphics[width=0.95\textwidth]{229-gtsp.png}
+\makeatletter
+  \@for\job:={229,464,3211}\do{
+    \begin{figure}
+      \centering
+      \subfloat[Точное решение задачи GTSP]{
+        \includegraphics[width=0.95\textwidth]{\job-gtsp.png}
+      }
+      \\
+      \subfloat[Решение задачи CCP]{
+        \includegraphics[width=0.95\textwidth]{\job-ccp.png}
+      }
+      \caption{Решения задач резки для задания № \job}
+      \label{fig:ccp-\job}
+    \end{figure}
   }
-  \\
-  \subfloat[Решение задачи CCP]{
-    \includegraphics[width=0.95\textwidth]{229-ccp.png}
-  }
-  \caption{Решения задач резки для задания № 229}
-\end{figure}
-
-
-\begin{figure}
-  \centering
-  \subfloat[Точное решение задачи GTSP]{
-    \includegraphics[width=0.95\textwidth]{464-gtsp.png}
-  }
-  \\
-  \subfloat[Решение задачи CCP]{
-    \includegraphics[width=0.95\textwidth]{464-ccp.png}
-  }
-  \caption{Решения задач резки для задания № 464}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \subfloat[Точное решение задачи GTSP]{
-    \includegraphics[width=0.95\textwidth]{3211-gtsp.png}
-  }
-  \\
-  \subfloat[Решение задачи CCP]{
-    \includegraphics[width=0.95\textwidth]{3211-ccp.png}
-  }
-  \caption{Решения задач резки для задания № 3211}
-\end{figure}
+\makeatother
