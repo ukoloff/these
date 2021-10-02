@@ -16,50 +16,33 @@ JSON
 JSON-схем
 \cite{bi:json-schema}.
 
-\section{Сведения о геометрии деталей и раскроя}
-
+\newcommand{\AddJSON}[3]{
 \lstinputlisting[
   language=Java,
   basicstyle=\footnotesize,
   showstringspaces=false,
   numbers=left,
-  label={lst:schema-dbs},
+  label={lst:schema-#2},
   captionpos=b,
-  caption=Файл геометрии деталей и раскроя
+  caption=#3
   ]
-{media/json/dbs.json}
+{media/json/#1.json}
 \textattachfile[
-  description=Файл геометрии деталей и раскроя
-]{media/json/dbs.json}{}
+  author=\theseAuthor,
+  mimetype=application/json,
+  print=false,
+  description=#3
+]{media/json/#1.json}{}
+}
+
+\section{Сведения о геометрии деталей и раскроя}
+
+\AddJSON{dbs}{dbs}{Файл геометрии деталей и раскроя}
 
 \section{Задание на резку}
 
-\lstinputlisting[
-  language=Java,
-  basicstyle=\footnotesize,
-  showstringspaces=false,
-  numbers=left,
-  label={lst:schema-cut-task},
-  captionpos=b,
-  caption=Задание на резку
-  ]
-{media/json/rm-task.json}
-\textattachfile[
-  description=Задание на резку
-]{media/json/rm-task.json}{}
+\AddJSON{rm-task}{cut-task}{Задание на резку}
 
 \section{Результат резки}
 
-\lstinputlisting[
-  language=Java,
-  basicstyle=\footnotesize,
-  showstringspaces=false,
-  numbers=left,
-  label={lst:schema-cut-solution},
-  captionpos=b,
-  caption=Решение задачи резки
-  ]
-{media/json/rm-result.json}
-\textattachfile[
-  description=Решение задачи резки
-]{media/json/rm-result.json}{}
+\AddJSON{rm-result}{cut-solution}{Решение задачи резки}
