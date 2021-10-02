@@ -26,6 +26,7 @@
 \renewcommand{\cftchapterfont}{}                       % нежирные названия глав в оглавлении
 
 \renewcommand*{\cftchaptername}{\chaptername\space} % будет вписано слово Глава перед каждым номером раздела в оглавлении
+\renewcommand*{\cftappendixname}{\appendixname\space} % Слово Приложение в оглавлении
 
 \settocdepth{subsection}
 \setsecnumdepth{subsection}
@@ -39,4 +40,4 @@
 \let \savenumberline \numberline
 \def \numberline#1{\savenumberline{#1.}}
 
-\renewcommand*{\cftappendixname}{\appendixname\space} % Слово Приложение в оглавлении
+\renewcommand\cftchapteraftersnum{.\space}       % добавляет точку с пробелом после номера раздела в оглавлении
