@@ -1,0 +1,56 @@
+%!TEX root = ../these.tex
+
+\chapter{
+  JSON-cхемы
+}
+\label{app:json}
+
+В ходе диссертационной работы был
+разработан ряд форматов обмена информацией
+\cite{bi:dbs-schema},
+все они представляют собой современный
+\textit{стандарт де-факто}
+JSON
+\cite{bi:JSON}
+и оформлены в виде
+JSON-схем
+\cite{bi:json-schema}.
+
+\section{Сведения о геометрии деталей и раскроя}
+
+\lstinputlisting[
+  language=Java,
+  basicstyle=\footnotesize,
+  showstringspaces=false,
+  numbers=left,
+  label={lst:schema-dbs},
+  captionpos=b,
+  caption=Файл геометрии деталей и раскроя
+  ]
+{media/json/dbs.json}
+
+\section{Задание на резку}
+
+\lstinputlisting[
+  language=Java,
+  basicstyle=\footnotesize,
+  showstringspaces=false,
+  numbers=left,
+  label={lst:schema-cut-task},
+  captionpos=b,
+  caption=Задание на резку
+  ]
+{media/json/rm-task.json}
+
+\section{Результат резки}
+
+\lstinputlisting[
+  language=Java,
+  basicstyle=\footnotesize,
+  showstringspaces=false,
+  numbers=left,
+  label={lst:schema-cut-solution},
+  captionpos=b,
+  caption=Решение задачи резки
+  ]
+{media/json/rm-result.json}
