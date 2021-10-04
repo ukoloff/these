@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Build these
+        run:  latexmk -pdf these
+
       - name: Build synopsis
         run:  latexmk -pdf synopsis
 
