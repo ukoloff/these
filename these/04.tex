@@ -44,7 +44,7 @@ SVG-файла из Листинга~\ref{lst:json-svg}
 (масштабирование и прокрутка)
 обеспечивается при помощи подключения
 библиотеки с открытым кодом
-svg-pan-zoom~\cite{bib:svg-pan-zoom}.
+svg-pan-zoom~\cite{bi:svg-pan-zoom}.
 
 \begin{figure}[b]
   \centering
@@ -52,5 +52,19 @@ svg-pan-zoom~\cite{bib:svg-pan-zoom}.
   \caption{Визуализация раскроя из Листинга~\ref{lst:json-dbs}}
   \label{fig:json-nesting}
 \end{figure}
+
+Для визуализации решения задачи PCGTSP
+(на основе комбинации информации,
+полученной из нескольких источников),
+была разработана специализированная утилита
+\cite{bi:j2pcgtsp},
+первоначально в форме утилиты командной строки
+но позднее преобразованная
+для удобства использования в
+Single Page Application
+(SPA).
+Пример созданного ею изображения
+приведён на рис.~\ref{fig:pcgtsp.svg},
+стр.~\pageref{fig:pcgtsp.svg}.
 
 \input{these/04.conclude}
