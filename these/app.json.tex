@@ -1,0 +1,46 @@
+%!TEX root = ../these.tex
+
+\chapter{
+  JSON-схемы
+}
+\label{app:json}
+
+В ходе диссертационной работы был
+разработан ряд форматов обмена информацией
+\cite{bi:dbs-schema},
+все они представляют собой современный
+\textit{стандарт де-факто}
+JSON
+\cite{bi:JSON}
+и их описание оформлено в виде
+JSON-схем
+\cite{bi:json-schema}.
+
+\newcommand{\AddJSON}[3]{
+\lstinputlisting[
+  language=Java,
+  basicstyle=\footnotesize,
+  showstringspaces=false,
+  numbers=left,
+  label={lst:schema-#2},
+  captionpos=b,
+  caption=#3
+  ]
+{media/json/#1.json}
+\embedfile[
+  mimetype=application/json,
+  desc=#3
+]{media/json/#1.json}
+}
+
+\section{Сведения о геометрии деталей и раскроя}
+
+\AddJSON{dbs}{dbs}{Файл геометрии деталей и раскроя}
+
+\section{Задание на резку}
+
+\AddJSON{rm-task}{cut-task}{Задание на резку}
+
+\section{Результат резки}
+
+\AddJSON{rm-result}{cut-solution}{Решение задачи резки}
