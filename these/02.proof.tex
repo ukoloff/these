@@ -349,7 +349,8 @@ $.
   \label{cond:ccp-or}
 Пусть выполняется
 \textbf{одно}
-из следующих условий:
+из следующих условий
+(см.~рис.~\ref{fig:ccp-sufficient-two}):
 \begin{enumerate}
   \item
   Сегмент
@@ -357,7 +358,8 @@ $.
   пересекает контур
   $C_i$,
   то есть
-  $M_i \in M_{i-1} M_{i+1}$
+  $M_i \in M_{i-1} M_{i+1}$,
+  рис.~\ref{fig:ccp-thru}
   \item
   Касательная в точке
   $M_i$
@@ -368,9 +370,24 @@ $.
   и проходящему через
   $M_i$,
   разделяет эллипс и контур
-  $C_i$.
+  $C_i$,
+  рис.~\ref{fig:ccp-ellipse}
 \end{enumerate}
 \end{condition}
+
+\begin{figure}
+  \centering
+  \subfloat[Маршрут пересекает контур]{
+    \label{fig:ccp-thru}
+    \includegraphics{proof/thru.pdf}
+  }
+  \subfloat[Касательная отделяет контур]{
+    \label{fig:ccp-ellipse}
+    \includegraphics{proof/ellipse.pdf}
+  }
+  \caption{Достаточные условия глобального минимума}
+  \label{fig:ccp-sufficient-two}
+\end{figure}
 
 \begin{proposition}
 Если условие
@@ -462,14 +479,16 @@ $L_*$
 
 \begin{condition}
   \label{cond:ccp-four}
-  Выполняется \textbf{любое} из условий:
+  Выполняется \textbf{любое} из условий
+  (см.~рис.~\ref{fig:ccp-sufficient-weak}):
   \begin{enumerate}
     \item
     Сегмент
     $M_{i-1} M_{i+1}$
     пересекает контур
     $C_i$:
-    $M_i \in M_{i-1} M_{i+1}$
+    $M_i \in M_{i-1} M_{i+1}$,
+    рис.~\ref{fig:ccp-thru-again}
     \item
     Если вершина
     $M_i$
@@ -482,7 +501,8 @@ $L_*$
     (это и есть касательная,
     которую использует условие~\ref{cond:ccp-or};
     иначе существовала бы лучшая вершина
-    $M'_i\in C_i$).
+    $M'_i\in C_i$),
+    рис.~\ref{fig:ccp-edge}
     \item
     Если вершина
     $M_i$
@@ -494,12 +514,37 @@ $L_*$
     образованного лучами,
     идущими из вершины
     $M_i$
-    вдоль этих двух отрезков
+    вдоль этих двух отрезков,
+    рис.~\ref{fig:ccp-corner}
     \item
     Если контур
     $C_i$
     ограничивает собой выпуклый
     многоугольник
-    $\widetilde C_i$
+    $\widetilde C_i$,
+    рис.~\ref{fig:ccp-convex}
   \end{enumerate}
 \end{condition}
+
+\begin{figure}
+  \centering
+  \subfloat[Маршрут пересекает контур]{
+    \label{fig:ccp-thru-again}
+    \includegraphics{proof/thru.pdf}
+  }
+  \subfloat[Точка врезки на ребре]{
+    \label{fig:ccp-edge}
+    \includegraphics{proof/edge.pdf}
+  }
+  \\
+  \subfloat[Врезка в вершину контура]{
+    \label{fig:ccp-corner}
+    \includegraphics{proof/corner.pdf}
+  }
+  \subfloat[Выпуклый контур]{
+    \label{fig:ccp-convex}
+    \includegraphics{proof/convex.pdf}
+  }
+  \caption{Ослабленное условие глобального минимума}
+  \label{fig:ccp-sufficient-weak}
+\end{figure}
