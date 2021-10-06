@@ -1,0 +1,126 @@
+%!TEX root = ../these.tex
+
+\subsection{Получение нижних оценок}
+\label{sec:pgstcp.bound}
+
+Используя подход динамического программирования
+(Dynamic Programming, DP),
+легко найти кратчайший путь
+вдоль $\sigma$
+между всеми парами вершин
+$(v_1, v_r)$,
+где
+$v_1\in V_{i_1}, v_r\in V_{i_r}$
+\begin{equation}
+  \label{eq:pcgtsp.Cmin}
+  c_{min}(\sigma)=\min_{\substack{v_1\in V_{i_1} \\ v_r\in V_{i_r}} } \left\{
+    cost \left(P_{v_1, v_r}\right) \colon
+    P_{v_1, v_r} \text{ --- частичный путь в порядке } \sigma \right\}
+\end{equation}
+
+Таким образом, исходная постановка задачи PCGTSP
+может быть в каждом узле дерева поиска декомпозирована в две
+(более простых) задачи:
+\begin{enumerate}
+  \item вычисление $c_{min}(\sigma)$
+  \item задачу PCGTSP $\mathcal P(\sigma)$, полученную релаксацией исходной задачи PCGTSP следующим образом:
+  \begin{itemize}
+    \item использует те же ограничения предшествования
+    \item содержит те же узлы и кластера,
+    за исключением внутренних кластеров префикса
+    $V_{i_2}, \dots V_{i_{r-1}}$
+    \item ребра исходящие из $V_{i_1}$
+    и входящие в $V_{i_r}$ удаляются
+    \item веса ребер $c(u,v)$ сохраняются,
+    \item для всех пар вершин
+    $v_1\in V_{i_1}, v_r\in V_{i_r}$
+    добавляются ребра нулевого веса
+    $c(v_1, v_r)=0$
+  \end{itemize}
+\end{enumerate}
+
+\begin{proposition}
+\begin{multline}
+  \label{eq:pcgtsp.decomposition}
+  \min_T \{cost(T)| T \text{ начинается с префикса } \sigma\}
+  \geqslant \\
+  c_{min}(\sigma) + \min_{T}\{cost(T)| T \text{ -- допустимое решение задачи } \mathcal P(\sigma)\}
+\end{multline}
+\end{proposition}
+
+\begin{proof}
+  Любой маршрут $T$,
+  начинающийся с префикса $\sigma$,
+  делится на две части ---
+  одну вдоль $\sigma$,
+  вторую от $V_{i_r}$ до ${V_{i_1}}$.
+  Первая имеет вес не менее $c_{min}(\sigma)$
+  по определению.
+  Вторая может быть дополнена ребром,
+  идущим из $V_{i_r}$ в ${V_{i_r}}$
+  (имеющим нулевой вес)
+  и тем самым давая решение задачи
+  $\mathcal P(\sigma)$.
+\end{proof}
+
+Нижняя оценка решения исходной задачи PCGTSP,
+таким образом,
+в каждом узле дерева поиска
+$\sigma$
+оценивается по формуле \eqref{eq:pcgtsp.decomposition}.
+Важно заметить,
+что многие задачи $\mathcal  P(\sigma)$
+оказываются идентичными для разных $\sigma$
+(отличающихся порядком посещения внутренних кластеров),
+что позволяет значительно уменьшить общее время вычислений.
+
+В то же время,
+$\mathcal P(\sigma)$
+все еще представляет собой экземпляр
+задачи PCGTSP,
+хотя и меньше размером,
+чем исходная постановка.
+Заменим ее решение в формуле~\eqref{eq:pcgtsp.decomposition}
+на нижнюю границу,
+полученную тем или иным способом
+$$
+\min_{T}\{cost(T)| T \text{ -- допустимое решение задачи } \mathcal P(\sigma)\}
+\geqslant LB(\mathcal P(\sigma))
+$$
+
+В данной диссертационной работе для вычисления оценки
+$LB(\mathcal P(\sigma))$
+вслед за~\cite{SALMAN2020163}
+используется двухступенчатая релаксация:
+\begin{enumerate}
+  \item $\mathcal P(\sigma) \to$ ATSP
+  \item ATSP $\to \mathcal P_{rel}(\sigma)$
+\end{enumerate}
+и решение задачи $\mathcal P_{rel}(\sigma)$
+принимается за нижнюю границу
+$LB(\mathcal P(\sigma))$:
+
+\begin{equation}
+  \label{eq:pcgtsp.LB}
+  \min_T \{cost(T)| T \text{ начинается с префикса } \sigma\}
+  \geqslant
+  c_{min}(\sigma) + \mathrm{OPT}(\mathcal P_{rel})
+\end{equation}
+
+На каждом из двух шагов релаксации используются
+несколько методов,
+так что в общем случае получается \textit{несколько}
+оценок
+$\mathrm{OPT}(\mathcal P_{rel})$,
+в формулу~\eqref{eq:pcgtsp.LB}
+подставляется \textit{наибольшая} из них.
+Опишем применявшиеся в данной диссертационной работе
+методы релаксации задачи
+$\mathcal P(\sigma)$
+подробнее.
+
+\subsection*{Сведение PCGTSP к ATSP}
+
+
+
+\subsection*{Вторая релаксация ATSP }
