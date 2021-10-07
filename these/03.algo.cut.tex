@@ -25,7 +25,8 @@ $c_{min}(\sigma)$
 методом динамического программирования
 на самом деле требуется рассчитывать
 и запоминать целую матрицу
-$$
+\begin{equation}
+  \label{eq:pcgtsp.cut.matrix}
 D(\sigma)_{ij} = \min\left\{
   cost(P_{v_i,v_j})\colon
   v_i \in V_{i_1},
@@ -33,7 +34,7 @@ D(\sigma)_{ij} = \min\left\{
   P_{v_i,v_j} \text{ -- путь $v_i$-$v_j$ в порядке } \sigma
 \right\}
 ,
-$$
+\end{equation}
 потому что она легко вычисляется
 инкрементально на основе такой же матрицы
 родительского префикса $\sigma': |\sigma| = |\sigma'|+1$,
@@ -52,8 +53,11 @@ $$
 $\mathcal P(\sigma)$,
 а значит одну и ту же ее нижнюю оценку.
 Построим кортеж
-$\mathcal T(\sigma) = (V_{i_1},
-\left\{V_{i_1}, V_{i_2}, \dots V_{i_r} \right\}, V_{i_r})$
+\begin{equation}
+  \label{eq:pcgtsp.cut.key}
+  \mathcal T(\sigma) = (V_{i_1},
+  \left\{V_{i_1}, V_{i_2}, \dots V_{i_r} \right\}, V_{i_r})
+\end{equation}
 и множество
 $
 \mathbb T(\sigma) =\{\sigma' \colon \mathcal T(\sigma')=\mathcal T(\sigma)\}$
