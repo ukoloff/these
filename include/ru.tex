@@ -10,7 +10,7 @@
 % Убираем переносы в заголовках
 \usepackage[raggedright]{titlesec}
 
-% Короткое тире для ненумерованых списков
+% Короткое тире для ненумерованных списков
 % ГОСТ 2.105-95, пункт 4.1.7, требует дефиса, но так лучше смотрится
 \renewcommand{\labelitemi}{\normalfont\bfseries{--}}
 
@@ -43,8 +43,16 @@
 % https://tex.stackexchange.com/a/78777
 % Подписи к таблицам
 \DeclareCaptionFormat{hfillstart}{\hfill#1#2#3}
-\captionsetup[table]
+\captionsetup*[table]
 {
   format=hfillstart,
   labelsep=newline,
 }
+
+% Подписи к подрисункам
+\captionsetup*[subfigure]{
+  labelformat=brace,
+}
+
+\usepackage[caption=false]{subfig}
+\renewcommand\thesubfigure{\asbuk{subfigure}}
