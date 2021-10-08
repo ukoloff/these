@@ -73,7 +73,7 @@ $\sigma=V_1$
   \textbf{Вход}: префикс $\sigma$ \\
   \textbf{Выход}: список потомков префикса для обработки
   \begin{algorithmic}[1]
-      \STATE инициализация $R =$ empty queue
+      \STATE инициализация $R =$ пустая очередь
       \FORALL{$V \in \mathcal C \setminus \sigma $}
           \STATE $valid =$ \TRUE
           \FORALL{$W \in \mathcal C$}
@@ -130,4 +130,5 @@ $\sigma$
 (Алгоритм~\ref{alg:bnb:branch}),
 которая пытается удлинить префикс
 $\sigma$
-на один кластер с соблюдением ограничений предшествования.
+на один кластер с соблюдением ограничений предшествования,
+как описано в разделе~\ref{sec:pgstcp.branch}.
