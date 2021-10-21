@@ -41,3 +41,8 @@
 \def \numberline#1{\savenumberline{#1.}}
 
 \renewcommand\cftchapteraftersnum{.\space}       % добавляет точку с пробелом после номера раздела в оглавлении
+
+% Нумерация алгоритмов тоже по Главам
+\counterwithin{algorithm}{chapter}
+
+\input{include/counts}

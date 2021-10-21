@@ -1,0 +1,30 @@
+%!TEX root = ../these.tex
+
+\subsection{Обновление нижней оценки}
+\label{sec:pgstcp.upd}
+
+После того, как
+обработаны все префиксы
+$\sigma$
+некоторой длины $r$
+(алгоритм обрабатывает
+префиксы в порядке увеличения длины,
+начиная с корня
+$\sigma = V_1$
+длины 1,
+до листьев длины $m$),
+может быть вычислена текущая
+нижняя оценка для слоя $r$:
+\begin{equation}
+  \label{eq:pcgtsp.lb.layer}
+  LB_{|r|}=\min_{|\sigma|=r} LB(\sigma)
+\end{equation}
+по всем префиксам длины $r$,
+не подвергшимся отсечению,
+как описано в разделе~\ref{sec:pgstcp.cut}.
+
+Полная нижняя оценка при этом обновляется по формуле
+\begin{equation}
+  \label{eq:pcgtsp.lb.total}
+  LB \gets \max(LB, LB_{|r|})
+\end{equation}
