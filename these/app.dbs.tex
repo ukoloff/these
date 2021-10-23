@@ -1,16 +1,22 @@
-[%!TEX root = ../these.tex
+%!TEX root = ../these.tex
 
 \chapter{
   Описание формата файлов DBS
 }
 \label{app:dbs}
 
-\noindent
-\begin{tabularx}{\textwidth}{|p{3em}|p{4em}|X|}
-  \hline
-  1 & 2 & 3 \\
-  \hline
-  4 & 5 & вва твт ывлоат лвыота выл ыв ывлоат ов в авыа ыв алыв ат выатлвы алтыв а лыв алывалыв алыв лыв алывл
-  \\
-  \hline
-\end{tabularx}
+\newcommand{\dbsRecord}[1]{
+  \noindent
+  \begin{tabularx}{\textwidth}{|p{3em}|p{4em}|X|}
+    \hline
+    1 & 2 & 3 \\
+    \hline
+    #1
+    \\
+    \hline
+  \end{tabularx}
+}
+
+\dbsRecord{
+  4 & 5 & Превед Медвед!
+}
