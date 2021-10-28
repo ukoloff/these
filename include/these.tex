@@ -31,16 +31,20 @@
 \settocdepth{subsection}
 \setsecnumdepth{subsection}
 
-% Точка после номера параграфа (не в Оглавлении)
-\makeatletter
-  \def\@seccntformat#1{\csname the#1\endcsname.\,}
-\makeatother
+% % Точка после номера параграфа (не в Оглавлении)
+% \makeatletter
+%   \def\@seccntformat#1{\csname the#1\endcsname.\,}
+% \makeatother
 
 % Точки после номера в Оглавлении. Кроме \part
 \let \savenumberline \numberline
 \def \numberline#1{\savenumberline{#1.}}
 
 \renewcommand\cftchapteraftersnum{.\space}       % добавляет точку с пробелом после номера раздела в оглавлении
+
+% Заголовки разделов (не в Оглавлении)
+\titlelabel{\thetitle.\space}           % Не влияет на \chapter
+% \titleformat{\chapter}[hang]{\bfseries}{}{1ex}{\chaptertitlename\space\thechapter.\space}{}
 
 % Нумерация алгоритмов тоже по Главам
 \counterwithin{algorithm}{chapter}
