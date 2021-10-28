@@ -44,9 +44,14 @@
 
 % Заголовки разделов (не в Оглавлении)
 \titlelabel{\thetitle.\space}           % Не влияет на \chapter
-% \titleformat{\chapter}[hang]{\bfseries}{}{1ex}{\chaptertitlename\space\thechapter.\space}{}
+\titleformat{\chapter}[hang]{\bfseries}{}{1ex}{\chaptertitlename\space\thechapter.\space}{}
+\titleformat{name=\chapter,numberless}[hang]{\bfseries}{}{1ex}{}{}
+% \chapterstyle{article}
+\renewcommand{\insertchapterspace}{}
 
 % Нумерация алгоритмов тоже по Главам
 \counterwithin{algorithm}{chapter}
 
 \input{include/counts}
+
+\usepackage{pdfpages}
