@@ -23,6 +23,7 @@ jobs:
         run:  latexmk -pdf booklet
 
       - name: Build article
+        if: false
         working-directory: article
         run:  latexmk -pdf -outdir=..
 
