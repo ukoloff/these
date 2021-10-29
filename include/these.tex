@@ -44,10 +44,15 @@
 
 % Заголовки разделов (не в Оглавлении)
 \titlelabel{\thetitle.\space}           % Не влияет на \chapter
-\titleformat{\chapter}[hang]{\bfseries}{}{1ex}{\chaptertitlename\space\thechapter.\space}{}
-\titleformat{name=\chapter,numberless}[hang]{\bfseries}{}{1ex}{}{}
 % \chapterstyle{article}
+\titleformat{\chapter}[hang]{\bfseries\raggedright}{}{1ex}{\chaptertitlename\space\thechapter.\space}{}
+\titleformat{name=\chapter,numberless}[hang]{\bfseries\raggedright}{}{1ex}{}{}
 \renewcommand{\insertchapterspace}{}
+% \setlength{\beforechapskip}{10pt}
+\titlespacing{\chapter}{0pt}{*1}{*3}
+
+\setlength{\topskip}{0pt}   %размер дополнительного верхнего поля
+\setlength{\footskip}{12.3pt} % снимет warning, согласно https://tex.stackexchange.com/a/334346
 
 % Нумерация алгоритмов тоже по Главам
 \counterwithin{algorithm}{chapter}
