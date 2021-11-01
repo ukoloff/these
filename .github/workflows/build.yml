@@ -23,6 +23,7 @@ jobs:
         run:  latexmk -pdf booklet
 
       - name: Build article
+        if: false
         working-directory: article
         run:  latexmk -pdf -outdir=..
 
@@ -38,7 +39,7 @@ jobs:
             .ref.txt
 
   publish:
-    if: false
+    # if: false
     needs: latex
     runs-on: ubuntu-latest
     steps:
@@ -46,7 +47,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 2
-          ref: gh-pagez
+          ref: gh-pages
 
       - uses: actions/download-artifact@v2
         with:
