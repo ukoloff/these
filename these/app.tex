@@ -4,6 +4,11 @@
 
 \appendix
 
+% Оформление заголовков приложений ближе к ГОСТ:
+\setlength{\midchapskip}{20pt}
+\renewcommand*{\afterchapternum}{\par\nobreak\vskip \midchapskip}
+\renewcommand\thechapter{\Asbuk{chapter}} % Чтобы приложения русскими буквами нумеровались
+
 \input{these/app.impl}
 \input{these/app.dbs}
 \input{these/app.json}
