@@ -18,10 +18,12 @@
 к тому же значительно уменьшив обращение
 к трансцендентным функциям.
 
-Рассмотрим круговую дугу на рис.~\ref{fig:app.arc},
+Рассмотрим круговую дугу
+${\smile}AMZ$
+на рис.~\ref{fig:app.arc},
 имея в виду,
 что она может выражаться в отрезок прямой.
-Зададим начальную точку $A$
+Зафиксируем начальную точку $A$
 и конечную точку $Z$,
 а кривизну дуги выразим в виде параметра
 $bulge$
@@ -40,7 +42,7 @@ $bulge$
 Знак параметра $\beta$
 выберем положительным для дуг,
 идущих против часовой стрелки
-($\beta < 0$ на рис.~\ref{fig:app.arc} ).
+($\beta < 0$ на рис.~\ref{fig:app.arc}).
 
 Тогда легко подобрать формулу для положения
 произвольной точки
@@ -56,3 +58,86 @@ $\tau \in[-1,1]$:
 Очевидно,
 $x(-1) = A$,
 $x(+1) = Z$.
+Несложно также найти середину дуги
+$M$
+(<<зенит>>)
+$$
+M = \frac{A+Z}{2} - \frac{Z-A}{2}i\beta
+\equiv
+\frac{1+i \beta}2 A + \frac{1-i \beta}2 Z
+$$
+и <<надир>> N:
+$$
+N = \frac{A+Z}{2} - \frac{Z-A}{2} \frac{1}{i\beta}
+\equiv
+\frac{1+i \beta}{2 i \beta} A - \frac{1 - i \beta}{2 i\beta} Z
+$$
+
+Заметим, что <<анти-дуга>>
+${\smile} ANZ$
+опирается на те же точки
+$A$ и $Z$,
+но с другим значением кривизны
+$$
+\beta^- = -\frac{1}{\beta}
+$$
+
+Далее уже легко найти центр:
+$$
+C =
+\frac{(1+i\beta)^2}{4i\beta}A
+-
+\frac{(1-i\beta)^2}{4i\beta}Z
+$$
+и радиус
+$$
+R = \left| \beta + \frac{1}\beta \right|
+\frac{\left|A-Z \right|}4
+$$
+
+\section*{Периметр и площадь}
+
+Длина
+(периметер)
+дуги
+${\smile}AMZ$:
+\begin{equation}
+  \label{eq:buldge.perimeter}
+  P_{\smile} =
+  \left(1+\beta^2 \right)
+  \frac{\arctg \beta}{\beta}
+  \left| A - Z \right|
+\end{equation}
+
+Площадь кругового сегмента
+$AMZ$:
+\begin{equation}
+  \label{eq:buldge.area.segment}
+  S_{\smile}=
+  \frac{\left(1 - \beta^2\right) \beta - \left(1+\beta^2\right)\arctg \beta}{8\beta^2}
+  |A-Z|^2
+\end{equation}
+
+Площадь треугольника
+$\triangle AOZ$
+(где $O$ --- начало координат)
+\begin{equation}
+  \label{eq:buldge.area.tri}
+  S_{\triangle} =
+  \frac{\operatorname{re} Z \cdot \operatorname{im} A - \operatorname{im} Z \cdot \operatorname{re} A}2
+\end{equation}
+
+Комбинируя формулы
+\eqref{eq:buldge.perimeter}--\eqref{eq:buldge.area.tri}
+для
+\textit{замкнутого}
+контура,
+состоящего из отрезков прямых и дуг окружностей,
+получаем соответственно периметр контура
+$$
+P_{\circ} =  \sum P_{\smile}
+$$
+и площадь контура
+$$
+S_{\circ} = \sum S_{\smile} + S_{\triangle}
+$$
