@@ -97,9 +97,9 @@ $I = (i_1, i_2, ... i_N)$
 На первом шаге мы удаляем все контура,
 внутри которых содержатся другие,
 то есть оставляем только
-$$
-\{C_i \vert \forall j \ne i\colon C_j \cap \widetilde C_i = \varnothing \},
-$$
+$
+\{C_i \vert \forall j \ne i\colon C_j \cap \widetilde C_i = \varnothing \}
+$,
 тем самым как правило сокращая размерность задачи с $N$
 до некоторого $N' \leqslant N$.
 
@@ -175,10 +175,6 @@ $M_i = C_i \cap \mathcal R$,
 который посещает все исходные контуры,
 причём внутренние контуры посещаются
 строго раньше содержащих их внешних.
-Полная длина маршрута
-при этой операции,
-очевидно,
-не меняется.
 Получаемый таким образом
 за линейное время
 $O(N)$
@@ -191,37 +187,7 @@ $O(N)$
 Как для любой эвристики,
 возникает вопрос оценки качества решения,
 получаемого данным алгоритмом.
-Действительно, легко построить пример,
-см.~рис.~\ref{fig:counter-example},
-когда
-(даже для фиксированного порядка посещения контуров),
-может быть получено два маршрута резки,
-в зависимости от начальных точек врезки.
-
-\begin{figure}
-  \begin{center}
-  \begin{tikzpicture}[scale=2.7]
-    \draw
-      (1,-0.2) node(M3){} circle(0.027) node[below] {$M_3$}
-      (-1,-0.2) node(M0){} circle(0.027) node[below] {$M_0$};
-    \draw [thick,pattern=north west lines]
-      (1.3,0) -- (2,0) -- (2,1) node[midway,left]{$C_2$} -- (1,1) node(M2x){} --
-      (1, 1.1) -- (2.1,1.1) -- (2.1,-0.1) -- (1.3, -0.1) node(M2) {} --cycle
-    % \draw [thick,pattern=north west lines]
-      (-1.3,0) -- (-2,0) -- (-2,1) node[midway,right]{$C_1$} -- (-1,1) node(M1x){} --
-      (-1, 1.1) -- (-2.1,1.1) -- (-2.1,-0.1) -- (-1.3, -0.1) node(M1){} --cycle;
-    \draw[dashed]
-      (M0) -- (M1) -- (M2) node[midway,above]{Глобальный минимум} -- (M3);
-    \draw[dashed]
-      (M0) -- (M1x) -- (M2x) node[midway,below]{Локальный минимум} -- (M3);
-  \end{tikzpicture}
-  \end{center}
-  \caption{Два маршрута резки для одной задачи CCP  }
-  \label{fig:counter-example}
-\end{figure}
-
-В ходе данной диссертационной работы были доказаны несколько свойств получаемого маршрута
-в предположении, что все контуры являются многоугольниками:
+В ходе данной диссертационной работы были доказаны несколько свойств получаемого маршрута.
 
 \begin{itemize}
   \item
@@ -305,7 +271,21 @@ $N \leqslant 33$.
 содержащих реальные детали,
 см. табл.~\ref{tab:ccp-vs-gtsp}.
 
-\begin{table}[h!]
+\begin{figure}
+  \centering
+  \subfloat[Точное решение задачи PCGTSP]{
+    \label{fig:gtsp-path}
+    \includegraphics[width=0.45\textwidth]{464-gtsp.png}
+  }
+  \subfloat[Решение задачи CCP]{
+    \label{fig:ccp-path}
+    \includegraphics[width=0.45\textwidth]{464-ccp.png}
+    }
+  \caption{Решения задач резки для задания № 464}
+  \label{fig:solutions-path}
+\end{figure}
+
+\begin{table}
   \centering
   \caption{Сравнение качества решений задач CCP и GTSP}
   \label{tab:ccp-vs-gtsp}
@@ -323,33 +303,12 @@ $N \leqslant 33$.
   \end{tabular}
 \end{table}
 
-\begin{figure}[p]
-  \begin{center}
-    \includegraphics[width=0.95\textwidth]{464-gtsp.png}
-  \end{center}
-  \caption{Точное решение задачи GTSP для задания № 464}
-  \label{fig:gtsp-path}
-\end{figure}
-
-\begin{figure}[p]
-  \begin{center}
-    \includegraphics[width=0.95\textwidth]{464-ccp.png}
-  \end{center}
-  \caption{Решение задачи непрерывной резки для задания № 464}
-  \label{fig:ccp-path}
-\end{figure}
-
 На рис. \ref{fig:gtsp-path}
-показано точное решение задачи GTSP.
-Хорошо видны возможные положения точек врезки,
-которые получены путём дискретизации контура,
-то есть сведения задачи непрерывной оптимизации
-к задаче дискретной оптимизации.
-На рис. \ref{fig:ccp-path}
-показано решение задачи непрерывной резки,
+показано точное решение задачи GTSP,
+а на рис. \ref{fig:ccp-path}
+--- решение задачи непрерывной резки,
 полученное вышеописанным алгоритмом
 для того же раскройного плана.
-
 Видно,
 что оба алгоритма дают практически идентичные
 маршруты резки.
