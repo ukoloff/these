@@ -60,6 +60,7 @@ $\tau \in[-1,1]$,
 и приобретает вид:
 
 \begin{equation}
+  \label{eq:bulge.x}
   x(\tau) =
   \frac{A+Z}{2} + \frac{Z-A}{2}\frac{\tau - i \cdot \beta}{1 - i \cdot \beta \tau}
 \end{equation}
@@ -118,6 +119,14 @@ ${\smile}AMZ$:
   \left| A - Z \right|
 \end{equation}
 
+Для дуг, близких к отрезку
+($\beta \to 0$):
+$$
+P_{\smile} =
+ \left(1+\frac{2}{3}\beta^2 - \frac{2}{15}\beta^4 + \frac{2}{35}\beta^6 +O(\beta^8)\right)
+ \left| A - Z \right|
+$$
+
 Площадь кругового сегмента
 $AMZ$:
 \begin{equation}
@@ -126,6 +135,15 @@ $AMZ$:
   \frac{\left(1 - \beta^2\right) \beta - \left(1+\beta^2\right)\arctg \beta}{8\beta^2}
   |A-Z|^2
 \end{equation}
+
+В пределе,
+когда дуга вырождается в отрезок,
+$$
+S_{\smile}=
+  \left(
+    -\frac{5}{24} \beta + \frac{1}{60}\beta^3 -\frac{1}{140}\beta^5 + O(\beta^7)
+  \right)|A-Z|^2
+$$
 
 Площадь треугольника
 $\triangle AOZ$
@@ -136,17 +154,70 @@ $\triangle AOZ$
   \frac{\operatorname{re} Z \cdot \operatorname{im} A - \operatorname{im} Z \cdot \operatorname{re} A}2
 \end{equation}
 
+Знак в формулах для элемента площади
+\eqref{eq:buldge.area.segment}--\eqref{eq:buldge.area.tri}
+выбран в соответствии с соглашениями об ориентации контуров
+в DBS-файле,
+см.~Приложение~\ref{app.dbs}.
+
 Комбинируя формулы
 \eqref{eq:buldge.perimeter}--\eqref{eq:buldge.area.tri}
-для
-\textit{замкнутого}
-контура,
+для контура,
 состоящего из отрезков прямых и дуг окружностей,
 получаем соответственно периметр контура
 $$
 P_{\circ} =  \sum P_{\smile}
 $$
-и площадь контура
+и площадь
+\textit{замкнутого}
+контура
 $$
 S_{\circ} = \sum S_{\smile} + S_{\triangle}
+$$
+
+\subsection*{Разбиение дуги}
+
+Произвольная точка
+$x(\tau)$
+делит дугу
+${\smile}AMZ$
+на две,
+вершины которых естественно вычислять по формуле
+\eqref{eq:bulge.x},
+а значения кривизны определяются по формуле
+$$
+\begin{cases}
+  \beta_{-}(\tau)= \tg \frac{\arg (1+i\beta)(1+i\beta\tau)}2
+  \\
+  \beta_{+}(\tau)= \tg \frac{\arg (1+i\beta)(1-i\beta\tau)}2
+  \end{cases}
+  ,
+$$
+причём функция
+$\tg(1/2\arg z)$
+может вычисляться без использования
+трансцендентных функций:
+\begin{equation}
+  \label{eq:bulge.tgq}
+  \tg \frac{\arg z}2 =
+  \begin{cases}
+    \frac{|z|-\operatorname{re} z}{\operatorname{im} z}, & \operatorname{re} z < 0
+    \\
+    \frac{\operatorname{im} z}{|z|+\operatorname{re} z}, & \operatorname{re} z \geqslant 0
+  \end{cases}
+\end{equation}
+
+Кривизны поддуг
+$\beta_{\pm}(\tau)$
+удовлетворяют формуле тангенса суммы:
+$$
+\beta = \frac{\beta_{-}(\tau)+\beta_{+}(\tau)}{1-\beta_{-}(\tau)\cdot\beta_{+}(\tau)}
+$$
+
+В частном случае разбиения дуги пополам
+(в <<зените>>)
+$\tau=0.5$
+$$
+\beta_{1/2}=
+  \frac{\beta}{1+\sqrt{1+\beta^2}}
 $$
