@@ -55,7 +55,7 @@ $\beta = \pm(\sqrt{2}-1)\approx \pm 0.41421 \dots$
 произвольной точки
 $x(\tau)$ дуги,
 параметризуемой положением
-$\tau \in[-1,1]$,
+$\tau \in[-1,+1]$,
 может быть просто подобрана из общих соображений
 и приобретает вид:
 
@@ -110,7 +110,7 @@ $$
 \section*{Периметр и площадь}
 
 Длина
-(периметер)
+(периметр)
 дуги
 ${\smile}AMZ$:
 \begin{equation}
@@ -125,7 +125,8 @@ ${\smile}AMZ$:
 ($\beta \to 0$):
 $$
 P_{\smile} =
- \left(1+\frac{2}{3}\beta^2 - \frac{2}{15}\beta^4 + \frac{2}{35}\beta^6 +O(\beta^8)\right)
+ \left(1+\frac{2}{3}\beta^2 - \frac{2}{15}\beta^4 + \frac{2}{35}\beta^6 - \frac{2}{63}\beta^8
+ + O(\beta^{10})\right)
  \left| A - Z \right|
 $$
 
@@ -134,7 +135,7 @@ $AMZ$:
 \begin{equation}
   \label{eq:buldge.area.segment}
   S_{\smile}=
-  \frac{\left(1 - \beta^2\right) \beta - \left(1+\beta^2\right)\arctg \beta}{8\beta^2}
+  \frac{\left(1 - \beta^2\right) \beta - \left(1+\beta^2\right)^2\arctg \beta}{8\beta^2}
   |A-Z|^2
 \end{equation}
 
@@ -143,7 +144,8 @@ $AMZ$:
 $$
 S_{\smile}=
   \left(
-    -\frac{5}{24} \beta + \frac{1}{60}\beta^3 -\frac{1}{140}\beta^5 + O(\beta^7)
+    -\frac{1}{3} \beta - \frac{1}{15}\beta^3 +\frac{1}{105}\beta^5 - \frac{1}{315}\beta^7 + \frac{1}{693}\beta^9
+    + O(\beta^{11})
   \right)|A-Z|^2
 $$
 
@@ -153,6 +155,8 @@ $\triangle AOZ$
 \begin{equation}
   \label{eq:buldge.area.tri}
   S_{\triangle} =
+  \frac{\operatorname{im}A\cdot\overline Z}{2}
+  \equiv
   \frac{\operatorname{re} Z \cdot \operatorname{im} A - \operatorname{im} Z \cdot \operatorname{re} A}2
 \end{equation}
 
@@ -218,8 +222,110 @@ $$
 
 В частном случае разбиения дуги пополам
 (в <<зените>>)
-$\tau=0.5$
+$\tau=0$:
 $$
 \beta_{1/2}=
   \frac{\beta}{1+\sqrt{1+\beta^2}}
+$$
+
+\section*{Построение дуги по трем точкам}
+
+Иногда нужно найти дугу по ее концам и точке $x$,
+через которую она проходит.
+Кривизна такой дуги однозначно определяется
+углом $\measuredangle AxZ$:
+$$
+\beta(x) =
+  \tg \frac{\arg \overline{x - A} \cdot \left(Z- x \right)}{2}
+  ,
+$$
+и функция
+$\tg(1/2\arg z)$
+по-прежнему может вычисляться по формуле~
+\eqref{eq:bulge.tgq}.
+
+Параметр же
+$\tau$,
+задающий положение точки $x$
+на этой дуге,
+однозначно зависит от отношения
+$|A-x|:|Z-x|$:
+$$
+\tau(x) =
+  \frac{|A-x|-|Z-x|}{|A-x|+|Z-x|}
+$$
+
+\section*{Скорость движения по дуге}
+
+Скорость $v(\tau)$
+движения точки $x(\tau)$
+по дуге при изменении $\tau$
+легко находится как производная:
+$$
+v(\tau) =
+  \frac{\partial x}{\partial \tau} =
+  \frac{Z-A}{2}\frac{1+\beta^2}{\left(1 - i \beta \tau \right)^2}
+$$
+Отсюда
+$$
+|v(\tau)| =
+  \frac{\left|Z-A\right|}{2}\frac{1+\beta^2}{1 + \beta^2 \tau^2}
+  ,
+$$
+и скорость движения точки $x(\tau)$
+по дуге оказывается неравномерной,
+наибольшей в середине
+и минимальной по краям:
+$$
+\frac{|v(0)|}{|v(\pm1)|} = 1+\beta^2
+,
+$$
+и
+$$
+\lim_{\beta \to \pm \infty}
+  \frac{|v(0)|}{|v(\pm1)|} =
+  \infty
+  ,
+$$
+что делает построение больших дуг непосредственно по формуле~
+\eqref{eq:bulge.x}
+непрактичным.
+Разумеется,
+несложно найти другой параметр
+$\widetilde{\tau}$,
+такой, что
+$v(\widetilde{\tau}) = const$,
+но тогда в зависимость
+$\tau(\widetilde{\tau})$
+будет входить тригонометрическая функция.
+Можно подобрать более простое преобразование,
+дающее
+\textit{почти}
+равномерное движение:
+\begin{equation}
+  \label{eq:bulge.uniform}
+  \tau(\hat \tau) =
+  \frac{\hat \tau}{1 + \frac{\sqrt{9+8\beta^2}-3}{4} \left(1 -  \hat \tau^2\right)}
+\end{equation}
+и параметр
+$\hat \tau \in[-1,+1]$.
+
+Преобразование
+\eqref{eq:bulge.uniform}
+подобрано таким образом,
+что
+$|v(0)|=|v(\pm 1)|$,
+можно показать, что
+для всех остальных
+$
+\hat \tau
+  \in(-1, +1)
+  \setminus \left\{0\right\}
+$
+$$
+1 <
+  \frac{|v(\hat \tau)|}{|v(0)|}
+  <
+  \frac{1+\sqrt{2}}{2}
+  \approx 1.2071\dots
 $$
