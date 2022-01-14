@@ -2,7 +2,6 @@
 
 - Русская версия статьи [PCGTSP](pcgtsp.pdf)
 - [Автореферат](synopsis.pdf)
-    + [Буклет](booklet.pdf)
 - [Диссертация](these.pdf)
 
 См. также:
