@@ -40,7 +40,7 @@ jobs:
             .ref.txt
 
   publish:
-    # if: false
+    if: false
     needs: latex
     runs-on: ubuntu-latest
     steps:
