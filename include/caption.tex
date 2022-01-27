@@ -3,18 +3,18 @@
 
 \captionsetup{
   font=small,
-  labelsep=period,
+  labelsep=endash,
   justification=centering,
 }
 
 % https://tex.stackexchange.com/a/78777
 % Подписи к таблицам
-\DeclareCaptionFormat{hfillstart}{\hfill#1#2#3}
-\captionsetup*[table]
-{
-  format=hfillstart,
-  labelsep=newline,
-}
+% \DeclareCaptionFormat{hfillstart}{\hfill#1#2#3}
+% \captionsetup*[table]
+% {
+%   format=hfillstart,
+%   labelsep=newline,
+% }
 
 % Подписи к подрисункам
 \captionsetup*[subfigure]{
