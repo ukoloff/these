@@ -1,0 +1,4906 @@
+<!DOCTYPE html>
+<html><head>
+<title>PCGTSP Visualization</title>
+<style>
+svg{box-sizing:border-box;height:100;left:0;padding:0;position:absolute;top:0;width:100%}path{stroke-width:1px;vector-effect:non-scaling-stroke;fill-rule:nonzero}path.DBS{fill:#cdff00;stroke:#000}path.DBS:first-of-type{fill:none}path.DBS:hover{stroke-dasharray:1%;animation:dash 1s linear infinite}path.part{fill:#fff;fill-opacity:0;stroke:#000}path.part:hover{fill:#ff0;fill-opacity:50%;stroke-dasharray:1%;animation:dash 1s linear infinite}path.cluster{stroke:#000;fill:#ff0;fill-opacity:15%}path.cluster:hover{fill:#ff0;fill-opacity:50%;stroke-dasharray:1%;animation:dash 1s linear infinite}path.route{stroke:red;fill:none}circle.pierce{r:.2%;fill:#0f0;stroke:navy;stroke-width:1px;vector-effect:non-scaling-stroke}circle.pierce:hover{fill:#ff0;stroke:red}circle.route:hover{fill-opacity:75%;stroke:#0f0}@-moz-keyframes dash{0%{stroke-dashoffset:0%}to{stroke-dashoffset:-2%}}@-webkit-keyframes dash{0%{stroke-dashoffset:0%}to{stroke-dashoffset:-2%}}@-o-keyframes dash{0%{stroke-dashoffset:0%}to{stroke-dashoffset:-2%}}@keyframes dash{0%{stroke-dashoffset:0%}to{stroke-dashoffset:-2%}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+<script>
+  setTimeout(function() {
+    svgPanZoom('svg', {controlIconsEnabled: true})
+  })
+</script>
+</head><body>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  height="100%" width="100%"
+  viewBox="-14.89285034179688 -796.89 1519.0707348632818 804.78"><g><g transform = "scale(1, -1)"><path class="DBS" d="
+M 0 0
+L 0 800
+L 1500 800
+L 1500 0
+L 0 0 Z">
+<title>Part: LIST1500
+Contours: 1</title></path><path class="DBS" d="
+M 1453 10
+L 1453 324
+L 1488 324
+L 1488 300
+L 1470.5 300
+L 1470.5 264
+L 1488 264
+L 1488 10
+L 1453 10 Z
+M 1460.5 46.549476623535156
+A 10 10 0 0 1 1480.5 46.549476623535156
+A 10 10 0 0 1 1460.5 46.549476623535156 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 603 588
+L 688 520
+L 523 520
+L 523 578
+L 533 588
+L 603 588 Z
+M 561.5 563
+A 6.5 6.5 0 0 1 574.5 563
+A 6.5 6.5 0 0 1 561.5 563 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 704.2849731445312 520
+L 619.2849731445312 588
+L 784.2849731445312 588
+L 784.2849731445312 530
+L 774.2849731445312 520
+L 704.2849731445312 520 Z
+M 745.7849731445312 545
+A 6.5 6.5 0 0 1 732.7849731445312 545
+A 6.5 6.5 0 0 1 745.7849731445312 545 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 943 510
+L 1143 510
+L 1143 10
+L 943 10
+L 943 510 Z
+M 1104.885009765625 75.31097412109375
+A 18 18 0 0 1 1104.885009765625 39.31097412109375
+A 18 18 0 0 1 1104.885009765625 75.31097412109375 Z
+M 1043 312
+A 52 52 0 0 1 1043 208
+A 52 52 0 0 1 1043 312 Z">
+<title>Part: 
+Contours: 3</title></path><path class="DBS" d="
+M 733 510
+L 933 510
+L 933 10
+L 733 10
+L 733 510 Z
+M 894.8850708007812 75.31097412109375
+A 18 18 0 0 1 894.8850708007812 39.31097412109375
+A 18 18 0 0 1 894.8850708007812 75.31097412109375 Z
+M 833 312
+A 52 52 0 0 1 833 208
+A 52 52 0 0 1 833 312 Z">
+<title>Part: 
+Contours: 3</title></path><path class="DBS" d="
+M 1261.2850341796875 701.2849731445312
+L 1193.2850341796875 616.2849731445312
+L 1193.2850341796875 781.2849731445312
+L 1251.2850341796875 781.2849731445312
+L 1261.2850341796875 771.2849731445312
+L 1261.2850341796875 701.2849731445312 Z
+M 1236.2850341796875 742.7849731445312
+A 6.5 6.5 0 0 1 1236.2850341796875 729.7849731445312
+A 6.5 6.5 0 0 1 1236.2850341796875 742.7849731445312 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 1193.2850341796875 600
+L 1261.2850341796875 685
+L 1261.2850341796875 520
+L 1203.2850341796875 520
+L 1193.2850341796875 530
+L 1193.2850341796875 600 Z
+M 1218.2850341796875 558.5
+A 6.5 6.5 0 0 1 1218.2850341796875 571.5
+A 6.5 6.5 0 0 1 1218.2850341796875 558.5 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 513 191.28500366210938
+L 445 106.28500366210938
+L 445 271.2850036621094
+L 503 271.2850036621094
+L 513 261.2850036621094
+L 513 191.28500366210938 Z
+M 488 232.78500366210938
+A 6.5 6.5 0 0 1 488 219.78500366210938
+A 6.5 6.5 0 0 1 488 232.78500366210938 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 445 90
+L 513 175
+L 513 10
+L 455 10
+L 445 20
+L 445 90 Z
+M 470 48.5
+A 6.5 6.5 0 0 1 470 61.5
+A 6.5 6.5 0 0 1 470 48.5 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 1153 510
+L 1353 510
+L 1353 10
+L 1153 10
+L 1153 510 Z
+M 1314.885009765625 75.31097412109375
+A 18 18 0 0 1 1314.885009765625 39.31097412109375
+A 18 18 0 0 1 1314.885009765625 75.31097412109375 Z
+M 1253 312
+A 52 52 0 0 1 1253 208
+A 52 52 0 0 1 1253 312 Z">
+<title>Part: 
+Contours: 3</title></path><path class="DBS" d="
+M 523 510
+L 723 510
+L 723 10
+L 523 10
+L 523 510 Z
+M 684.8850708007812 75.31097412109375
+A 18 18 0 0 1 684.8850708007812 39.31097412109375
+A 18 18 0 0 1 684.8850708007812 75.31097412109375 Z
+M 623 312
+A 52 52 0 0 1 623 208
+A 52 52 0 0 1 623 312 Z">
+<title>Part: 
+Contours: 3</title></path><path class="DBS" d="
+M 924 789
+L 1009 721
+L 844 721
+L 844 779
+L 854 789
+L 924 789 Z
+M 882.5 764
+A 6.5 6.5 0 0 1 895.5 764
+A 6.5 6.5 0 0 1 882.5 764 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 1025.2850341796875 721
+L 940.2849731445312 789
+L 1105.2850341796875 789
+L 1105.2850341796875 731
+L 1095.2850341796875 721
+L 1025.2850341796875 721 Z
+M 1066.7850341796875 746
+A 6.5 6.5 0 0 1 1053.7850341796875 746
+A 6.5 6.5 0 0 1 1066.7850341796875 746 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 1339.2850341796875 701.2849731445312
+L 1271.2850341796875 616.2849731445312
+L 1271.2850341796875 781.2849731445312
+L 1329.2850341796875 781.2849731445312
+L 1339.2850341796875 771.2849731445312
+L 1339.2850341796875 701.2849731445312 Z
+M 1314.2850341796875 742.7849731445312
+A 6.5 6.5 0 0 1 1314.2850341796875 729.7849731445312
+A 6.5 6.5 0 0 1 1314.2850341796875 742.7849731445312 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 1271.2850341796875 600
+L 1339.2850341796875 685
+L 1339.2850341796875 520
+L 1281.2850341796875 520
+L 1271.2850341796875 530
+L 1271.2850341796875 600 Z
+M 1296.2850341796875 558.5
+A 6.5 6.5 0 0 1 1296.2850341796875 571.5
+A 6.5 6.5 0 0 1 1296.2850341796875 558.5 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 478 281.2850036621094
+L 478 595.2849731445312
+L 513 595.2849731445312
+L 513 571.2849731445312
+L 495.5 571.2849731445312
+L 495.5 535.2849731445312
+L 513 535.2849731445312
+L 513 281.2850036621094
+L 478 281.2850036621094 Z
+M 485.5 317.83447265625
+A 10 10 0 0 1 505.5 317.83447265625
+A 10 10 0 0 1 485.5 317.83447265625 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 480 718.2849731445312
+L 565 650.2849731445312
+L 400 650.2849731445312
+L 400 708.2849731445312
+L 410 718.2849731445312
+L 480 718.2849731445312 Z
+M 438.5 693.2849731445312
+A 6.5 6.5 0 0 1 451.5 693.2849731445312
+A 6.5 6.5 0 0 1 438.5 693.2849731445312 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 581.2849731445312 650.2849731445312
+L 496.2850036621094 718.2849731445312
+L 661.2849731445312 718.2849731445312
+L 661.2849731445312 660.2849731445312
+L 651.2849731445312 650.2849731445312
+L 581.2849731445312 650.2849731445312 Z
+M 622.7849731445312 675.2849731445312
+A 6.5 6.5 0 0 1 609.7849731445312 675.2849731445312
+A 6.5 6.5 0 0 1 622.7849731445312 675.2849731445312 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 874.2849731445312 588
+L 959.2849731445312 520
+L 794.2849731445312 520
+L 794.2849731445312 578
+L 804.2849731445312 588
+L 874.2849731445312 588 Z
+M 832.7849731445312 563
+A 6.5 6.5 0 0 1 845.7849731445312 563
+A 6.5 6.5 0 0 1 832.7849731445312 563 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 975.5700073242188 520
+L 890.5700073242188 588
+L 1055.5699462890625 588
+L 1055.5699462890625 530
+L 1045.5699462890625 520
+L 975.5700073242188 520 Z
+M 1017.0700073242188 545
+A 6.5 6.5 0 0 1 1004.0700073242188 545
+A 6.5 6.5 0 0 1 1017.0700073242188 545 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 400 640.2849731445312
+L 714 640.2849731445312
+L 714 605.2849731445312
+L 690 605.2849731445312
+L 690 622.7849731445312
+L 654 622.7849731445312
+L 654 605.2849731445312
+L 400 605.2849731445312
+L 400 640.2849731445312 Z
+M 436.5494689941406 632.7849731445312
+A 10 10 0 0 1 436.5494689941406 612.7849731445312
+A 10 10 0 0 1 436.5494689941406 632.7849731445312 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 1183.2850341796875 701.2849731445312
+L 1115.2850341796875 616.2849731445312
+L 1115.2850341796875 781.2849731445312
+L 1173.2850341796875 781.2849731445312
+L 1183.2850341796875 771.2849731445312
+L 1183.2850341796875 701.2849731445312 Z
+M 1158.2850341796875 742.7849731445312
+A 6.5 6.5 0 0 1 1158.2850341796875 729.7849731445312
+A 6.5 6.5 0 0 1 1158.2850341796875 742.7849731445312 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 1115.2850341796875 600
+L 1183.2850341796875 685
+L 1183.2850341796875 520
+L 1125.2850341796875 520
+L 1115.2850341796875 530
+L 1115.2850341796875 600 Z
+M 1140.2850341796875 558.5
+A 6.5 6.5 0 0 1 1140.2850341796875 571.5
+A 6.5 6.5 0 0 1 1140.2850341796875 558.5 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 1454.2850341796875 454
+L 1454.2850341796875 768
+L 1489.2850341796875 768
+L 1489.2850341796875 744
+L 1471.7850341796875 744
+L 1471.7850341796875 708
+L 1489.2850341796875 708
+L 1489.2850341796875 454
+L 1454.2850341796875 454 Z
+M 1461.7850341796875 490.5494689941406
+A 10 10 0 0 1 1481.7850341796875 490.5494689941406
+A 10 10 0 0 1 1461.7850341796875 490.5494689941406 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 468 515.2849731445312
+L 400 430.2850036621094
+L 400 595.2849731445312
+L 458 595.2849731445312
+L 468 585.2849731445312
+L 468 515.2849731445312 Z
+M 443 556.7849731445312
+A 6.5 6.5 0 0 1 443 543.7849731445312
+A 6.5 6.5 0 0 1 443 556.7849731445312 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 400 414
+L 468 499
+L 468 334
+L 410 334
+L 400 344
+L 400 414 Z
+M 425 372.5
+A 6.5 6.5 0 0 1 425 385.5
+A 6.5 6.5 0 0 1 425 372.5 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 864 711
+L 949 643
+L 784 643
+L 784 701
+L 794 711
+L 864 711 Z
+M 822.5 686
+A 6.5 6.5 0 0 1 835.5 686
+A 6.5 6.5 0 0 1 822.5 686 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 965.2849731445312 643
+L 880.2849731445312 711
+L 1045.2850341796875 711
+L 1045.2850341796875 653
+L 1035.2850341796875 643
+L 965.2849731445312 643 Z
+M 1006.7849731445312 668
+A 6.5 6.5 0 0 1 993.7849731445312 668
+A 6.5 6.5 0 0 1 1006.7849731445312 668 Z">
+<title>Part: DVOR4-3
+Contours: 2</title></path><path class="DBS" d="
+M 1408 444
+L 1458 444
+L 1458 334
+L 1446 334
+A 13 13 0 0 1 1420 334
+L 1408 334
+L 1408 444 Z
+M 1433 402
+A 13 13 0 0 1 1433 376
+A 13 13 0 0 1 1433 402 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 1409.2850341796875 454
+L 1409.2850341796875 768
+L 1444.2850341796875 768
+L 1444.2850341796875 744
+L 1426.7850341796875 744
+L 1426.7850341796875 708
+L 1444.2850341796875 708
+L 1444.2850341796875 454
+L 1409.2850341796875 454 Z
+M 1416.7850341796875 490.5494689941406
+A 10 10 0 0 1 1436.7850341796875 490.5494689941406
+A 10 10 0 0 1 1416.7850341796875 490.5494689941406 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 400 728.2849731445312
+L 400 778.2849731445312
+L 510 778.2849731445312
+L 510 766.2849731445312
+A 13 13 0 0 1 510 740.2849731445312
+L 510 728.2849731445312
+L 400 728.2849731445312 Z
+M 442 753.2849731445312
+A 13 13 0 0 1 468 753.2849731445312
+A 13 13 0 0 1 442 753.2849731445312 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 1349.2850341796875 768
+L 1399.2850341796875 768
+L 1399.2850341796875 658
+L 1387.2850341796875 658
+A 13 13 0 0 1 1361.2850341796875 658
+L 1349.2850341796875 658
+L 1349.2850341796875 768 Z
+M 1374.2850341796875 726
+A 13 13 0 0 1 1374.2850341796875 700
+A 13 13 0 0 1 1374.2850341796875 726 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 1408 10
+L 1408 324
+L 1443 324
+L 1443 300
+L 1425.5 300
+L 1425.5 264
+L 1443 264
+L 1443 10
+L 1408 10 Z
+M 1415.5 46.549476623535156
+A 10 10 0 0 1 1435.5 46.549476623535156
+A 10 10 0 0 1 1415.5 46.549476623535156 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 784 633
+L 1098 633
+L 1098 598
+L 1074 598
+L 1074 615.5
+L 1038 615.5
+L 1038 598
+L 784 598
+L 784 633 Z
+M 820.5494995117188 625.5
+A 10 10 0 0 1 820.5494995117188 605.5
+A 10 10 0 0 1 820.5494995117188 625.5 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 1363 334
+L 1363 648
+L 1398 648
+L 1398 624
+L 1380.5 624
+L 1380.5 588
+L 1398 588
+L 1398 334
+L 1363 334 Z
+M 1370.5 370.5494689941406
+A 10 10 0 0 1 1390.5 370.5494689941406
+A 10 10 0 0 1 1370.5 370.5494689941406 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 724 708
+L 774 708
+L 774 598
+L 762 598
+A 13 13 0 0 1 736 598
+L 724 598
+L 724 708 Z
+M 749 666
+A 13 13 0 0 1 749 640
+A 13 13 0 0 1 749 666 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 199.1709747314453 779.9981689453125
+A 189.9999928519778 189.9999928519778 0 0 0 200.8290252685547 400.0018005371094
+A 189.9999928519778 189.9999928519778 0 0 0 199.1709747314453 779.9981689453125 Z
+M 199.35641479492188 737.4985961914062
+A 50.00001818734414 50.00001818734414 0 0 1 199.79273986816406 637.49951171875
+A 50.00001818734414 50.00001818734414 0 0 1 199.35641479492188 737.4985961914062 Z
+M 200.20726013183594 542.5004272460938
+A 49.99998767005651 49.99998767005651 0 0 1 200.64358520507812 442.50140380859375
+A 49.99998767005651 49.99998767005651 0 0 1 200.20726013183594 542.5004272460938 Z
+M 102.28276062011719 639.5740966796875
+A 49.99998768670115 49.99998768670115 0 0 1 102.7190933227539 539.5750732421875
+A 49.99998768670115 49.99998768670115 0 0 1 102.28276062011719 639.5740966796875 Z
+M 297.2809143066406 640.4249267578125
+A 49.999987636768125 49.999987636768125 0 0 1 297.71722412109375 540.4259033203125
+A 49.999987636768125 49.999987636768125 0 0 1 297.2809143066406 640.4249267578125 Z">
+<title>Part: SH40
+Contours: 5</title></path><path class="DBS" d="
+M 520 763.2849731445312
+L 834 763.2849731445312
+L 834 728.2849731445312
+L 810 728.2849731445312
+L 810 745.7849731445312
+L 774 745.7849731445312
+L 774 728.2849731445312
+L 520 728.2849731445312
+L 520 763.2849731445312 Z
+M 556.5494995117188 755.7849731445312
+A 10 10 0 0 1 556.5494995117188 735.7849731445312
+A 10 10 0 0 1 556.5494995117188 755.7849731445312 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 400 10
+L 400 324
+L 435 324
+L 435 300
+L 417.5 300
+L 417.5 264
+L 435 264
+L 435 10
+L 400 10 Z
+M 407.5 46.549476623535156
+A 10 10 0 0 1 427.5 46.549476623535156
+A 10 10 0 0 1 407.5 46.549476623535156 Z">
+<title>Part: 
+Contours: 2</title></path><path class="DBS" d="
+M 199.1709747314453 389.9981994628906
+A 190.00000381912804 190.00000381912804 0 0 0 200.8290252685547 10.001809120178223
+A 190.00000381912804 190.00000381912804 0 0 0 199.1709747314453 389.9981994628906 Z
+M 199.35641479492188 347.49859619140625
+A 50.000002928700326 50.000002928700326 0 0 1 199.79273986816406 247.49954223632812
+A 50.000002928700326 50.000002928700326 0 0 1 199.35641479492188 347.49859619140625 Z
+M 200.20726013183594 152.5004425048828
+A 49.99999529937842 49.99999529937842 0 0 1 200.64358520507812 52.50140380859375
+A 49.99999529937842 49.99999529937842 0 0 1 200.20726013183594 152.5004425048828 Z
+M 102.28276062011719 249.5740966796875
+A 49.999995316023046 49.999995316023046 0 0 1 102.7190933227539 149.57505798339844
+A 49.999995316023046 49.999995316023046 0 0 1 102.28276062011719 249.5740966796875 Z
+M 297.2809143066406 250.42494201660156
+A 49.99999526609004 49.99999526609004 0 0 1 297.71722412109375 150.4259033203125
+A 49.99999526609004 49.99999526609004 0 0 1 297.2809143066406 250.42494201660156 Z">
+<title>Part: SH40
+Contours: 5</title></path><path class="DBS" d="
+M 1363 10
+L 1363 324
+L 1398 324
+L 1398 300
+L 1380.5 300
+L 1380.5 264
+L 1398 264
+L 1398 10
+L 1363 10 Z
+M 1370.5 46.549476623535156
+A 10 10 0 0 1 1390.5 46.549476623535156
+A 10 10 0 0 1 1370.5 46.549476623535156 Z">
+<title>Part: 
+Contours: 2</title></path>
+<circle class="pierce" cx="1453" cy="10"><title>Point #1
+Group #1 (20 points)
+X: 1453
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1453" cy="46.65"><title>Point #2
+Group #1 (20 points)
+X: 1453
+Y: 46.65
+</title></circle>
+<circle class="pierce" cx="1453" cy="83.3"><title>Point #3
+Group #1 (20 points)
+X: 1453
+Y: 83.3
+</title></circle>
+<circle class="pierce" cx="1453" cy="119.95"><title>Point #4
+Group #1 (20 points)
+X: 1453
+Y: 119.95
+</title></circle>
+<circle class="pierce" cx="1453" cy="156.6"><title>Point #5
+Group #1 (20 points)
+X: 1453
+Y: 156.6
+</title></circle>
+<circle class="pierce" cx="1453" cy="193.25"><title>Point #6
+Group #1 (20 points)
+X: 1453
+Y: 193.25
+</title></circle>
+<circle class="pierce" cx="1453" cy="229.9"><title>Point #7
+Group #1 (20 points)
+X: 1453
+Y: 229.9
+</title></circle>
+<circle class="pierce" cx="1453" cy="266.55"><title>Point #8
+Group #1 (20 points)
+X: 1453
+Y: 266.55
+</title></circle>
+<circle class="pierce" cx="1453" cy="303.2"><title>Point #9
+Group #1 (20 points)
+X: 1453
+Y: 303.2
+</title></circle>
+<circle class="pierce" cx="1468.85" cy="324"><title>Point #10
+Group #1 (20 points)
+X: 1468.85
+Y: 324
+</title></circle>
+<circle class="pierce" cx="1488" cy="306.5"><title>Point #11
+Group #1 (20 points)
+X: 1488
+Y: 306.5
+</title></circle>
+<circle class="pierce" cx="1470.5" cy="287.35"><title>Point #12
+Group #1 (20 points)
+X: 1470.5
+Y: 287.35
+</title></circle>
+<circle class="pierce" cx="1483.8" cy="264"><title>Point #13
+Group #1 (20 points)
+X: 1483.8
+Y: 264
+</title></circle>
+<circle class="pierce" cx="1488" cy="231.55"><title>Point #14
+Group #1 (20 points)
+X: 1488
+Y: 231.55
+</title></circle>
+<circle class="pierce" cx="1488" cy="194.9"><title>Point #15
+Group #1 (20 points)
+X: 1488
+Y: 194.9
+</title></circle>
+<circle class="pierce" cx="1488" cy="158.25"><title>Point #16
+Group #1 (20 points)
+X: 1488
+Y: 158.25
+</title></circle>
+<circle class="pierce" cx="1488" cy="121.6"><title>Point #17
+Group #1 (20 points)
+X: 1488
+Y: 121.6
+</title></circle>
+<circle class="pierce" cx="1488" cy="84.95"><title>Point #18
+Group #1 (20 points)
+X: 1488
+Y: 84.95
+</title></circle>
+<circle class="pierce" cx="1488" cy="48.3"><title>Point #19
+Group #1 (20 points)
+X: 1488
+Y: 48.3
+</title></circle>
+<circle class="pierce" cx="1488" cy="11.65"><title>Point #20
+Group #1 (20 points)
+X: 1488
+Y: 11.65
+</title></circle>
+<circle class="pierce" cx="1460.5" cy="46.549476623535"><title>Point #21
+Group #2 (1 points)
+X: 1460.5
+Y: 46.549476623535
+</title></circle>
+<circle class="pierce" cx="603" cy="588"><title>Point #22
+Group #3 (11 points)
+X: 603
+Y: 588
+</title></circle>
+<circle class="pierce" cx="632.530701252208" cy="564.375438998233"><title>Point #23
+Group #3 (11 points)
+X: 632.530701252208
+Y: 564.375438998233
+</title></circle>
+<circle class="pierce" cx="662.061402504417" cy="540.750877996466"><title>Point #24
+Group #3 (11 points)
+X: 662.061402504417
+Y: 540.750877996466
+</title></circle>
+<circle class="pierce" cx="683.399862674516" cy="520"><title>Point #25
+Group #3 (11 points)
+X: 683.399862674516
+Y: 520
+</title></circle>
+<circle class="pierce" cx="645.582112887235" cy="520"><title>Point #26
+Group #3 (11 points)
+X: 645.582112887235
+Y: 520
+</title></circle>
+<circle class="pierce" cx="607.764363099954" cy="520"><title>Point #27
+Group #3 (11 points)
+X: 607.764363099954
+Y: 520
+</title></circle>
+<circle class="pierce" cx="569.946613312674" cy="520"><title>Point #28
+Group #3 (11 points)
+X: 569.946613312674
+Y: 520
+</title></circle>
+<circle class="pierce" cx="532.128863525393" cy="520"><title>Point #29
+Group #3 (11 points)
+X: 532.128863525393
+Y: 520
+</title></circle>
+<circle class="pierce" cx="523" cy="548.688886261888"><title>Point #30
+Group #3 (11 points)
+X: 523
+Y: 548.688886261888
+</title></circle>
+<circle class="pierce" cx="529.015100035453" cy="584.015100035453"><title>Point #31
+Group #3 (11 points)
+X: 529.015100035453
+Y: 584.015100035453
+</title></circle>
+<circle class="pierce" cx="565.182250212719" cy="588"><title>Point #32
+Group #3 (11 points)
+X: 565.182250212719
+Y: 588
+</title></circle>
+<circle class="pierce" cx="561.5" cy="563"><title>Point #33
+Group #4 (1 points)
+X: 561.5
+Y: 563
+</title></circle>
+<circle class="pierce" cx="704.284973144531" cy="520"><title>Point #34
+Group #5 (11 points)
+X: 704.284973144531
+Y: 520
+</title></circle>
+<circle class="pierce" cx="674.754271892323" cy="543.624561001767"><title>Point #35
+Group #5 (11 points)
+X: 674.754271892323
+Y: 543.624561001767
+</title></circle>
+<circle class="pierce" cx="645.223570640115" cy="567.249122003534"><title>Point #36
+Group #5 (11 points)
+X: 645.223570640115
+Y: 567.249122003534
+</title></circle>
+<circle class="pierce" cx="623.885110470016" cy="588"><title>Point #37
+Group #5 (11 points)
+X: 623.885110470016
+Y: 588
+</title></circle>
+<circle class="pierce" cx="661.702860257296" cy="588"><title>Point #38
+Group #5 (11 points)
+X: 661.702860257296
+Y: 588
+</title></circle>
+<circle class="pierce" cx="699.520610044577" cy="588"><title>Point #39
+Group #5 (11 points)
+X: 699.520610044577
+Y: 588
+</title></circle>
+<circle class="pierce" cx="737.338359831858" cy="588"><title>Point #40
+Group #5 (11 points)
+X: 737.338359831858
+Y: 588
+</title></circle>
+<circle class="pierce" cx="775.156109619139" cy="588"><title>Point #41
+Group #5 (11 points)
+X: 775.156109619139
+Y: 588
+</title></circle>
+<circle class="pierce" cx="784.284973144531" cy="559.311113738111"><title>Point #42
+Group #5 (11 points)
+X: 784.284973144531
+Y: 559.311113738111
+</title></circle>
+<circle class="pierce" cx="778.269873109078" cy="523.984899964547"><title>Point #43
+Group #5 (11 points)
+X: 778.269873109078
+Y: 523.984899964547
+</title></circle>
+<circle class="pierce" cx="742.102722931812" cy="520"><title>Point #44
+Group #5 (11 points)
+X: 742.102722931812
+Y: 520
+</title></circle>
+<circle class="pierce" cx="745.784973144531" cy="545"><title>Point #45
+Group #6 (1 points)
+X: 745.784973144531
+Y: 545
+</title></circle>
+<circle class="pierce" cx="943" cy="510"><title>Point #46
+Group #7 (40 points)
+X: 943
+Y: 510
+</title></circle>
+<circle class="pierce" cx="978" cy="510"><title>Point #47
+Group #7 (40 points)
+X: 978
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1013" cy="510"><title>Point #48
+Group #7 (40 points)
+X: 1013
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1048" cy="510"><title>Point #49
+Group #7 (40 points)
+X: 1048
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1083" cy="510"><title>Point #50
+Group #7 (40 points)
+X: 1083
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1118" cy="510"><title>Point #51
+Group #7 (40 points)
+X: 1118
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1143" cy="500"><title>Point #52
+Group #7 (40 points)
+X: 1143
+Y: 500
+</title></circle>
+<circle class="pierce" cx="1143" cy="465"><title>Point #53
+Group #7 (40 points)
+X: 1143
+Y: 465
+</title></circle>
+<circle class="pierce" cx="1143" cy="430"><title>Point #54
+Group #7 (40 points)
+X: 1143
+Y: 430
+</title></circle>
+<circle class="pierce" cx="1143" cy="395"><title>Point #55
+Group #7 (40 points)
+X: 1143
+Y: 395
+</title></circle>
+<circle class="pierce" cx="1143" cy="360"><title>Point #56
+Group #7 (40 points)
+X: 1143
+Y: 360
+</title></circle>
+<circle class="pierce" cx="1143" cy="325"><title>Point #57
+Group #7 (40 points)
+X: 1143
+Y: 325
+</title></circle>
+<circle class="pierce" cx="1143" cy="290"><title>Point #58
+Group #7 (40 points)
+X: 1143
+Y: 290
+</title></circle>
+<circle class="pierce" cx="1143" cy="255"><title>Point #59
+Group #7 (40 points)
+X: 1143
+Y: 255
+</title></circle>
+<circle class="pierce" cx="1143" cy="220"><title>Point #60
+Group #7 (40 points)
+X: 1143
+Y: 220
+</title></circle>
+<circle class="pierce" cx="1143" cy="185"><title>Point #61
+Group #7 (40 points)
+X: 1143
+Y: 185
+</title></circle>
+<circle class="pierce" cx="1143" cy="150"><title>Point #62
+Group #7 (40 points)
+X: 1143
+Y: 150
+</title></circle>
+<circle class="pierce" cx="1143" cy="115"><title>Point #63
+Group #7 (40 points)
+X: 1143
+Y: 115
+</title></circle>
+<circle class="pierce" cx="1143" cy="80"><title>Point #64
+Group #7 (40 points)
+X: 1143
+Y: 80
+</title></circle>
+<circle class="pierce" cx="1143" cy="45"><title>Point #65
+Group #7 (40 points)
+X: 1143
+Y: 45
+</title></circle>
+<circle class="pierce" cx="1143" cy="10"><title>Point #66
+Group #7 (40 points)
+X: 1143
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1108" cy="10"><title>Point #67
+Group #7 (40 points)
+X: 1108
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1073" cy="10"><title>Point #68
+Group #7 (40 points)
+X: 1073
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1038" cy="10"><title>Point #69
+Group #7 (40 points)
+X: 1038
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1003" cy="10"><title>Point #70
+Group #7 (40 points)
+X: 1003
+Y: 10
+</title></circle>
+<circle class="pierce" cx="968" cy="10"><title>Point #71
+Group #7 (40 points)
+X: 968
+Y: 10
+</title></circle>
+<circle class="pierce" cx="943" cy="20"><title>Point #72
+Group #7 (40 points)
+X: 943
+Y: 20
+</title></circle>
+<circle class="pierce" cx="943" cy="55"><title>Point #73
+Group #7 (40 points)
+X: 943
+Y: 55
+</title></circle>
+<circle class="pierce" cx="943" cy="90"><title>Point #74
+Group #7 (40 points)
+X: 943
+Y: 90
+</title></circle>
+<circle class="pierce" cx="943" cy="125"><title>Point #75
+Group #7 (40 points)
+X: 943
+Y: 125
+</title></circle>
+<circle class="pierce" cx="943" cy="160"><title>Point #76
+Group #7 (40 points)
+X: 943
+Y: 160
+</title></circle>
+<circle class="pierce" cx="943" cy="195"><title>Point #77
+Group #7 (40 points)
+X: 943
+Y: 195
+</title></circle>
+<circle class="pierce" cx="943" cy="230"><title>Point #78
+Group #7 (40 points)
+X: 943
+Y: 230
+</title></circle>
+<circle class="pierce" cx="943" cy="265"><title>Point #79
+Group #7 (40 points)
+X: 943
+Y: 265
+</title></circle>
+<circle class="pierce" cx="943" cy="300"><title>Point #80
+Group #7 (40 points)
+X: 943
+Y: 300
+</title></circle>
+<circle class="pierce" cx="943" cy="335"><title>Point #81
+Group #7 (40 points)
+X: 943
+Y: 335
+</title></circle>
+<circle class="pierce" cx="943" cy="370"><title>Point #82
+Group #7 (40 points)
+X: 943
+Y: 370
+</title></circle>
+<circle class="pierce" cx="943" cy="405"><title>Point #83
+Group #7 (40 points)
+X: 943
+Y: 405
+</title></circle>
+<circle class="pierce" cx="943" cy="440"><title>Point #84
+Group #7 (40 points)
+X: 943
+Y: 440
+</title></circle>
+<circle class="pierce" cx="943" cy="475"><title>Point #85
+Group #7 (40 points)
+X: 943
+Y: 475
+</title></circle>
+<circle class="pierce" cx="1104.885009765625" cy="75.310974121094"><title>Point #86
+Group #8 (3 points)
+X: 1104.885009765625
+Y: 75.310974121094
+</title></circle>
+<circle class="pierce" cx="1120.47346706328" cy="48.310974146672"><title>Point #87
+Group #8 (3 points)
+X: 1120.47346706328
+Y: 48.310974146672
+</title></circle>
+<circle class="pierce" cx="1089.296552504889" cy="48.310974108305"><title>Point #88
+Group #8 (3 points)
+X: 1089.296552504889
+Y: 48.310974108305
+</title></circle>
+<circle class="pierce" cx="1043" cy="312"><title>Point #89
+Group #9 (9 points)
+X: 1043
+Y: 312
+</title></circle>
+<circle class="pierce" cx="1076.424955713681" cy="299.834311069609"><title>Point #90
+Group #9 (9 points)
+X: 1076.424955713681
+Y: 299.834311069609
+</title></circle>
+<circle class="pierce" cx="1094.210003191889" cy="269.029705280694"><title>Point #91
+Group #9 (9 points)
+X: 1094.210003191889
+Y: 269.029705280694
+</title></circle>
+<circle class="pierce" cx="1088.033321082114" cy="234.000000073892"><title>Point #92
+Group #9 (9 points)
+X: 1088.033321082114
+Y: 234.000000073892
+</title></circle>
+<circle class="pierce" cx="1060.785047575774" cy="211.135983748315"><title>Point #93
+Group #9 (9 points)
+X: 1060.785047575774
+Y: 211.135983748315
+</title></circle>
+<circle class="pierce" cx="1025.214952587154" cy="211.135983704542"><title>Point #94
+Group #9 (9 points)
+X: 1025.214952587154
+Y: 211.135983704542
+</title></circle>
+<circle class="pierce" cx="997.96667902454" cy="233.999999963054"><title>Point #95
+Group #9 (9 points)
+X: 997.96667902454
+Y: 233.999999963054
+</title></circle>
+<circle class="pierce" cx="991.789996835957" cy="269.029705196667"><title>Point #96
+Group #9 (9 points)
+X: 991.789996835957
+Y: 269.029705196667
+</title></circle>
+<circle class="pierce" cx="1009.575044263619" cy="299.834311014765"><title>Point #97
+Group #9 (9 points)
+X: 1009.575044263619
+Y: 299.834311014765
+</title></circle>
+<circle class="pierce" cx="733" cy="510"><title>Point #98
+Group #10 (40 points)
+X: 733
+Y: 510
+</title></circle>
+<circle class="pierce" cx="768" cy="510"><title>Point #99
+Group #10 (40 points)
+X: 768
+Y: 510
+</title></circle>
+<circle class="pierce" cx="803" cy="510"><title>Point #100
+Group #10 (40 points)
+X: 803
+Y: 510
+</title></circle>
+<circle class="pierce" cx="838" cy="510"><title>Point #101
+Group #10 (40 points)
+X: 838
+Y: 510
+</title></circle>
+<circle class="pierce" cx="873" cy="510"><title>Point #102
+Group #10 (40 points)
+X: 873
+Y: 510
+</title></circle>
+<circle class="pierce" cx="908" cy="510"><title>Point #103
+Group #10 (40 points)
+X: 908
+Y: 510
+</title></circle>
+<circle class="pierce" cx="933" cy="500"><title>Point #104
+Group #10 (40 points)
+X: 933
+Y: 500
+</title></circle>
+<circle class="pierce" cx="933" cy="465"><title>Point #105
+Group #10 (40 points)
+X: 933
+Y: 465
+</title></circle>
+<circle class="pierce" cx="933" cy="430"><title>Point #106
+Group #10 (40 points)
+X: 933
+Y: 430
+</title></circle>
+<circle class="pierce" cx="933" cy="395"><title>Point #107
+Group #10 (40 points)
+X: 933
+Y: 395
+</title></circle>
+<circle class="pierce" cx="933" cy="360"><title>Point #108
+Group #10 (40 points)
+X: 933
+Y: 360
+</title></circle>
+<circle class="pierce" cx="933" cy="325"><title>Point #109
+Group #10 (40 points)
+X: 933
+Y: 325
+</title></circle>
+<circle class="pierce" cx="933" cy="290"><title>Point #110
+Group #10 (40 points)
+X: 933
+Y: 290
+</title></circle>
+<circle class="pierce" cx="933" cy="255"><title>Point #111
+Group #10 (40 points)
+X: 933
+Y: 255
+</title></circle>
+<circle class="pierce" cx="933" cy="220"><title>Point #112
+Group #10 (40 points)
+X: 933
+Y: 220
+</title></circle>
+<circle class="pierce" cx="933" cy="185"><title>Point #113
+Group #10 (40 points)
+X: 933
+Y: 185
+</title></circle>
+<circle class="pierce" cx="933" cy="150"><title>Point #114
+Group #10 (40 points)
+X: 933
+Y: 150
+</title></circle>
+<circle class="pierce" cx="933" cy="115"><title>Point #115
+Group #10 (40 points)
+X: 933
+Y: 115
+</title></circle>
+<circle class="pierce" cx="933" cy="80"><title>Point #116
+Group #10 (40 points)
+X: 933
+Y: 80
+</title></circle>
+<circle class="pierce" cx="933" cy="45"><title>Point #117
+Group #10 (40 points)
+X: 933
+Y: 45
+</title></circle>
+<circle class="pierce" cx="933" cy="10"><title>Point #118
+Group #10 (40 points)
+X: 933
+Y: 10
+</title></circle>
+<circle class="pierce" cx="898" cy="10"><title>Point #119
+Group #10 (40 points)
+X: 898
+Y: 10
+</title></circle>
+<circle class="pierce" cx="863" cy="10"><title>Point #120
+Group #10 (40 points)
+X: 863
+Y: 10
+</title></circle>
+<circle class="pierce" cx="828" cy="10"><title>Point #121
+Group #10 (40 points)
+X: 828
+Y: 10
+</title></circle>
+<circle class="pierce" cx="793" cy="10"><title>Point #122
+Group #10 (40 points)
+X: 793
+Y: 10
+</title></circle>
+<circle class="pierce" cx="758" cy="10"><title>Point #123
+Group #10 (40 points)
+X: 758
+Y: 10
+</title></circle>
+<circle class="pierce" cx="733" cy="20"><title>Point #124
+Group #10 (40 points)
+X: 733
+Y: 20
+</title></circle>
+<circle class="pierce" cx="733" cy="55"><title>Point #125
+Group #10 (40 points)
+X: 733
+Y: 55
+</title></circle>
+<circle class="pierce" cx="733" cy="90"><title>Point #126
+Group #10 (40 points)
+X: 733
+Y: 90
+</title></circle>
+<circle class="pierce" cx="733" cy="125"><title>Point #127
+Group #10 (40 points)
+X: 733
+Y: 125
+</title></circle>
+<circle class="pierce" cx="733" cy="160"><title>Point #128
+Group #10 (40 points)
+X: 733
+Y: 160
+</title></circle>
+<circle class="pierce" cx="733" cy="195"><title>Point #129
+Group #10 (40 points)
+X: 733
+Y: 195
+</title></circle>
+<circle class="pierce" cx="733" cy="230"><title>Point #130
+Group #10 (40 points)
+X: 733
+Y: 230
+</title></circle>
+<circle class="pierce" cx="733" cy="265"><title>Point #131
+Group #10 (40 points)
+X: 733
+Y: 265
+</title></circle>
+<circle class="pierce" cx="733" cy="300"><title>Point #132
+Group #10 (40 points)
+X: 733
+Y: 300
+</title></circle>
+<circle class="pierce" cx="733" cy="335"><title>Point #133
+Group #10 (40 points)
+X: 733
+Y: 335
+</title></circle>
+<circle class="pierce" cx="733" cy="370"><title>Point #134
+Group #10 (40 points)
+X: 733
+Y: 370
+</title></circle>
+<circle class="pierce" cx="733" cy="405"><title>Point #135
+Group #10 (40 points)
+X: 733
+Y: 405
+</title></circle>
+<circle class="pierce" cx="733" cy="440"><title>Point #136
+Group #10 (40 points)
+X: 733
+Y: 440
+</title></circle>
+<circle class="pierce" cx="733" cy="475"><title>Point #137
+Group #10 (40 points)
+X: 733
+Y: 475
+</title></circle>
+<circle class="pierce" cx="894.885070800781" cy="75.310974121094"><title>Point #138
+Group #11 (3 points)
+X: 894.885070800781
+Y: 75.310974121094
+</title></circle>
+<circle class="pierce" cx="910.473528098436" cy="48.310974146672"><title>Point #139
+Group #11 (3 points)
+X: 910.473528098436
+Y: 48.310974146672
+</title></circle>
+<circle class="pierce" cx="879.296613540045" cy="48.310974108305"><title>Point #140
+Group #11 (3 points)
+X: 879.296613540045
+Y: 48.310974108305
+</title></circle>
+<circle class="pierce" cx="833" cy="312"><title>Point #141
+Group #12 (9 points)
+X: 833
+Y: 312
+</title></circle>
+<circle class="pierce" cx="866.424955713681" cy="299.834311069609"><title>Point #142
+Group #12 (9 points)
+X: 866.424955713681
+Y: 299.834311069609
+</title></circle>
+<circle class="pierce" cx="884.210003191888" cy="269.029705280694"><title>Point #143
+Group #12 (9 points)
+X: 884.210003191888
+Y: 269.029705280694
+</title></circle>
+<circle class="pierce" cx="878.033321082114" cy="234.000000073892"><title>Point #144
+Group #12 (9 points)
+X: 878.033321082114
+Y: 234.000000073892
+</title></circle>
+<circle class="pierce" cx="850.785047575774" cy="211.135983748315"><title>Point #145
+Group #12 (9 points)
+X: 850.785047575774
+Y: 211.135983748315
+</title></circle>
+<circle class="pierce" cx="815.214952587154" cy="211.135983704542"><title>Point #146
+Group #12 (9 points)
+X: 815.214952587154
+Y: 211.135983704542
+</title></circle>
+<circle class="pierce" cx="787.96667902454" cy="233.999999963054"><title>Point #147
+Group #12 (9 points)
+X: 787.96667902454
+Y: 233.999999963054
+</title></circle>
+<circle class="pierce" cx="781.789996835957" cy="269.029705196667"><title>Point #148
+Group #12 (9 points)
+X: 781.789996835957
+Y: 269.029705196667
+</title></circle>
+<circle class="pierce" cx="799.575044263619" cy="299.834311014765"><title>Point #149
+Group #12 (9 points)
+X: 799.575044263619
+Y: 299.834311014765
+</title></circle>
+<circle class="pierce" cx="1261.285034179688" cy="701.284973144531"><title>Point #150
+Group #13 (11 points)
+X: 1261.285034179688
+Y: 701.284973144531
+</title></circle>
+<circle class="pierce" cx="1237.660473177921" cy="671.754271892323"><title>Point #151
+Group #13 (11 points)
+X: 1237.660473177921
+Y: 671.754271892323
+</title></circle>
+<circle class="pierce" cx="1214.035912176154" cy="642.223570640115"><title>Point #152
+Group #13 (11 points)
+X: 1214.035912176154
+Y: 642.223570640115
+</title></circle>
+<circle class="pierce" cx="1193.285034179688" cy="620.885110470016"><title>Point #153
+Group #13 (11 points)
+X: 1193.285034179688
+Y: 620.885110470016
+</title></circle>
+<circle class="pierce" cx="1193.285034179688" cy="658.702860257296"><title>Point #154
+Group #13 (11 points)
+X: 1193.285034179688
+Y: 658.702860257296
+</title></circle>
+<circle class="pierce" cx="1193.285034179688" cy="696.520610044577"><title>Point #155
+Group #13 (11 points)
+X: 1193.285034179688
+Y: 696.520610044577
+</title></circle>
+<circle class="pierce" cx="1193.285034179688" cy="734.338359831858"><title>Point #156
+Group #13 (11 points)
+X: 1193.285034179688
+Y: 734.338359831858
+</title></circle>
+<circle class="pierce" cx="1193.285034179688" cy="772.156109619139"><title>Point #157
+Group #13 (11 points)
+X: 1193.285034179688
+Y: 772.156109619139
+</title></circle>
+<circle class="pierce" cx="1221.973920441576" cy="781.284973144531"><title>Point #158
+Group #13 (11 points)
+X: 1221.973920441576
+Y: 781.284973144531
+</title></circle>
+<circle class="pierce" cx="1257.300134215141" cy="775.269873109078"><title>Point #159
+Group #13 (11 points)
+X: 1257.300134215141
+Y: 775.269873109078
+</title></circle>
+<circle class="pierce" cx="1261.285034179688" cy="739.102722931812"><title>Point #160
+Group #13 (11 points)
+X: 1261.285034179688
+Y: 739.102722931812
+</title></circle>
+<circle class="pierce" cx="1236.285034179688" cy="742.784973144531"><title>Point #161
+Group #14 (1 points)
+X: 1236.285034179688
+Y: 742.784973144531
+</title></circle>
+<circle class="pierce" cx="1193.285034179688" cy="600"><title>Point #162
+Group #15 (11 points)
+X: 1193.285034179688
+Y: 600
+</title></circle>
+<circle class="pierce" cx="1216.909595181454" cy="629.530701252208"><title>Point #163
+Group #15 (11 points)
+X: 1216.909595181454
+Y: 629.530701252208
+</title></circle>
+<circle class="pierce" cx="1240.534156183221" cy="659.061402504417"><title>Point #164
+Group #15 (11 points)
+X: 1240.534156183221
+Y: 659.061402504417
+</title></circle>
+<circle class="pierce" cx="1261.285034179688" cy="680.399862674516"><title>Point #165
+Group #15 (11 points)
+X: 1261.285034179688
+Y: 680.399862674516
+</title></circle>
+<circle class="pierce" cx="1261.285034179688" cy="642.582112887235"><title>Point #166
+Group #15 (11 points)
+X: 1261.285034179688
+Y: 642.582112887235
+</title></circle>
+<circle class="pierce" cx="1261.285034179688" cy="604.764363099954"><title>Point #167
+Group #15 (11 points)
+X: 1261.285034179688
+Y: 604.764363099954
+</title></circle>
+<circle class="pierce" cx="1261.285034179688" cy="566.946613312674"><title>Point #168
+Group #15 (11 points)
+X: 1261.285034179688
+Y: 566.946613312674
+</title></circle>
+<circle class="pierce" cx="1261.285034179688" cy="529.128863525393"><title>Point #169
+Group #15 (11 points)
+X: 1261.285034179688
+Y: 529.128863525393
+</title></circle>
+<circle class="pierce" cx="1232.596147917799" cy="520"><title>Point #170
+Group #15 (11 points)
+X: 1232.596147917799
+Y: 520
+</title></circle>
+<circle class="pierce" cx="1197.269934144234" cy="526.015100035453"><title>Point #171
+Group #15 (11 points)
+X: 1197.269934144234
+Y: 526.015100035453
+</title></circle>
+<circle class="pierce" cx="1193.285034179688" cy="562.182250212719"><title>Point #172
+Group #15 (11 points)
+X: 1193.285034179688
+Y: 562.182250212719
+</title></circle>
+<circle class="pierce" cx="1218.28503418502" cy="558.5"><title>Point #173
+Group #16 (1 points)
+X: 1218.28503418502
+Y: 558.5
+</title></circle>
+<circle class="pierce" cx="513" cy="191.285003662109"><title>Point #174
+Group #17 (11 points)
+X: 513
+Y: 191.285003662109
+</title></circle>
+<circle class="pierce" cx="489.375438998233" cy="161.754302409901"><title>Point #175
+Group #17 (11 points)
+X: 489.375438998233
+Y: 161.754302409901
+</title></circle>
+<circle class="pierce" cx="465.750877996466" cy="132.223601157693"><title>Point #176
+Group #17 (11 points)
+X: 465.750877996466
+Y: 132.223601157693
+</title></circle>
+<circle class="pierce" cx="445" cy="110.885140987594"><title>Point #177
+Group #17 (11 points)
+X: 445
+Y: 110.885140987594
+</title></circle>
+<circle class="pierce" cx="445" cy="148.702890774874"><title>Point #178
+Group #17 (11 points)
+X: 445
+Y: 148.702890774874
+</title></circle>
+<circle class="pierce" cx="445" cy="186.520640562155"><title>Point #179
+Group #17 (11 points)
+X: 445
+Y: 186.520640562155
+</title></circle>
+<circle class="pierce" cx="445" cy="224.338390349436"><title>Point #180
+Group #17 (11 points)
+X: 445
+Y: 224.338390349436
+</title></circle>
+<circle class="pierce" cx="445" cy="262.156140136717"><title>Point #181
+Group #17 (11 points)
+X: 445
+Y: 262.156140136717
+</title></circle>
+<circle class="pierce" cx="473.688886261888" cy="271.285003662109"><title>Point #182
+Group #17 (11 points)
+X: 473.688886261888
+Y: 271.285003662109
+</title></circle>
+<circle class="pierce" cx="509.015100035453" cy="265.269903626656"><title>Point #183
+Group #17 (11 points)
+X: 509.015100035453
+Y: 265.269903626656
+</title></circle>
+<circle class="pierce" cx="513" cy="229.10275344939"><title>Point #184
+Group #17 (11 points)
+X: 513
+Y: 229.10275344939
+</title></circle>
+<circle class="pierce" cx="488" cy="232.785003662109"><title>Point #185
+Group #18 (1 points)
+X: 488
+Y: 232.785003662109
+</title></circle>
+<circle class="pierce" cx="445" cy="90"><title>Point #186
+Group #19 (11 points)
+X: 445
+Y: 90
+</title></circle>
+<circle class="pierce" cx="468.624561001767" cy="119.530701252208"><title>Point #187
+Group #19 (11 points)
+X: 468.624561001767
+Y: 119.530701252208
+</title></circle>
+<circle class="pierce" cx="492.249122003534" cy="149.061402504417"><title>Point #188
+Group #19 (11 points)
+X: 492.249122003534
+Y: 149.061402504417
+</title></circle>
+<circle class="pierce" cx="513" cy="170.399862674516"><title>Point #189
+Group #19 (11 points)
+X: 513
+Y: 170.399862674516
+</title></circle>
+<circle class="pierce" cx="513" cy="132.582112887235"><title>Point #190
+Group #19 (11 points)
+X: 513
+Y: 132.582112887235
+</title></circle>
+<circle class="pierce" cx="513" cy="94.764363099954"><title>Point #191
+Group #19 (11 points)
+X: 513
+Y: 94.764363099954
+</title></circle>
+<circle class="pierce" cx="513" cy="56.946613312673"><title>Point #192
+Group #19 (11 points)
+X: 513
+Y: 56.946613312673
+</title></circle>
+<circle class="pierce" cx="513" cy="19.128863525392"><title>Point #193
+Group #19 (11 points)
+X: 513
+Y: 19.128863525392
+</title></circle>
+<circle class="pierce" cx="484.311113738112" cy="10"><title>Point #194
+Group #19 (11 points)
+X: 484.311113738112
+Y: 10
+</title></circle>
+<circle class="pierce" cx="448.984899964547" cy="16.015100035454"><title>Point #195
+Group #19 (11 points)
+X: 448.984899964547
+Y: 16.015100035454
+</title></circle>
+<circle class="pierce" cx="445" cy="52.182250212719"><title>Point #196
+Group #19 (11 points)
+X: 445
+Y: 52.182250212719
+</title></circle>
+<circle class="pierce" cx="470.000000005333" cy="48.5"><title>Point #197
+Group #20 (1 points)
+X: 470.000000005333
+Y: 48.5
+</title></circle>
+<circle class="pierce" cx="1153" cy="510"><title>Point #198
+Group #21 (40 points)
+X: 1153
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1188" cy="510"><title>Point #199
+Group #21 (40 points)
+X: 1188
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1223" cy="510"><title>Point #200
+Group #21 (40 points)
+X: 1223
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1258" cy="510"><title>Point #201
+Group #21 (40 points)
+X: 1258
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1293" cy="510"><title>Point #202
+Group #21 (40 points)
+X: 1293
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1328" cy="510"><title>Point #203
+Group #21 (40 points)
+X: 1328
+Y: 510
+</title></circle>
+<circle class="pierce" cx="1353" cy="500"><title>Point #204
+Group #21 (40 points)
+X: 1353
+Y: 500
+</title></circle>
+<circle class="pierce" cx="1353" cy="465"><title>Point #205
+Group #21 (40 points)
+X: 1353
+Y: 465
+</title></circle>
+<circle class="pierce" cx="1353" cy="430"><title>Point #206
+Group #21 (40 points)
+X: 1353
+Y: 430
+</title></circle>
+<circle class="pierce" cx="1353" cy="395"><title>Point #207
+Group #21 (40 points)
+X: 1353
+Y: 395
+</title></circle>
+<circle class="pierce" cx="1353" cy="360"><title>Point #208
+Group #21 (40 points)
+X: 1353
+Y: 360
+</title></circle>
+<circle class="pierce" cx="1353" cy="325"><title>Point #209
+Group #21 (40 points)
+X: 1353
+Y: 325
+</title></circle>
+<circle class="pierce" cx="1353" cy="290"><title>Point #210
+Group #21 (40 points)
+X: 1353
+Y: 290
+</title></circle>
+<circle class="pierce" cx="1353" cy="255"><title>Point #211
+Group #21 (40 points)
+X: 1353
+Y: 255
+</title></circle>
+<circle class="pierce" cx="1353" cy="220"><title>Point #212
+Group #21 (40 points)
+X: 1353
+Y: 220
+</title></circle>
+<circle class="pierce" cx="1353" cy="185"><title>Point #213
+Group #21 (40 points)
+X: 1353
+Y: 185
+</title></circle>
+<circle class="pierce" cx="1353" cy="150"><title>Point #214
+Group #21 (40 points)
+X: 1353
+Y: 150
+</title></circle>
+<circle class="pierce" cx="1353" cy="115"><title>Point #215
+Group #21 (40 points)
+X: 1353
+Y: 115
+</title></circle>
+<circle class="pierce" cx="1353" cy="80"><title>Point #216
+Group #21 (40 points)
+X: 1353
+Y: 80
+</title></circle>
+<circle class="pierce" cx="1353" cy="45"><title>Point #217
+Group #21 (40 points)
+X: 1353
+Y: 45
+</title></circle>
+<circle class="pierce" cx="1353" cy="10"><title>Point #218
+Group #21 (40 points)
+X: 1353
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1318" cy="10"><title>Point #219
+Group #21 (40 points)
+X: 1318
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1283" cy="10"><title>Point #220
+Group #21 (40 points)
+X: 1283
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1248" cy="10"><title>Point #221
+Group #21 (40 points)
+X: 1248
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1213" cy="10"><title>Point #222
+Group #21 (40 points)
+X: 1213
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1178" cy="10"><title>Point #223
+Group #21 (40 points)
+X: 1178
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1153" cy="20"><title>Point #224
+Group #21 (40 points)
+X: 1153
+Y: 20
+</title></circle>
+<circle class="pierce" cx="1153" cy="55"><title>Point #225
+Group #21 (40 points)
+X: 1153
+Y: 55
+</title></circle>
+<circle class="pierce" cx="1153" cy="90"><title>Point #226
+Group #21 (40 points)
+X: 1153
+Y: 90
+</title></circle>
+<circle class="pierce" cx="1153" cy="125"><title>Point #227
+Group #21 (40 points)
+X: 1153
+Y: 125
+</title></circle>
+<circle class="pierce" cx="1153" cy="160"><title>Point #228
+Group #21 (40 points)
+X: 1153
+Y: 160
+</title></circle>
+<circle class="pierce" cx="1153" cy="195"><title>Point #229
+Group #21 (40 points)
+X: 1153
+Y: 195
+</title></circle>
+<circle class="pierce" cx="1153" cy="230"><title>Point #230
+Group #21 (40 points)
+X: 1153
+Y: 230
+</title></circle>
+<circle class="pierce" cx="1153" cy="265"><title>Point #231
+Group #21 (40 points)
+X: 1153
+Y: 265
+</title></circle>
+<circle class="pierce" cx="1153" cy="300"><title>Point #232
+Group #21 (40 points)
+X: 1153
+Y: 300
+</title></circle>
+<circle class="pierce" cx="1153" cy="335"><title>Point #233
+Group #21 (40 points)
+X: 1153
+Y: 335
+</title></circle>
+<circle class="pierce" cx="1153" cy="370"><title>Point #234
+Group #21 (40 points)
+X: 1153
+Y: 370
+</title></circle>
+<circle class="pierce" cx="1153" cy="405"><title>Point #235
+Group #21 (40 points)
+X: 1153
+Y: 405
+</title></circle>
+<circle class="pierce" cx="1153" cy="440"><title>Point #236
+Group #21 (40 points)
+X: 1153
+Y: 440
+</title></circle>
+<circle class="pierce" cx="1153" cy="475"><title>Point #237
+Group #21 (40 points)
+X: 1153
+Y: 475
+</title></circle>
+<circle class="pierce" cx="1314.885009765625" cy="75.310974121094"><title>Point #238
+Group #22 (3 points)
+X: 1314.885009765625
+Y: 75.310974121094
+</title></circle>
+<circle class="pierce" cx="1330.47346706328" cy="48.310974146672"><title>Point #239
+Group #22 (3 points)
+X: 1330.47346706328
+Y: 48.310974146672
+</title></circle>
+<circle class="pierce" cx="1299.296552504889" cy="48.310974108305"><title>Point #240
+Group #22 (3 points)
+X: 1299.296552504889
+Y: 48.310974108305
+</title></circle>
+<circle class="pierce" cx="1253" cy="312"><title>Point #241
+Group #23 (9 points)
+X: 1253
+Y: 312
+</title></circle>
+<circle class="pierce" cx="1286.424955713681" cy="299.834311069609"><title>Point #242
+Group #23 (9 points)
+X: 1286.424955713681
+Y: 299.834311069609
+</title></circle>
+<circle class="pierce" cx="1304.210003191889" cy="269.029705280694"><title>Point #243
+Group #23 (9 points)
+X: 1304.210003191889
+Y: 269.029705280694
+</title></circle>
+<circle class="pierce" cx="1298.033321082114" cy="234.000000073892"><title>Point #244
+Group #23 (9 points)
+X: 1298.033321082114
+Y: 234.000000073892
+</title></circle>
+<circle class="pierce" cx="1270.785047575774" cy="211.135983748315"><title>Point #245
+Group #23 (9 points)
+X: 1270.785047575774
+Y: 211.135983748315
+</title></circle>
+<circle class="pierce" cx="1235.214952587154" cy="211.135983704542"><title>Point #246
+Group #23 (9 points)
+X: 1235.214952587154
+Y: 211.135983704542
+</title></circle>
+<circle class="pierce" cx="1207.96667902454" cy="233.999999963054"><title>Point #247
+Group #23 (9 points)
+X: 1207.96667902454
+Y: 233.999999963054
+</title></circle>
+<circle class="pierce" cx="1201.789996835957" cy="269.029705196667"><title>Point #248
+Group #23 (9 points)
+X: 1201.789996835957
+Y: 269.029705196667
+</title></circle>
+<circle class="pierce" cx="1219.575044263619" cy="299.834311014765"><title>Point #249
+Group #23 (9 points)
+X: 1219.575044263619
+Y: 299.834311014765
+</title></circle>
+<circle class="pierce" cx="523" cy="510"><title>Point #250
+Group #24 (40 points)
+X: 523
+Y: 510
+</title></circle>
+<circle class="pierce" cx="558" cy="510"><title>Point #251
+Group #24 (40 points)
+X: 558
+Y: 510
+</title></circle>
+<circle class="pierce" cx="593" cy="510"><title>Point #252
+Group #24 (40 points)
+X: 593
+Y: 510
+</title></circle>
+<circle class="pierce" cx="628" cy="510"><title>Point #253
+Group #24 (40 points)
+X: 628
+Y: 510
+</title></circle>
+<circle class="pierce" cx="663" cy="510"><title>Point #254
+Group #24 (40 points)
+X: 663
+Y: 510
+</title></circle>
+<circle class="pierce" cx="698" cy="510"><title>Point #255
+Group #24 (40 points)
+X: 698
+Y: 510
+</title></circle>
+<circle class="pierce" cx="723" cy="500"><title>Point #256
+Group #24 (40 points)
+X: 723
+Y: 500
+</title></circle>
+<circle class="pierce" cx="723" cy="465"><title>Point #257
+Group #24 (40 points)
+X: 723
+Y: 465
+</title></circle>
+<circle class="pierce" cx="723" cy="430"><title>Point #258
+Group #24 (40 points)
+X: 723
+Y: 430
+</title></circle>
+<circle class="pierce" cx="723" cy="395"><title>Point #259
+Group #24 (40 points)
+X: 723
+Y: 395
+</title></circle>
+<circle class="pierce" cx="723" cy="360"><title>Point #260
+Group #24 (40 points)
+X: 723
+Y: 360
+</title></circle>
+<circle class="pierce" cx="723" cy="325"><title>Point #261
+Group #24 (40 points)
+X: 723
+Y: 325
+</title></circle>
+<circle class="pierce" cx="723" cy="290"><title>Point #262
+Group #24 (40 points)
+X: 723
+Y: 290
+</title></circle>
+<circle class="pierce" cx="723" cy="255"><title>Point #263
+Group #24 (40 points)
+X: 723
+Y: 255
+</title></circle>
+<circle class="pierce" cx="723" cy="220"><title>Point #264
+Group #24 (40 points)
+X: 723
+Y: 220
+</title></circle>
+<circle class="pierce" cx="723" cy="185"><title>Point #265
+Group #24 (40 points)
+X: 723
+Y: 185
+</title></circle>
+<circle class="pierce" cx="723" cy="150"><title>Point #266
+Group #24 (40 points)
+X: 723
+Y: 150
+</title></circle>
+<circle class="pierce" cx="723" cy="115"><title>Point #267
+Group #24 (40 points)
+X: 723
+Y: 115
+</title></circle>
+<circle class="pierce" cx="723" cy="80"><title>Point #268
+Group #24 (40 points)
+X: 723
+Y: 80
+</title></circle>
+<circle class="pierce" cx="723" cy="45"><title>Point #269
+Group #24 (40 points)
+X: 723
+Y: 45
+</title></circle>
+<circle class="pierce" cx="723" cy="10"><title>Point #270
+Group #24 (40 points)
+X: 723
+Y: 10
+</title></circle>
+<circle class="pierce" cx="688" cy="10"><title>Point #271
+Group #24 (40 points)
+X: 688
+Y: 10
+</title></circle>
+<circle class="pierce" cx="653" cy="10"><title>Point #272
+Group #24 (40 points)
+X: 653
+Y: 10
+</title></circle>
+<circle class="pierce" cx="618" cy="10"><title>Point #273
+Group #24 (40 points)
+X: 618
+Y: 10
+</title></circle>
+<circle class="pierce" cx="583" cy="10"><title>Point #274
+Group #24 (40 points)
+X: 583
+Y: 10
+</title></circle>
+<circle class="pierce" cx="548" cy="10"><title>Point #275
+Group #24 (40 points)
+X: 548
+Y: 10
+</title></circle>
+<circle class="pierce" cx="523" cy="20"><title>Point #276
+Group #24 (40 points)
+X: 523
+Y: 20
+</title></circle>
+<circle class="pierce" cx="523" cy="55"><title>Point #277
+Group #24 (40 points)
+X: 523
+Y: 55
+</title></circle>
+<circle class="pierce" cx="523" cy="90"><title>Point #278
+Group #24 (40 points)
+X: 523
+Y: 90
+</title></circle>
+<circle class="pierce" cx="523" cy="125"><title>Point #279
+Group #24 (40 points)
+X: 523
+Y: 125
+</title></circle>
+<circle class="pierce" cx="523" cy="160"><title>Point #280
+Group #24 (40 points)
+X: 523
+Y: 160
+</title></circle>
+<circle class="pierce" cx="523" cy="195"><title>Point #281
+Group #24 (40 points)
+X: 523
+Y: 195
+</title></circle>
+<circle class="pierce" cx="523" cy="230"><title>Point #282
+Group #24 (40 points)
+X: 523
+Y: 230
+</title></circle>
+<circle class="pierce" cx="523" cy="265"><title>Point #283
+Group #24 (40 points)
+X: 523
+Y: 265
+</title></circle>
+<circle class="pierce" cx="523" cy="300"><title>Point #284
+Group #24 (40 points)
+X: 523
+Y: 300
+</title></circle>
+<circle class="pierce" cx="523" cy="335"><title>Point #285
+Group #24 (40 points)
+X: 523
+Y: 335
+</title></circle>
+<circle class="pierce" cx="523" cy="370"><title>Point #286
+Group #24 (40 points)
+X: 523
+Y: 370
+</title></circle>
+<circle class="pierce" cx="523" cy="405"><title>Point #287
+Group #24 (40 points)
+X: 523
+Y: 405
+</title></circle>
+<circle class="pierce" cx="523" cy="440"><title>Point #288
+Group #24 (40 points)
+X: 523
+Y: 440
+</title></circle>
+<circle class="pierce" cx="523" cy="475"><title>Point #289
+Group #24 (40 points)
+X: 523
+Y: 475
+</title></circle>
+<circle class="pierce" cx="684.885070800781" cy="75.310974121094"><title>Point #290
+Group #25 (3 points)
+X: 684.885070800781
+Y: 75.310974121094
+</title></circle>
+<circle class="pierce" cx="700.473528098436" cy="48.310974146672"><title>Point #291
+Group #25 (3 points)
+X: 700.473528098436
+Y: 48.310974146672
+</title></circle>
+<circle class="pierce" cx="669.296613540045" cy="48.310974108305"><title>Point #292
+Group #25 (3 points)
+X: 669.296613540045
+Y: 48.310974108305
+</title></circle>
+<circle class="pierce" cx="623" cy="312"><title>Point #293
+Group #26 (9 points)
+X: 623
+Y: 312
+</title></circle>
+<circle class="pierce" cx="656.424955713681" cy="299.834311069609"><title>Point #294
+Group #26 (9 points)
+X: 656.424955713681
+Y: 299.834311069609
+</title></circle>
+<circle class="pierce" cx="674.210003191888" cy="269.029705280694"><title>Point #295
+Group #26 (9 points)
+X: 674.210003191888
+Y: 269.029705280694
+</title></circle>
+<circle class="pierce" cx="668.033321082114" cy="234.000000073892"><title>Point #296
+Group #26 (9 points)
+X: 668.033321082114
+Y: 234.000000073892
+</title></circle>
+<circle class="pierce" cx="640.785047575774" cy="211.135983748315"><title>Point #297
+Group #26 (9 points)
+X: 640.785047575774
+Y: 211.135983748315
+</title></circle>
+<circle class="pierce" cx="605.214952587154" cy="211.135983704542"><title>Point #298
+Group #26 (9 points)
+X: 605.214952587154
+Y: 211.135983704542
+</title></circle>
+<circle class="pierce" cx="577.96667902454" cy="233.999999963054"><title>Point #299
+Group #26 (9 points)
+X: 577.96667902454
+Y: 233.999999963054
+</title></circle>
+<circle class="pierce" cx="571.789996835957" cy="269.029705196667"><title>Point #300
+Group #26 (9 points)
+X: 571.789996835957
+Y: 269.029705196667
+</title></circle>
+<circle class="pierce" cx="589.575044263619" cy="299.834311014765"><title>Point #301
+Group #26 (9 points)
+X: 589.575044263619
+Y: 299.834311014765
+</title></circle>
+<circle class="pierce" cx="924" cy="789"><title>Point #302
+Group #27 (11 points)
+X: 924
+Y: 789
+</title></circle>
+<circle class="pierce" cx="953.530701252208" cy="765.375438998234"><title>Point #303
+Group #27 (11 points)
+X: 953.530701252208
+Y: 765.375438998234
+</title></circle>
+<circle class="pierce" cx="983.061402504417" cy="741.750877996467"><title>Point #304
+Group #27 (11 points)
+X: 983.061402504417
+Y: 741.750877996467
+</title></circle>
+<circle class="pierce" cx="1004.399862674516" cy="721"><title>Point #305
+Group #27 (11 points)
+X: 1004.399862674516
+Y: 721
+</title></circle>
+<circle class="pierce" cx="966.582112887235" cy="721"><title>Point #306
+Group #27 (11 points)
+X: 966.582112887235
+Y: 721
+</title></circle>
+<circle class="pierce" cx="928.764363099954" cy="721"><title>Point #307
+Group #27 (11 points)
+X: 928.764363099954
+Y: 721
+</title></circle>
+<circle class="pierce" cx="890.946613312674" cy="721"><title>Point #308
+Group #27 (11 points)
+X: 890.946613312674
+Y: 721
+</title></circle>
+<circle class="pierce" cx="853.128863525392" cy="721"><title>Point #309
+Group #27 (11 points)
+X: 853.128863525392
+Y: 721
+</title></circle>
+<circle class="pierce" cx="844" cy="749.688886261889"><title>Point #310
+Group #27 (11 points)
+X: 844
+Y: 749.688886261889
+</title></circle>
+<circle class="pierce" cx="850.015100035454" cy="785.015100035454"><title>Point #311
+Group #27 (11 points)
+X: 850.015100035454
+Y: 785.015100035454
+</title></circle>
+<circle class="pierce" cx="886.18225021272" cy="789"><title>Point #312
+Group #27 (11 points)
+X: 886.18225021272
+Y: 789
+</title></circle>
+<circle class="pierce" cx="882.5" cy="764"><title>Point #313
+Group #28 (1 points)
+X: 882.5
+Y: 764
+</title></circle>
+<circle class="pierce" cx="1025.285034179688" cy="721"><title>Point #314
+Group #29 (11 points)
+X: 1025.285034179688
+Y: 721
+</title></circle>
+<circle class="pierce" cx="995.754316936333" cy="744.624556830819"><title>Point #315
+Group #29 (11 points)
+X: 995.754316936333
+Y: 744.624556830819
+</title></circle>
+<circle class="pierce" cx="966.223599692978" cy="768.249113661638"><title>Point #316
+Group #29 (11 points)
+X: 966.223599692978
+Y: 768.249113661638
+</title></circle>
+<circle class="pierce" cx="944.885092453817" cy="789"><title>Point #317
+Group #29 (11 points)
+X: 944.885092453817
+Y: 789
+</title></circle>
+<circle class="pierce" cx="982.702852122517" cy="789"><title>Point #318
+Group #29 (11 points)
+X: 982.702852122517
+Y: 789
+</title></circle>
+<circle class="pierce" cx="1020.520611791217" cy="789"><title>Point #319
+Group #29 (11 points)
+X: 1020.520611791217
+Y: 789
+</title></circle>
+<circle class="pierce" cx="1058.338371459918" cy="789"><title>Point #320
+Group #29 (11 points)
+X: 1058.338371459918
+Y: 789
+</title></circle>
+<circle class="pierce" cx="1096.156131128618" cy="789"><title>Point #321
+Group #29 (11 points)
+X: 1096.156131128618
+Y: 789
+</title></circle>
+<circle class="pierce" cx="1105.285034179688" cy="760.31114338237"><title>Point #322
+Group #29 (11 points)
+X: 1105.285034179688
+Y: 760.31114338237
+</title></circle>
+<circle class="pierce" cx="1099.269948118671" cy="724.984913938984"><title>Point #323
+Group #29 (11 points)
+X: 1099.269948118671
+Y: 724.984913938984
+</title></circle>
+<circle class="pierce" cx="1063.102793848388" cy="721"><title>Point #324
+Group #29 (11 points)
+X: 1063.102793848388
+Y: 721
+</title></circle>
+<circle class="pierce" cx="1066.785034179688" cy="746"><title>Point #325
+Group #30 (1 points)
+X: 1066.785034179688
+Y: 746
+</title></circle>
+<circle class="pierce" cx="1339.285034179688" cy="701.284973144531"><title>Point #326
+Group #31 (11 points)
+X: 1339.285034179688
+Y: 701.284973144531
+</title></circle>
+<circle class="pierce" cx="1315.660473177921" cy="671.754271892323"><title>Point #327
+Group #31 (11 points)
+X: 1315.660473177921
+Y: 671.754271892323
+</title></circle>
+<circle class="pierce" cx="1292.035912176154" cy="642.223570640115"><title>Point #328
+Group #31 (11 points)
+X: 1292.035912176154
+Y: 642.223570640115
+</title></circle>
+<circle class="pierce" cx="1271.285034179688" cy="620.885110470016"><title>Point #329
+Group #31 (11 points)
+X: 1271.285034179688
+Y: 620.885110470016
+</title></circle>
+<circle class="pierce" cx="1271.285034179688" cy="658.702860257296"><title>Point #330
+Group #31 (11 points)
+X: 1271.285034179688
+Y: 658.702860257296
+</title></circle>
+<circle class="pierce" cx="1271.285034179688" cy="696.520610044577"><title>Point #331
+Group #31 (11 points)
+X: 1271.285034179688
+Y: 696.520610044577
+</title></circle>
+<circle class="pierce" cx="1271.285034179688" cy="734.338359831858"><title>Point #332
+Group #31 (11 points)
+X: 1271.285034179688
+Y: 734.338359831858
+</title></circle>
+<circle class="pierce" cx="1271.285034179688" cy="772.156109619139"><title>Point #333
+Group #31 (11 points)
+X: 1271.285034179688
+Y: 772.156109619139
+</title></circle>
+<circle class="pierce" cx="1299.973920441576" cy="781.284973144531"><title>Point #334
+Group #31 (11 points)
+X: 1299.973920441576
+Y: 781.284973144531
+</title></circle>
+<circle class="pierce" cx="1335.300134215141" cy="775.269873109078"><title>Point #335
+Group #31 (11 points)
+X: 1335.300134215141
+Y: 775.269873109078
+</title></circle>
+<circle class="pierce" cx="1339.285034179688" cy="739.102722931812"><title>Point #336
+Group #31 (11 points)
+X: 1339.285034179688
+Y: 739.102722931812
+</title></circle>
+<circle class="pierce" cx="1314.285034179688" cy="742.784973144531"><title>Point #337
+Group #32 (1 points)
+X: 1314.285034179688
+Y: 742.784973144531
+</title></circle>
+<circle class="pierce" cx="1271.285034179688" cy="600"><title>Point #338
+Group #33 (11 points)
+X: 1271.285034179688
+Y: 600
+</title></circle>
+<circle class="pierce" cx="1294.909595181454" cy="629.530701252208"><title>Point #339
+Group #33 (11 points)
+X: 1294.909595181454
+Y: 629.530701252208
+</title></circle>
+<circle class="pierce" cx="1318.534156183221" cy="659.061402504417"><title>Point #340
+Group #33 (11 points)
+X: 1318.534156183221
+Y: 659.061402504417
+</title></circle>
+<circle class="pierce" cx="1339.285034179688" cy="680.399862674516"><title>Point #341
+Group #33 (11 points)
+X: 1339.285034179688
+Y: 680.399862674516
+</title></circle>
+<circle class="pierce" cx="1339.285034179688" cy="642.582112887235"><title>Point #342
+Group #33 (11 points)
+X: 1339.285034179688
+Y: 642.582112887235
+</title></circle>
+<circle class="pierce" cx="1339.285034179688" cy="604.764363099954"><title>Point #343
+Group #33 (11 points)
+X: 1339.285034179688
+Y: 604.764363099954
+</title></circle>
+<circle class="pierce" cx="1339.285034179688" cy="566.946613312674"><title>Point #344
+Group #33 (11 points)
+X: 1339.285034179688
+Y: 566.946613312674
+</title></circle>
+<circle class="pierce" cx="1339.285034179688" cy="529.128863525393"><title>Point #345
+Group #33 (11 points)
+X: 1339.285034179688
+Y: 529.128863525393
+</title></circle>
+<circle class="pierce" cx="1310.596147917799" cy="520"><title>Point #346
+Group #33 (11 points)
+X: 1310.596147917799
+Y: 520
+</title></circle>
+<circle class="pierce" cx="1275.269934144234" cy="526.015100035453"><title>Point #347
+Group #33 (11 points)
+X: 1275.269934144234
+Y: 526.015100035453
+</title></circle>
+<circle class="pierce" cx="1271.285034179688" cy="562.182250212719"><title>Point #348
+Group #33 (11 points)
+X: 1271.285034179688
+Y: 562.182250212719
+</title></circle>
+<circle class="pierce" cx="1296.28503418502" cy="558.5"><title>Point #349
+Group #34 (1 points)
+X: 1296.28503418502
+Y: 558.5
+</title></circle>
+<circle class="pierce" cx="478" cy="281.285003662109"><title>Point #350
+Group #35 (20 points)
+X: 478
+Y: 281.285003662109
+</title></circle>
+<circle class="pierce" cx="478" cy="317.935000610352"><title>Point #351
+Group #35 (20 points)
+X: 478
+Y: 317.935000610352
+</title></circle>
+<circle class="pierce" cx="478" cy="354.584997558594"><title>Point #352
+Group #35 (20 points)
+X: 478
+Y: 354.584997558594
+</title></circle>
+<circle class="pierce" cx="478" cy="391.234994506836"><title>Point #353
+Group #35 (20 points)
+X: 478
+Y: 391.234994506836
+</title></circle>
+<circle class="pierce" cx="478" cy="427.884991455078"><title>Point #354
+Group #35 (20 points)
+X: 478
+Y: 427.884991455078
+</title></circle>
+<circle class="pierce" cx="478" cy="464.53498840332"><title>Point #355
+Group #35 (20 points)
+X: 478
+Y: 464.53498840332
+</title></circle>
+<circle class="pierce" cx="478" cy="501.184985351563"><title>Point #356
+Group #35 (20 points)
+X: 478
+Y: 501.184985351563
+</title></circle>
+<circle class="pierce" cx="478" cy="537.834982299805"><title>Point #357
+Group #35 (20 points)
+X: 478
+Y: 537.834982299805
+</title></circle>
+<circle class="pierce" cx="478" cy="574.484979248047"><title>Point #358
+Group #35 (20 points)
+X: 478
+Y: 574.484979248047
+</title></circle>
+<circle class="pierce" cx="493.850003051758" cy="595.284973144531"><title>Point #359
+Group #35 (20 points)
+X: 493.850003051758
+Y: 595.284973144531
+</title></circle>
+<circle class="pierce" cx="513" cy="577.784973144531"><title>Point #360
+Group #35 (20 points)
+X: 513
+Y: 577.784973144531
+</title></circle>
+<circle class="pierce" cx="495.5" cy="558.634976196289"><title>Point #361
+Group #35 (20 points)
+X: 495.5
+Y: 558.634976196289
+</title></circle>
+<circle class="pierce" cx="508.799993896484" cy="535.284973144531"><title>Point #362
+Group #35 (20 points)
+X: 508.799993896484
+Y: 535.284973144531
+</title></circle>
+<circle class="pierce" cx="513" cy="502.834982299805"><title>Point #363
+Group #35 (20 points)
+X: 513
+Y: 502.834982299805
+</title></circle>
+<circle class="pierce" cx="513" cy="466.184985351563"><title>Point #364
+Group #35 (20 points)
+X: 513
+Y: 466.184985351563
+</title></circle>
+<circle class="pierce" cx="513" cy="429.53498840332"><title>Point #365
+Group #35 (20 points)
+X: 513
+Y: 429.53498840332
+</title></circle>
+<circle class="pierce" cx="513" cy="392.884991455078"><title>Point #366
+Group #35 (20 points)
+X: 513
+Y: 392.884991455078
+</title></circle>
+<circle class="pierce" cx="513" cy="356.234994506836"><title>Point #367
+Group #35 (20 points)
+X: 513
+Y: 356.234994506836
+</title></circle>
+<circle class="pierce" cx="513" cy="319.584997558594"><title>Point #368
+Group #35 (20 points)
+X: 513
+Y: 319.584997558594
+</title></circle>
+<circle class="pierce" cx="513" cy="282.935000610352"><title>Point #369
+Group #35 (20 points)
+X: 513
+Y: 282.935000610352
+</title></circle>
+<circle class="pierce" cx="485.5" cy="317.83447265625"><title>Point #370
+Group #36 (1 points)
+X: 485.5
+Y: 317.83447265625
+</title></circle>
+<circle class="pierce" cx="480" cy="718.284973144531"><title>Point #371
+Group #37 (11 points)
+X: 480
+Y: 718.284973144531
+</title></circle>
+<circle class="pierce" cx="509.530701252208" cy="694.660412142765"><title>Point #372
+Group #37 (11 points)
+X: 509.530701252208
+Y: 694.660412142765
+</title></circle>
+<circle class="pierce" cx="539.061402504417" cy="671.035851140998"><title>Point #373
+Group #37 (11 points)
+X: 539.061402504417
+Y: 671.035851140998
+</title></circle>
+<circle class="pierce" cx="560.399862674516" cy="650.284973144531"><title>Point #374
+Group #37 (11 points)
+X: 560.399862674516
+Y: 650.284973144531
+</title></circle>
+<circle class="pierce" cx="522.582112887235" cy="650.284973144531"><title>Point #375
+Group #37 (11 points)
+X: 522.582112887235
+Y: 650.284973144531
+</title></circle>
+<circle class="pierce" cx="484.764363099954" cy="650.284973144531"><title>Point #376
+Group #37 (11 points)
+X: 484.764363099954
+Y: 650.284973144531
+</title></circle>
+<circle class="pierce" cx="446.946613312673" cy="650.284973144531"><title>Point #377
+Group #37 (11 points)
+X: 446.946613312673
+Y: 650.284973144531
+</title></circle>
+<circle class="pierce" cx="409.128863525393" cy="650.284973144531"><title>Point #378
+Group #37 (11 points)
+X: 409.128863525393
+Y: 650.284973144531
+</title></circle>
+<circle class="pierce" cx="400" cy="678.97385940642"><title>Point #379
+Group #37 (11 points)
+X: 400
+Y: 678.97385940642
+</title></circle>
+<circle class="pierce" cx="406.015100035454" cy="714.300073179985"><title>Point #380
+Group #37 (11 points)
+X: 406.015100035454
+Y: 714.300073179985
+</title></circle>
+<circle class="pierce" cx="442.182250212719" cy="718.284973144531"><title>Point #381
+Group #37 (11 points)
+X: 442.182250212719
+Y: 718.284973144531
+</title></circle>
+<circle class="pierce" cx="438.5" cy="693.284973144531"><title>Point #382
+Group #38 (1 points)
+X: 438.5
+Y: 693.284973144531
+</title></circle>
+<circle class="pierce" cx="581.284973144531" cy="650.284973144531"><title>Point #383
+Group #39 (11 points)
+X: 581.284973144531
+Y: 650.284973144531
+</title></circle>
+<circle class="pierce" cx="551.754279887898" cy="673.909536231773"><title>Point #384
+Group #39 (11 points)
+X: 551.754279887898
+Y: 673.909536231773
+</title></circle>
+<circle class="pierce" cx="522.223586631265" cy="697.534099319014"><title>Point #385
+Group #39 (11 points)
+X: 522.223586631265
+Y: 697.534099319014
+</title></circle>
+<circle class="pierce" cx="500.885149995689" cy="718.284973144531"><title>Point #386
+Group #39 (11 points)
+X: 500.885149995689
+Y: 718.284973144531
+</title></circle>
+<circle class="pierce" cx="538.702894842261" cy="718.284973144531"><title>Point #387
+Group #39 (11 points)
+X: 538.702894842261
+Y: 718.284973144531
+</title></circle>
+<circle class="pierce" cx="576.520639688832" cy="718.284973144531"><title>Point #388
+Group #39 (11 points)
+X: 576.520639688832
+Y: 718.284973144531
+</title></circle>
+<circle class="pierce" cx="614.338384535404" cy="718.284973144531"><title>Point #389
+Group #39 (11 points)
+X: 614.338384535404
+Y: 718.284973144531
+</title></circle>
+<circle class="pierce" cx="652.156129381976" cy="718.284973144531"><title>Point #390
+Group #39 (11 points)
+X: 652.156129381976
+Y: 718.284973144531
+</title></circle>
+<circle class="pierce" cx="661.284973144531" cy="689.596072060515"><title>Point #391
+Group #39 (11 points)
+X: 661.284973144531
+Y: 689.596072060515
+</title></circle>
+<circle class="pierce" cx="655.26986612186" cy="654.26986612186"><title>Point #392
+Group #39 (11 points)
+X: 655.26986612186
+Y: 654.26986612186
+</title></circle>
+<circle class="pierce" cx="619.102717991103" cy="650.284973144531"><title>Point #393
+Group #39 (11 points)
+X: 619.102717991103
+Y: 650.284973144531
+</title></circle>
+<circle class="pierce" cx="622.784973144531" cy="675.284973144531"><title>Point #394
+Group #40 (1 points)
+X: 622.784973144531
+Y: 675.284973144531
+</title></circle>
+<circle class="pierce" cx="874.284973144531" cy="588"><title>Point #395
+Group #41 (11 points)
+X: 874.284973144531
+Y: 588
+</title></circle>
+<circle class="pierce" cx="903.815674396739" cy="564.375438998233"><title>Point #396
+Group #41 (11 points)
+X: 903.815674396739
+Y: 564.375438998233
+</title></circle>
+<circle class="pierce" cx="933.346375648949" cy="540.750877996466"><title>Point #397
+Group #41 (11 points)
+X: 933.346375648949
+Y: 540.750877996466
+</title></circle>
+<circle class="pierce" cx="954.684835819048" cy="520"><title>Point #398
+Group #41 (11 points)
+X: 954.684835819048
+Y: 520
+</title></circle>
+<circle class="pierce" cx="916.867086031766" cy="520"><title>Point #399
+Group #41 (11 points)
+X: 916.867086031766
+Y: 520
+</title></circle>
+<circle class="pierce" cx="879.049336244486" cy="520"><title>Point #400
+Group #41 (11 points)
+X: 879.049336244486
+Y: 520
+</title></circle>
+<circle class="pierce" cx="841.231586457205" cy="520"><title>Point #401
+Group #41 (11 points)
+X: 841.231586457205
+Y: 520
+</title></circle>
+<circle class="pierce" cx="803.413836669924" cy="520"><title>Point #402
+Group #41 (11 points)
+X: 803.413836669924
+Y: 520
+</title></circle>
+<circle class="pierce" cx="794.284973144531" cy="548.688886261888"><title>Point #403
+Group #41 (11 points)
+X: 794.284973144531
+Y: 548.688886261888
+</title></circle>
+<circle class="pierce" cx="800.300073179985" cy="584.015100035453"><title>Point #404
+Group #41 (11 points)
+X: 800.300073179985
+Y: 584.015100035453
+</title></circle>
+<circle class="pierce" cx="836.467223357251" cy="588"><title>Point #405
+Group #41 (11 points)
+X: 836.467223357251
+Y: 588
+</title></circle>
+<circle class="pierce" cx="832.784973144531" cy="563"><title>Point #406
+Group #42 (1 points)
+X: 832.784973144531
+Y: 563
+</title></circle>
+<circle class="pierce" cx="975.570007324219" cy="520"><title>Point #407
+Group #43 (11 points)
+X: 975.570007324219
+Y: 520
+</title></circle>
+<circle class="pierce" cx="946.039314737547" cy="543.624554069338"><title>Point #408
+Group #43 (11 points)
+X: 946.039314737547
+Y: 543.624554069338
+</title></circle>
+<circle class="pierce" cx="916.508622150874" cy="567.249108138675"><title>Point #409
+Group #43 (11 points)
+X: 916.508622150874
+Y: 567.249108138675
+</title></circle>
+<circle class="pierce" cx="895.170111357799" cy="588"><title>Point #410
+Group #43 (11 points)
+X: 895.170111357799
+Y: 588
+</title></circle>
+<circle class="pierce" cx="932.987850047779" cy="588"><title>Point #411
+Group #43 (11 points)
+X: 932.987850047779
+Y: 588
+</title></circle>
+<circle class="pierce" cx="970.805588737759" cy="588"><title>Point #412
+Group #43 (11 points)
+X: 970.805588737759
+Y: 588
+</title></circle>
+<circle class="pierce" cx="1008.623327427738" cy="588"><title>Point #413
+Group #43 (11 points)
+X: 1008.623327427738
+Y: 588
+</title></circle>
+<circle class="pierce" cx="1046.441066117719" cy="588"><title>Point #414
+Group #43 (11 points)
+X: 1046.441066117719
+Y: 588
+</title></circle>
+<circle class="pierce" cx="1055.569946289062" cy="559.311141481365"><title>Point #415
+Group #43 (11 points)
+X: 1055.569946289062
+Y: 559.311141481365
+</title></circle>
+<circle class="pierce" cx="1049.554873718028" cy="523.984927428966"><title>Point #416
+Group #43 (11 points)
+X: 1049.554873718028
+Y: 523.984927428966
+</title></circle>
+<circle class="pierce" cx="1013.387746014198" cy="520"><title>Point #417
+Group #43 (11 points)
+X: 1013.387746014198
+Y: 520
+</title></circle>
+<circle class="pierce" cx="1017.070007324219" cy="545"><title>Point #418
+Group #44 (1 points)
+X: 1017.070007324219
+Y: 545
+</title></circle>
+<circle class="pierce" cx="400" cy="640.284973144531"><title>Point #419
+Group #45 (20 points)
+X: 400
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="436.65" cy="640.284973144531"><title>Point #420
+Group #45 (20 points)
+X: 436.65
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="473.3" cy="640.284973144531"><title>Point #421
+Group #45 (20 points)
+X: 473.3
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="509.95" cy="640.284973144531"><title>Point #422
+Group #45 (20 points)
+X: 509.95
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="546.6" cy="640.284973144531"><title>Point #423
+Group #45 (20 points)
+X: 546.6
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="583.25" cy="640.284973144531"><title>Point #424
+Group #45 (20 points)
+X: 583.25
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="619.9" cy="640.284973144531"><title>Point #425
+Group #45 (20 points)
+X: 619.9
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="656.55" cy="640.284973144531"><title>Point #426
+Group #45 (20 points)
+X: 656.55
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="693.2" cy="640.284973144531"><title>Point #427
+Group #45 (20 points)
+X: 693.2
+Y: 640.284973144531
+</title></circle>
+<circle class="pierce" cx="714" cy="624.434973144531"><title>Point #428
+Group #45 (20 points)
+X: 714
+Y: 624.434973144531
+</title></circle>
+<circle class="pierce" cx="696.5" cy="605.284973144531"><title>Point #429
+Group #45 (20 points)
+X: 696.5
+Y: 605.284973144531
+</title></circle>
+<circle class="pierce" cx="677.35" cy="622.784973144531"><title>Point #430
+Group #45 (20 points)
+X: 677.35
+Y: 622.784973144531
+</title></circle>
+<circle class="pierce" cx="654" cy="609.484973144531"><title>Point #431
+Group #45 (20 points)
+X: 654
+Y: 609.484973144531
+</title></circle>
+<circle class="pierce" cx="621.55" cy="605.284973144531"><title>Point #432
+Group #45 (20 points)
+X: 621.55
+Y: 605.284973144531
+</title></circle>
+<circle class="pierce" cx="584.9" cy="605.284973144531"><title>Point #433
+Group #45 (20 points)
+X: 584.9
+Y: 605.284973144531
+</title></circle>
+<circle class="pierce" cx="548.25" cy="605.284973144531"><title>Point #434
+Group #45 (20 points)
+X: 548.25
+Y: 605.284973144531
+</title></circle>
+<circle class="pierce" cx="511.6" cy="605.284973144531"><title>Point #435
+Group #45 (20 points)
+X: 511.6
+Y: 605.284973144531
+</title></circle>
+<circle class="pierce" cx="474.95" cy="605.284973144531"><title>Point #436
+Group #45 (20 points)
+X: 474.95
+Y: 605.284973144531
+</title></circle>
+<circle class="pierce" cx="438.3" cy="605.284973144531"><title>Point #437
+Group #45 (20 points)
+X: 438.3
+Y: 605.284973144531
+</title></circle>
+<circle class="pierce" cx="401.65" cy="605.284973144531"><title>Point #438
+Group #45 (20 points)
+X: 401.65
+Y: 605.284973144531
+</title></circle>
+<circle class="pierce" cx="436.549468994141" cy="632.784973144531"><title>Point #439
+Group #46 (1 points)
+X: 436.549468994141
+Y: 632.784973144531
+</title></circle>
+<circle class="pierce" cx="1183.285034179688" cy="701.284973144531"><title>Point #440
+Group #47 (11 points)
+X: 1183.285034179688
+Y: 701.284973144531
+</title></circle>
+<circle class="pierce" cx="1159.660473177921" cy="671.754271892323"><title>Point #441
+Group #47 (11 points)
+X: 1159.660473177921
+Y: 671.754271892323
+</title></circle>
+<circle class="pierce" cx="1136.035912176154" cy="642.223570640115"><title>Point #442
+Group #47 (11 points)
+X: 1136.035912176154
+Y: 642.223570640115
+</title></circle>
+<circle class="pierce" cx="1115.285034179688" cy="620.885110470016"><title>Point #443
+Group #47 (11 points)
+X: 1115.285034179688
+Y: 620.885110470016
+</title></circle>
+<circle class="pierce" cx="1115.285034179688" cy="658.702860257296"><title>Point #444
+Group #47 (11 points)
+X: 1115.285034179688
+Y: 658.702860257296
+</title></circle>
+<circle class="pierce" cx="1115.285034179688" cy="696.520610044577"><title>Point #445
+Group #47 (11 points)
+X: 1115.285034179688
+Y: 696.520610044577
+</title></circle>
+<circle class="pierce" cx="1115.285034179688" cy="734.338359831858"><title>Point #446
+Group #47 (11 points)
+X: 1115.285034179688
+Y: 734.338359831858
+</title></circle>
+<circle class="pierce" cx="1115.285034179688" cy="772.156109619139"><title>Point #447
+Group #47 (11 points)
+X: 1115.285034179688
+Y: 772.156109619139
+</title></circle>
+<circle class="pierce" cx="1143.973920441576" cy="781.284973144531"><title>Point #448
+Group #47 (11 points)
+X: 1143.973920441576
+Y: 781.284973144531
+</title></circle>
+<circle class="pierce" cx="1179.300134215141" cy="775.269873109078"><title>Point #449
+Group #47 (11 points)
+X: 1179.300134215141
+Y: 775.269873109078
+</title></circle>
+<circle class="pierce" cx="1183.285034179688" cy="739.102722931812"><title>Point #450
+Group #47 (11 points)
+X: 1183.285034179688
+Y: 739.102722931812
+</title></circle>
+<circle class="pierce" cx="1158.285034179688" cy="742.784973144531"><title>Point #451
+Group #48 (1 points)
+X: 1158.285034179688
+Y: 742.784973144531
+</title></circle>
+<circle class="pierce" cx="1115.285034179688" cy="600"><title>Point #452
+Group #49 (11 points)
+X: 1115.285034179688
+Y: 600
+</title></circle>
+<circle class="pierce" cx="1138.909595181454" cy="629.530701252208"><title>Point #453
+Group #49 (11 points)
+X: 1138.909595181454
+Y: 629.530701252208
+</title></circle>
+<circle class="pierce" cx="1162.534156183221" cy="659.061402504417"><title>Point #454
+Group #49 (11 points)
+X: 1162.534156183221
+Y: 659.061402504417
+</title></circle>
+<circle class="pierce" cx="1183.285034179688" cy="680.399862674516"><title>Point #455
+Group #49 (11 points)
+X: 1183.285034179688
+Y: 680.399862674516
+</title></circle>
+<circle class="pierce" cx="1183.285034179688" cy="642.582112887235"><title>Point #456
+Group #49 (11 points)
+X: 1183.285034179688
+Y: 642.582112887235
+</title></circle>
+<circle class="pierce" cx="1183.285034179688" cy="604.764363099954"><title>Point #457
+Group #49 (11 points)
+X: 1183.285034179688
+Y: 604.764363099954
+</title></circle>
+<circle class="pierce" cx="1183.285034179688" cy="566.946613312674"><title>Point #458
+Group #49 (11 points)
+X: 1183.285034179688
+Y: 566.946613312674
+</title></circle>
+<circle class="pierce" cx="1183.285034179688" cy="529.128863525393"><title>Point #459
+Group #49 (11 points)
+X: 1183.285034179688
+Y: 529.128863525393
+</title></circle>
+<circle class="pierce" cx="1154.596147917799" cy="520"><title>Point #460
+Group #49 (11 points)
+X: 1154.596147917799
+Y: 520
+</title></circle>
+<circle class="pierce" cx="1119.269934144234" cy="526.015100035453"><title>Point #461
+Group #49 (11 points)
+X: 1119.269934144234
+Y: 526.015100035453
+</title></circle>
+<circle class="pierce" cx="1115.285034179688" cy="562.182250212719"><title>Point #462
+Group #49 (11 points)
+X: 1115.285034179688
+Y: 562.182250212719
+</title></circle>
+<circle class="pierce" cx="1140.28503418502" cy="558.5"><title>Point #463
+Group #50 (1 points)
+X: 1140.28503418502
+Y: 558.5
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="454"><title>Point #464
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 454
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="490.65"><title>Point #465
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 490.65
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="527.3"><title>Point #466
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 527.3
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="563.95"><title>Point #467
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 563.95
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="600.6"><title>Point #468
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 600.6
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="637.25"><title>Point #469
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 637.25
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="673.9"><title>Point #470
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 673.9
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="710.55"><title>Point #471
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 710.55
+</title></circle>
+<circle class="pierce" cx="1454.285034179688" cy="747.2"><title>Point #472
+Group #51 (20 points)
+X: 1454.285034179688
+Y: 747.2
+</title></circle>
+<circle class="pierce" cx="1470.135034179688" cy="768"><title>Point #473
+Group #51 (20 points)
+X: 1470.135034179688
+Y: 768
+</title></circle>
+<circle class="pierce" cx="1489.285034179688" cy="750.5"><title>Point #474
+Group #51 (20 points)
+X: 1489.285034179688
+Y: 750.5
+</title></circle>
+<circle class="pierce" cx="1471.785034179688" cy="731.35"><title>Point #475
+Group #51 (20 points)
+X: 1471.785034179688
+Y: 731.35
+</title></circle>
+<circle class="pierce" cx="1485.085034179688" cy="708"><title>Point #476
+Group #51 (20 points)
+X: 1485.085034179688
+Y: 708
+</title></circle>
+<circle class="pierce" cx="1489.285034179688" cy="675.55"><title>Point #477
+Group #51 (20 points)
+X: 1489.285034179688
+Y: 675.55
+</title></circle>
+<circle class="pierce" cx="1489.285034179688" cy="638.9"><title>Point #478
+Group #51 (20 points)
+X: 1489.285034179688
+Y: 638.9
+</title></circle>
+<circle class="pierce" cx="1489.285034179688" cy="602.25"><title>Point #479
+Group #51 (20 points)
+X: 1489.285034179688
+Y: 602.25
+</title></circle>
+<circle class="pierce" cx="1489.285034179688" cy="565.6"><title>Point #480
+Group #51 (20 points)
+X: 1489.285034179688
+Y: 565.6
+</title></circle>
+<circle class="pierce" cx="1489.285034179688" cy="528.95"><title>Point #481
+Group #51 (20 points)
+X: 1489.285034179688
+Y: 528.95
+</title></circle>
+<circle class="pierce" cx="1489.285034179688" cy="492.3"><title>Point #482
+Group #51 (20 points)
+X: 1489.285034179688
+Y: 492.3
+</title></circle>
+<circle class="pierce" cx="1489.285034179688" cy="455.65"><title>Point #483
+Group #51 (20 points)
+X: 1489.285034179688
+Y: 455.65
+</title></circle>
+<circle class="pierce" cx="1461.785034179688" cy="490.549468994141"><title>Point #484
+Group #52 (1 points)
+X: 1461.785034179688
+Y: 490.549468994141
+</title></circle>
+<circle class="pierce" cx="468" cy="515.284973144531"><title>Point #485
+Group #53 (11 points)
+X: 468
+Y: 515.284973144531
+</title></circle>
+<circle class="pierce" cx="444.375436912759" cy="485.754279887898"><title>Point #486
+Group #53 (11 points)
+X: 444.375436912759
+Y: 485.754279887898
+</title></circle>
+<circle class="pierce" cx="420.750873825518" cy="456.223586631265"><title>Point #487
+Group #53 (11 points)
+X: 420.750873825518
+Y: 456.223586631265
+</title></circle>
+<circle class="pierce" cx="400" cy="434.885149995689"><title>Point #488
+Group #53 (11 points)
+X: 400
+Y: 434.885149995689
+</title></circle>
+<circle class="pierce" cx="400" cy="472.702894842261"><title>Point #489
+Group #53 (11 points)
+X: 400
+Y: 472.702894842261
+</title></circle>
+<circle class="pierce" cx="400" cy="510.520639688832"><title>Point #490
+Group #53 (11 points)
+X: 400
+Y: 510.520639688832
+</title></circle>
+<circle class="pierce" cx="400" cy="548.338384535404"><title>Point #491
+Group #53 (11 points)
+X: 400
+Y: 548.338384535404
+</title></circle>
+<circle class="pierce" cx="400" cy="586.156129381976"><title>Point #492
+Group #53 (11 points)
+X: 400
+Y: 586.156129381976
+</title></circle>
+<circle class="pierce" cx="428.688901084016" cy="595.284973144531"><title>Point #493
+Group #53 (11 points)
+X: 428.688901084016
+Y: 595.284973144531
+</title></circle>
+<circle class="pierce" cx="464.015107022672" cy="589.26986612186"><title>Point #494
+Group #53 (11 points)
+X: 464.015107022672
+Y: 589.26986612186
+</title></circle>
+<circle class="pierce" cx="468" cy="553.102717991103"><title>Point #495
+Group #53 (11 points)
+X: 468
+Y: 553.102717991103
+</title></circle>
+<circle class="pierce" cx="443" cy="556.784973144531"><title>Point #496
+Group #54 (1 points)
+X: 443
+Y: 556.784973144531
+</title></circle>
+<circle class="pierce" cx="400" cy="414"><title>Point #497
+Group #55 (11 points)
+X: 400
+Y: 414
+</title></circle>
+<circle class="pierce" cx="423.624561001767" cy="443.530701252208"><title>Point #498
+Group #55 (11 points)
+X: 423.624561001767
+Y: 443.530701252208
+</title></circle>
+<circle class="pierce" cx="447.249122003534" cy="473.061402504417"><title>Point #499
+Group #55 (11 points)
+X: 447.249122003534
+Y: 473.061402504417
+</title></circle>
+<circle class="pierce" cx="468" cy="494.399862674516"><title>Point #500
+Group #55 (11 points)
+X: 468
+Y: 494.399862674516
+</title></circle>
+<circle class="pierce" cx="468" cy="456.582112887235"><title>Point #501
+Group #55 (11 points)
+X: 468
+Y: 456.582112887235
+</title></circle>
+<circle class="pierce" cx="468" cy="418.764363099954"><title>Point #502
+Group #55 (11 points)
+X: 468
+Y: 418.764363099954
+</title></circle>
+<circle class="pierce" cx="468" cy="380.946613312673"><title>Point #503
+Group #55 (11 points)
+X: 468
+Y: 380.946613312673
+</title></circle>
+<circle class="pierce" cx="468" cy="343.128863525393"><title>Point #504
+Group #55 (11 points)
+X: 468
+Y: 343.128863525393
+</title></circle>
+<circle class="pierce" cx="439.311113738112" cy="334"><title>Point #505
+Group #55 (11 points)
+X: 439.311113738112
+Y: 334
+</title></circle>
+<circle class="pierce" cx="403.984899964547" cy="340.015100035454"><title>Point #506
+Group #55 (11 points)
+X: 403.984899964547
+Y: 340.015100035454
+</title></circle>
+<circle class="pierce" cx="400" cy="376.182250212719"><title>Point #507
+Group #55 (11 points)
+X: 400
+Y: 376.182250212719
+</title></circle>
+<circle class="pierce" cx="425.000000005333" cy="372.5"><title>Point #508
+Group #56 (1 points)
+X: 425.000000005333
+Y: 372.5
+</title></circle>
+<circle class="pierce" cx="864" cy="711"><title>Point #509
+Group #57 (11 points)
+X: 864
+Y: 711
+</title></circle>
+<circle class="pierce" cx="893.530701252208" cy="687.375438998234"><title>Point #510
+Group #57 (11 points)
+X: 893.530701252208
+Y: 687.375438998234
+</title></circle>
+<circle class="pierce" cx="923.061402504417" cy="663.750877996467"><title>Point #511
+Group #57 (11 points)
+X: 923.061402504417
+Y: 663.750877996467
+</title></circle>
+<circle class="pierce" cx="944.399862674516" cy="643"><title>Point #512
+Group #57 (11 points)
+X: 944.399862674516
+Y: 643
+</title></circle>
+<circle class="pierce" cx="906.582112887235" cy="643"><title>Point #513
+Group #57 (11 points)
+X: 906.582112887235
+Y: 643
+</title></circle>
+<circle class="pierce" cx="868.764363099954" cy="643"><title>Point #514
+Group #57 (11 points)
+X: 868.764363099954
+Y: 643
+</title></circle>
+<circle class="pierce" cx="830.946613312673" cy="643"><title>Point #515
+Group #57 (11 points)
+X: 830.946613312673
+Y: 643
+</title></circle>
+<circle class="pierce" cx="793.128863525393" cy="643"><title>Point #516
+Group #57 (11 points)
+X: 793.128863525393
+Y: 643
+</title></circle>
+<circle class="pierce" cx="784" cy="671.688886261889"><title>Point #517
+Group #57 (11 points)
+X: 784
+Y: 671.688886261889
+</title></circle>
+<circle class="pierce" cx="790.015100035454" cy="707.015100035454"><title>Point #518
+Group #57 (11 points)
+X: 790.015100035454
+Y: 707.015100035454
+</title></circle>
+<circle class="pierce" cx="826.182250212719" cy="711"><title>Point #519
+Group #57 (11 points)
+X: 826.182250212719
+Y: 711
+</title></circle>
+<circle class="pierce" cx="822.5" cy="686"><title>Point #520
+Group #58 (1 points)
+X: 822.5
+Y: 686
+</title></circle>
+<circle class="pierce" cx="965.284973144531" cy="643"><title>Point #521
+Group #59 (11 points)
+X: 965.284973144531
+Y: 643
+</title></circle>
+<circle class="pierce" cx="935.754263226787" cy="666.624567934196"><title>Point #522
+Group #59 (11 points)
+X: 935.754263226787
+Y: 666.624567934196
+</title></circle>
+<circle class="pierce" cx="906.223553309042" cy="690.249135868392"><title>Point #523
+Group #59 (11 points)
+X: 906.223553309042
+Y: 690.249135868392
+</title></circle>
+<circle class="pierce" cx="884.885143761919" cy="711"><title>Point #524
+Group #59 (11 points)
+X: 884.885143761919
+Y: 711
+</title></circle>
+<circle class="pierce" cx="922.702904646501" cy="711"><title>Point #525
+Group #59 (11 points)
+X: 922.702904646501
+Y: 711
+</title></circle>
+<circle class="pierce" cx="960.520665531083" cy="711"><title>Point #526
+Group #59 (11 points)
+X: 960.520665531083
+Y: 711
+</title></circle>
+<circle class="pierce" cx="998.338426415665" cy="711"><title>Point #527
+Group #59 (11 points)
+X: 998.338426415665
+Y: 711
+</title></circle>
+<circle class="pierce" cx="1036.156187300247" cy="711"><title>Point #528
+Group #59 (11 points)
+X: 1036.156187300247
+Y: 711
+</title></circle>
+<circle class="pierce" cx="1045.285034179688" cy="682.311085994859"><title>Point #529
+Group #59 (11 points)
+X: 1045.285034179688
+Y: 682.311085994859
+</title></circle>
+<circle class="pierce" cx="1039.269906679815" cy="646.984872500128"><title>Point #530
+Group #59 (11 points)
+X: 1039.269906679815
+Y: 646.984872500128
+</title></circle>
+<circle class="pierce" cx="1003.102734029114" cy="643"><title>Point #531
+Group #59 (11 points)
+X: 1003.102734029114
+Y: 643
+</title></circle>
+<circle class="pierce" cx="1006.784973144531" cy="668"><title>Point #532
+Group #60 (1 points)
+X: 1006.784973144531
+Y: 668
+</title></circle>
+<circle class="pierce" cx="1408" cy="444"><title>Point #533
+Group #61 (9 points)
+X: 1408
+Y: 444
+</title></circle>
+<circle class="pierce" cx="1445.204522721851" cy="444"><title>Point #534
+Group #61 (9 points)
+X: 1445.204522721851
+Y: 444
+</title></circle>
+<circle class="pierce" cx="1458" cy="419.590954556296"><title>Point #535
+Group #61 (9 points)
+X: 1458
+Y: 419.590954556296
+</title></circle>
+<circle class="pierce" cx="1458" cy="382.386431834444"><title>Point #536
+Group #61 (9 points)
+X: 1458
+Y: 382.386431834444
+</title></circle>
+<circle class="pierce" cx="1458" cy="345.181909112592"><title>Point #537
+Group #61 (9 points)
+X: 1458
+Y: 345.181909112592
+</title></circle>
+<circle class="pierce" cx="1439.14259731288" cy="345.457246538842"><title>Point #538
+Group #61 (9 points)
+X: 1439.14259731288
+Y: 345.457246538842
+</title></circle>
+<circle class="pierce" cx="1409.613568165556" cy="334"><title>Point #539
+Group #61 (9 points)
+X: 1409.613568165556
+Y: 334
+</title></circle>
+<circle class="pierce" cx="1408" cy="369.590954556296"><title>Point #540
+Group #61 (9 points)
+X: 1408
+Y: 369.590954556296
+</title></circle>
+<circle class="pierce" cx="1408" cy="406.795477278148"><title>Point #541
+Group #61 (9 points)
+X: 1408
+Y: 406.795477278148
+</title></circle>
+<circle class="pierce" cx="1433" cy="402"><title>Point #542
+Group #62 (2 points)
+X: 1433
+Y: 402
+</title></circle>
+<circle class="pierce" cx="1433.000000010666" cy="376"><title>Point #543
+Group #62 (2 points)
+X: 1433.000000010666
+Y: 376
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="454"><title>Point #544
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 454
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="490.65"><title>Point #545
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 490.65
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="527.3"><title>Point #546
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 527.3
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="563.95"><title>Point #547
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 563.95
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="600.6"><title>Point #548
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 600.6
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="637.25"><title>Point #549
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 637.25
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="673.9"><title>Point #550
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 673.9
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="710.55"><title>Point #551
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 710.55
+</title></circle>
+<circle class="pierce" cx="1409.285034179688" cy="747.2"><title>Point #552
+Group #63 (20 points)
+X: 1409.285034179688
+Y: 747.2
+</title></circle>
+<circle class="pierce" cx="1425.135034179688" cy="768"><title>Point #553
+Group #63 (20 points)
+X: 1425.135034179688
+Y: 768
+</title></circle>
+<circle class="pierce" cx="1444.285034179688" cy="750.5"><title>Point #554
+Group #63 (20 points)
+X: 1444.285034179688
+Y: 750.5
+</title></circle>
+<circle class="pierce" cx="1426.785034179688" cy="731.35"><title>Point #555
+Group #63 (20 points)
+X: 1426.785034179688
+Y: 731.35
+</title></circle>
+<circle class="pierce" cx="1440.085034179688" cy="708"><title>Point #556
+Group #63 (20 points)
+X: 1440.085034179688
+Y: 708
+</title></circle>
+<circle class="pierce" cx="1444.285034179688" cy="675.55"><title>Point #557
+Group #63 (20 points)
+X: 1444.285034179688
+Y: 675.55
+</title></circle>
+<circle class="pierce" cx="1444.285034179688" cy="638.9"><title>Point #558
+Group #63 (20 points)
+X: 1444.285034179688
+Y: 638.9
+</title></circle>
+<circle class="pierce" cx="1444.285034179688" cy="602.25"><title>Point #559
+Group #63 (20 points)
+X: 1444.285034179688
+Y: 602.25
+</title></circle>
+<circle class="pierce" cx="1444.285034179688" cy="565.6"><title>Point #560
+Group #63 (20 points)
+X: 1444.285034179688
+Y: 565.6
+</title></circle>
+<circle class="pierce" cx="1444.285034179688" cy="528.95"><title>Point #561
+Group #63 (20 points)
+X: 1444.285034179688
+Y: 528.95
+</title></circle>
+<circle class="pierce" cx="1444.285034179688" cy="492.3"><title>Point #562
+Group #63 (20 points)
+X: 1444.285034179688
+Y: 492.3
+</title></circle>
+<circle class="pierce" cx="1444.285034179688" cy="455.65"><title>Point #563
+Group #63 (20 points)
+X: 1444.285034179688
+Y: 455.65
+</title></circle>
+<circle class="pierce" cx="1416.785034179688" cy="490.549468994141"><title>Point #564
+Group #64 (1 points)
+X: 1416.785034179688
+Y: 490.549468994141
+</title></circle>
+<circle class="pierce" cx="400" cy="728.284973144531"><title>Point #565
+Group #65 (9 points)
+X: 400
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="400" cy="765.489495866384"><title>Point #566
+Group #65 (9 points)
+X: 400
+Y: 765.489495866384
+</title></circle>
+<circle class="pierce" cx="424.409045443704" cy="778.284973144531"><title>Point #567
+Group #65 (9 points)
+X: 424.409045443704
+Y: 778.284973144531
+</title></circle>
+<circle class="pierce" cx="461.613568165556" cy="778.284973144531"><title>Point #568
+Group #65 (9 points)
+X: 461.613568165556
+Y: 778.284973144531
+</title></circle>
+<circle class="pierce" cx="498.818090887408" cy="778.284973144531"><title>Point #569
+Group #65 (9 points)
+X: 498.818090887408
+Y: 778.284973144531
+</title></circle>
+<circle class="pierce" cx="498.542753466784" cy="759.427570448011"><title>Point #570
+Group #65 (9 points)
+X: 498.542753466784
+Y: 759.427570448011
+</title></circle>
+<circle class="pierce" cx="510" cy="729.898541310087"><title>Point #571
+Group #65 (9 points)
+X: 510
+Y: 729.898541310087
+</title></circle>
+<circle class="pierce" cx="474.409045443704" cy="728.284973144531"><title>Point #572
+Group #65 (9 points)
+X: 474.409045443704
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="437.204522721852" cy="728.284973144531"><title>Point #573
+Group #65 (9 points)
+X: 437.204522721852
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="442" cy="753.284973144531"><title>Point #574
+Group #66 (2 points)
+X: 442
+Y: 753.284973144531
+</title></circle>
+<circle class="pierce" cx="468" cy="753.284973144531"><title>Point #575
+Group #66 (2 points)
+X: 468
+Y: 753.284973144531
+</title></circle>
+<circle class="pierce" cx="1349.285034179688" cy="768"><title>Point #576
+Group #67 (9 points)
+X: 1349.285034179688
+Y: 768
+</title></circle>
+<circle class="pierce" cx="1386.489556901539" cy="768"><title>Point #577
+Group #67 (9 points)
+X: 1386.489556901539
+Y: 768
+</title></circle>
+<circle class="pierce" cx="1399.285034179688" cy="743.590954556296"><title>Point #578
+Group #67 (9 points)
+X: 1399.285034179688
+Y: 743.590954556296
+</title></circle>
+<circle class="pierce" cx="1399.285034179688" cy="706.386431834444"><title>Point #579
+Group #67 (9 points)
+X: 1399.285034179688
+Y: 706.386431834444
+</title></circle>
+<circle class="pierce" cx="1399.285034179688" cy="669.181909112592"><title>Point #580
+Group #67 (9 points)
+X: 1399.285034179688
+Y: 669.181909112592
+</title></circle>
+<circle class="pierce" cx="1380.427631492567" cy="669.457246538842"><title>Point #581
+Group #67 (9 points)
+X: 1380.427631492567
+Y: 669.457246538842
+</title></circle>
+<circle class="pierce" cx="1350.898602345244" cy="658"><title>Point #582
+Group #67 (9 points)
+X: 1350.898602345244
+Y: 658
+</title></circle>
+<circle class="pierce" cx="1349.285034179688" cy="693.590954556296"><title>Point #583
+Group #67 (9 points)
+X: 1349.285034179688
+Y: 693.590954556296
+</title></circle>
+<circle class="pierce" cx="1349.285034179688" cy="730.795477278148"><title>Point #584
+Group #67 (9 points)
+X: 1349.285034179688
+Y: 730.795477278148
+</title></circle>
+<circle class="pierce" cx="1374.285034179688" cy="726"><title>Point #585
+Group #68 (2 points)
+X: 1374.285034179688
+Y: 726
+</title></circle>
+<circle class="pierce" cx="1374.285034190353" cy="700"><title>Point #586
+Group #68 (2 points)
+X: 1374.285034190353
+Y: 700
+</title></circle>
+<circle class="pierce" cx="1408" cy="10"><title>Point #587
+Group #69 (20 points)
+X: 1408
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1408" cy="46.65"><title>Point #588
+Group #69 (20 points)
+X: 1408
+Y: 46.65
+</title></circle>
+<circle class="pierce" cx="1408" cy="83.3"><title>Point #589
+Group #69 (20 points)
+X: 1408
+Y: 83.3
+</title></circle>
+<circle class="pierce" cx="1408" cy="119.95"><title>Point #590
+Group #69 (20 points)
+X: 1408
+Y: 119.95
+</title></circle>
+<circle class="pierce" cx="1408" cy="156.6"><title>Point #591
+Group #69 (20 points)
+X: 1408
+Y: 156.6
+</title></circle>
+<circle class="pierce" cx="1408" cy="193.25"><title>Point #592
+Group #69 (20 points)
+X: 1408
+Y: 193.25
+</title></circle>
+<circle class="pierce" cx="1408" cy="229.9"><title>Point #593
+Group #69 (20 points)
+X: 1408
+Y: 229.9
+</title></circle>
+<circle class="pierce" cx="1408" cy="266.55"><title>Point #594
+Group #69 (20 points)
+X: 1408
+Y: 266.55
+</title></circle>
+<circle class="pierce" cx="1408" cy="303.2"><title>Point #595
+Group #69 (20 points)
+X: 1408
+Y: 303.2
+</title></circle>
+<circle class="pierce" cx="1423.85" cy="324"><title>Point #596
+Group #69 (20 points)
+X: 1423.85
+Y: 324
+</title></circle>
+<circle class="pierce" cx="1443" cy="306.5"><title>Point #597
+Group #69 (20 points)
+X: 1443
+Y: 306.5
+</title></circle>
+<circle class="pierce" cx="1425.5" cy="287.35"><title>Point #598
+Group #69 (20 points)
+X: 1425.5
+Y: 287.35
+</title></circle>
+<circle class="pierce" cx="1438.8" cy="264"><title>Point #599
+Group #69 (20 points)
+X: 1438.8
+Y: 264
+</title></circle>
+<circle class="pierce" cx="1443" cy="231.55"><title>Point #600
+Group #69 (20 points)
+X: 1443
+Y: 231.55
+</title></circle>
+<circle class="pierce" cx="1443" cy="194.9"><title>Point #601
+Group #69 (20 points)
+X: 1443
+Y: 194.9
+</title></circle>
+<circle class="pierce" cx="1443" cy="158.25"><title>Point #602
+Group #69 (20 points)
+X: 1443
+Y: 158.25
+</title></circle>
+<circle class="pierce" cx="1443" cy="121.6"><title>Point #603
+Group #69 (20 points)
+X: 1443
+Y: 121.6
+</title></circle>
+<circle class="pierce" cx="1443" cy="84.95"><title>Point #604
+Group #69 (20 points)
+X: 1443
+Y: 84.95
+</title></circle>
+<circle class="pierce" cx="1443" cy="48.3"><title>Point #605
+Group #69 (20 points)
+X: 1443
+Y: 48.3
+</title></circle>
+<circle class="pierce" cx="1443" cy="11.65"><title>Point #606
+Group #69 (20 points)
+X: 1443
+Y: 11.65
+</title></circle>
+<circle class="pierce" cx="1415.5" cy="46.549476623535"><title>Point #607
+Group #70 (1 points)
+X: 1415.5
+Y: 46.549476623535
+</title></circle>
+<circle class="pierce" cx="784" cy="633"><title>Point #608
+Group #71 (20 points)
+X: 784
+Y: 633
+</title></circle>
+<circle class="pierce" cx="820.65" cy="633"><title>Point #609
+Group #71 (20 points)
+X: 820.65
+Y: 633
+</title></circle>
+<circle class="pierce" cx="857.3" cy="633"><title>Point #610
+Group #71 (20 points)
+X: 857.3
+Y: 633
+</title></circle>
+<circle class="pierce" cx="893.95" cy="633"><title>Point #611
+Group #71 (20 points)
+X: 893.95
+Y: 633
+</title></circle>
+<circle class="pierce" cx="930.6" cy="633"><title>Point #612
+Group #71 (20 points)
+X: 930.6
+Y: 633
+</title></circle>
+<circle class="pierce" cx="967.25" cy="633"><title>Point #613
+Group #71 (20 points)
+X: 967.25
+Y: 633
+</title></circle>
+<circle class="pierce" cx="1003.9" cy="633"><title>Point #614
+Group #71 (20 points)
+X: 1003.9
+Y: 633
+</title></circle>
+<circle class="pierce" cx="1040.55" cy="633"><title>Point #615
+Group #71 (20 points)
+X: 1040.55
+Y: 633
+</title></circle>
+<circle class="pierce" cx="1077.2" cy="633"><title>Point #616
+Group #71 (20 points)
+X: 1077.2
+Y: 633
+</title></circle>
+<circle class="pierce" cx="1098" cy="617.15"><title>Point #617
+Group #71 (20 points)
+X: 1098
+Y: 617.15
+</title></circle>
+<circle class="pierce" cx="1080.5" cy="598"><title>Point #618
+Group #71 (20 points)
+X: 1080.5
+Y: 598
+</title></circle>
+<circle class="pierce" cx="1061.35" cy="615.5"><title>Point #619
+Group #71 (20 points)
+X: 1061.35
+Y: 615.5
+</title></circle>
+<circle class="pierce" cx="1038" cy="602.2"><title>Point #620
+Group #71 (20 points)
+X: 1038
+Y: 602.2
+</title></circle>
+<circle class="pierce" cx="1005.55" cy="598"><title>Point #621
+Group #71 (20 points)
+X: 1005.55
+Y: 598
+</title></circle>
+<circle class="pierce" cx="968.9" cy="598"><title>Point #622
+Group #71 (20 points)
+X: 968.9
+Y: 598
+</title></circle>
+<circle class="pierce" cx="932.25" cy="598"><title>Point #623
+Group #71 (20 points)
+X: 932.25
+Y: 598
+</title></circle>
+<circle class="pierce" cx="895.6" cy="598"><title>Point #624
+Group #71 (20 points)
+X: 895.6
+Y: 598
+</title></circle>
+<circle class="pierce" cx="858.95" cy="598"><title>Point #625
+Group #71 (20 points)
+X: 858.95
+Y: 598
+</title></circle>
+<circle class="pierce" cx="822.3" cy="598"><title>Point #626
+Group #71 (20 points)
+X: 822.3
+Y: 598
+</title></circle>
+<circle class="pierce" cx="785.65" cy="598"><title>Point #627
+Group #71 (20 points)
+X: 785.65
+Y: 598
+</title></circle>
+<circle class="pierce" cx="820.549499511719" cy="625.5"><title>Point #628
+Group #72 (1 points)
+X: 820.549499511719
+Y: 625.5
+</title></circle>
+<circle class="pierce" cx="1363" cy="334"><title>Point #629
+Group #73 (20 points)
+X: 1363
+Y: 334
+</title></circle>
+<circle class="pierce" cx="1363" cy="370.65"><title>Point #630
+Group #73 (20 points)
+X: 1363
+Y: 370.65
+</title></circle>
+<circle class="pierce" cx="1363" cy="407.3"><title>Point #631
+Group #73 (20 points)
+X: 1363
+Y: 407.3
+</title></circle>
+<circle class="pierce" cx="1363" cy="443.95"><title>Point #632
+Group #73 (20 points)
+X: 1363
+Y: 443.95
+</title></circle>
+<circle class="pierce" cx="1363" cy="480.6"><title>Point #633
+Group #73 (20 points)
+X: 1363
+Y: 480.6
+</title></circle>
+<circle class="pierce" cx="1363" cy="517.25"><title>Point #634
+Group #73 (20 points)
+X: 1363
+Y: 517.25
+</title></circle>
+<circle class="pierce" cx="1363" cy="553.9"><title>Point #635
+Group #73 (20 points)
+X: 1363
+Y: 553.9
+</title></circle>
+<circle class="pierce" cx="1363" cy="590.55"><title>Point #636
+Group #73 (20 points)
+X: 1363
+Y: 590.55
+</title></circle>
+<circle class="pierce" cx="1363" cy="627.2"><title>Point #637
+Group #73 (20 points)
+X: 1363
+Y: 627.2
+</title></circle>
+<circle class="pierce" cx="1378.85" cy="648"><title>Point #638
+Group #73 (20 points)
+X: 1378.85
+Y: 648
+</title></circle>
+<circle class="pierce" cx="1398" cy="630.5"><title>Point #639
+Group #73 (20 points)
+X: 1398
+Y: 630.5
+</title></circle>
+<circle class="pierce" cx="1380.5" cy="611.35"><title>Point #640
+Group #73 (20 points)
+X: 1380.5
+Y: 611.35
+</title></circle>
+<circle class="pierce" cx="1393.8" cy="588"><title>Point #641
+Group #73 (20 points)
+X: 1393.8
+Y: 588
+</title></circle>
+<circle class="pierce" cx="1398" cy="555.55"><title>Point #642
+Group #73 (20 points)
+X: 1398
+Y: 555.55
+</title></circle>
+<circle class="pierce" cx="1398" cy="518.9"><title>Point #643
+Group #73 (20 points)
+X: 1398
+Y: 518.9
+</title></circle>
+<circle class="pierce" cx="1398" cy="482.25"><title>Point #644
+Group #73 (20 points)
+X: 1398
+Y: 482.25
+</title></circle>
+<circle class="pierce" cx="1398" cy="445.6"><title>Point #645
+Group #73 (20 points)
+X: 1398
+Y: 445.6
+</title></circle>
+<circle class="pierce" cx="1398" cy="408.95"><title>Point #646
+Group #73 (20 points)
+X: 1398
+Y: 408.95
+</title></circle>
+<circle class="pierce" cx="1398" cy="372.3"><title>Point #647
+Group #73 (20 points)
+X: 1398
+Y: 372.3
+</title></circle>
+<circle class="pierce" cx="1398" cy="335.65"><title>Point #648
+Group #73 (20 points)
+X: 1398
+Y: 335.65
+</title></circle>
+<circle class="pierce" cx="1370.5" cy="370.549468994141"><title>Point #649
+Group #74 (1 points)
+X: 1370.5
+Y: 370.549468994141
+</title></circle>
+<circle class="pierce" cx="724" cy="708"><title>Point #650
+Group #75 (9 points)
+X: 724
+Y: 708
+</title></circle>
+<circle class="pierce" cx="761.204522721852" cy="708"><title>Point #651
+Group #75 (9 points)
+X: 761.204522721852
+Y: 708
+</title></circle>
+<circle class="pierce" cx="774" cy="683.590954556296"><title>Point #652
+Group #75 (9 points)
+X: 774
+Y: 683.590954556296
+</title></circle>
+<circle class="pierce" cx="774" cy="646.386431834444"><title>Point #653
+Group #75 (9 points)
+X: 774
+Y: 646.386431834444
+</title></circle>
+<circle class="pierce" cx="774" cy="609.181909112592"><title>Point #654
+Group #75 (9 points)
+X: 774
+Y: 609.181909112592
+</title></circle>
+<circle class="pierce" cx="755.14259731288" cy="609.457246538842"><title>Point #655
+Group #75 (9 points)
+X: 755.14259731288
+Y: 609.457246538842
+</title></circle>
+<circle class="pierce" cx="725.613568165556" cy="598"><title>Point #656
+Group #75 (9 points)
+X: 725.613568165556
+Y: 598
+</title></circle>
+<circle class="pierce" cx="724" cy="633.590954556296"><title>Point #657
+Group #75 (9 points)
+X: 724
+Y: 633.590954556296
+</title></circle>
+<circle class="pierce" cx="724" cy="670.795477278148"><title>Point #658
+Group #75 (9 points)
+X: 724
+Y: 670.795477278148
+</title></circle>
+<circle class="pierce" cx="749" cy="666"><title>Point #659
+Group #76 (2 points)
+X: 749
+Y: 666
+</title></circle>
+<circle class="pierce" cx="749.000000010666" cy="640"><title>Point #660
+Group #76 (2 points)
+X: 749.000000010666
+Y: 640
+</title></circle>
+<circle class="pierce" cx="199.170974731445" cy="779.998168945313"><title>Point #661
+Group #77 (34 points)
+X: 199.170974731445
+Y: 779.998168945313
+</title></circle>
+<circle class="pierce" cx="234.097165198109" cy="776.915421824638"><title>Point #662
+Group #77 (34 points)
+X: 234.097165198109
+Y: 776.915421824638
+</title></circle>
+<circle class="pierce" cx="267.862217604302" cy="767.467493674468"><title>Point #663
+Group #77 (34 points)
+X: 267.862217604302
+Y: 767.467493674468
+</title></circle>
+<circle class="pierce" cx="299.316303587047" cy="751.976122356416"><title>Point #664
+Group #77 (34 points)
+X: 299.316303587047
+Y: 751.976122356416
+</title></circle>
+<circle class="pierce" cx="327.388291973221" cy="730.968847940865"><title>Point #665
+Group #77 (34 points)
+X: 327.388291973221
+Y: 730.968847940865
+</title></circle>
+<circle class="pierce" cx="351.12222486697" cy="705.161047962589"><title>Point #666
+Group #77 (34 points)
+X: 351.12222486697
+Y: 705.161047962589
+</title></circle>
+<circle class="pierce" cx="369.709871649314" cy="675.431576096803"><title>Point #667
+Group #77 (34 points)
+X: 369.709871649314
+Y: 675.431576096803
+</title></circle>
+<circle class="pierce" cx="382.518252302505" cy="642.792833851326"><title>Point #668
+Group #77 (34 points)
+X: 382.518252302505
+Y: 642.792833851326
+</title></circle>
+<circle class="pierce" cx="389.111192785358" cy="608.356294447471"><title>Point #669
+Group #77 (34 points)
+X: 389.111192785358
+Y: 608.356294447471
+</title></circle>
+<circle class="pierce" cx="389.264178430794" cy="573.294653087834"><title>Point #670
+Group #77 (34 points)
+X: 389.264178430794
+Y: 573.294653087834
+</title></circle>
+<circle class="pierce" cx="382.9719994975" cy="538.80189160669"><title>Point #671
+Group #77 (34 points)
+X: 382.9719994975
+Y: 538.80189160669
+</title></circle>
+<circle class="pierce" cx="370.448928577352" cy="506.05261978192"><title>Point #672
+Group #77 (34 points)
+X: 370.448928577352
+Y: 506.05261978192
+</title></circle>
+<circle class="pierce" cx="352.121423830767" cy="476.162074787096"><title>Point #673
+Group #77 (34 points)
+X: 352.121423830767
+Y: 476.162074787096
+</title></circle>
+<circle class="pierce" cx="328.613606450472" cy="450.148143282257"><title>Point #674
+Group #77 (34 points)
+X: 328.613606450472
+Y: 450.148143282257
+</title></circle>
+<circle class="pierce" cx="300.726006962833" cy="428.896698504531"><title>Point #675
+Group #77 (34 points)
+X: 300.726006962833
+Y: 428.896698504531
+</title></circle>
+<circle class="pierce" cx="269.408304120913" cy="413.131432917524"><title>Point #676
+Group #77 (34 points)
+X: 269.408304120913
+Y: 413.131432917524
+</title></circle>
+<circle class="pierce" cx="235.726984733548" cy="403.389213732449"><title>Point #677
+Group #77 (34 points)
+X: 235.726984733548
+Y: 403.389213732449
+</title></circle>
+<circle class="pierce" cx="200.829025424432" cy="400.00180053779"><title>Point #678
+Group #77 (34 points)
+X: 200.829025424432
+Y: 400.00180053779
+</title></circle>
+<circle class="pierce" cx="165.902834957768" cy="403.084547658464"><title>Point #679
+Group #77 (34 points)
+X: 165.902834957768
+Y: 403.084547658464
+</title></circle>
+<circle class="pierce" cx="132.137782551575" cy="412.532475808634"><title>Point #680
+Group #77 (34 points)
+X: 132.137782551575
+Y: 412.532475808634
+</title></circle>
+<circle class="pierce" cx="100.68369656883" cy="428.023847126687"><title>Point #681
+Group #77 (34 points)
+X: 100.68369656883
+Y: 428.023847126687
+</title></circle>
+<circle class="pierce" cx="72.611708182657" cy="449.031121542237"><title>Point #682
+Group #77 (34 points)
+X: 72.611708182657
+Y: 449.031121542237
+</title></circle>
+<circle class="pierce" cx="48.877775288907" cy="474.838921520513"><title>Point #683
+Group #77 (34 points)
+X: 48.877775288907
+Y: 474.838921520513
+</title></circle>
+<circle class="pierce" cx="30.290128506563" cy="504.568393386299"><title>Point #684
+Group #77 (34 points)
+X: 30.290128506563
+Y: 504.568393386299
+</title></circle>
+<circle class="pierce" cx="17.481747853372" cy="537.207135631776"><title>Point #685
+Group #77 (34 points)
+X: 17.481747853372
+Y: 537.207135631776
+</title></circle>
+<circle class="pierce" cx="10.88880737052" cy="571.643675035631"><title>Point #686
+Group #77 (34 points)
+X: 10.88880737052
+Y: 571.643675035631
+</title></circle>
+<circle class="pierce" cx="10.735821738788" cy="606.705316550543"><title>Point #687
+Group #77 (34 points)
+X: 10.735821738788
+Y: 606.705316550543
+</title></circle>
+<circle class="pierce" cx="17.028000700381" cy="641.198078026525"><title>Point #688
+Group #77 (34 points)
+X: 17.028000700381
+Y: 641.198078026525
+</title></circle>
+<circle class="pierce" cx="29.551071647397" cy="673.947349841021"><title>Point #689
+Group #77 (34 points)
+X: 29.551071647397
+Y: 673.947349841021
+</title></circle>
+<circle class="pierce" cx="47.878576418504" cy="703.837894820809"><title>Point #690
+Group #77 (34 points)
+X: 47.878576418504
+Y: 703.837894820809
+</title></circle>
+<circle class="pierce" cx="71.386393820141" cy="729.851826306361"><title>Point #691
+Group #77 (34 points)
+X: 71.386393820141
+Y: 729.851826306361
+</title></circle>
+<circle class="pierce" cx="99.273993325215" cy="751.103271061208"><title>Point #692
+Group #77 (34 points)
+X: 99.273993325215
+Y: 751.103271061208
+</title></circle>
+<circle class="pierce" cx="130.59169618007" cy="766.868536622522"><title>Point #693
+Group #77 (34 points)
+X: 130.59169618007
+Y: 766.868536622522
+</title></circle>
+<circle class="pierce" cx="164.273015575427" cy="776.610755779964"><title>Point #694
+Group #77 (34 points)
+X: 164.273015575427
+Y: 776.610755779964
+</title></circle>
+<circle class="pierce" cx="199.356414794922" cy="737.498596191406"><title>Point #695
+Group #78 (8 points)
+X: 199.356414794922
+Y: 737.498596191406
+</title></circle>
+<circle class="pierce" cx="234.775328505916" cy="723.008333564713"><title>Point #696
+Group #78 (8 points)
+X: 234.775328505916
+Y: 723.008333564713
+</title></circle>
+<circle class="pierce" cx="249.574119608712" cy="687.717216532899"><title>Point #697
+Group #78 (8 points)
+X: 249.574119608712
+Y: 687.717216532899
+</title></circle>
+<circle class="pierce" cx="235.083857010898" cy="652.298302851037"><title>Point #698
+Group #78 (8 points)
+X: 235.083857010898
+Y: 652.298302851037
+</title></circle>
+<circle class="pierce" cx="199.792739909184" cy="637.499511718929"><title>Point #699
+Group #78 (8 points)
+X: 199.792739909184
+Y: 637.499511718929
+</title></circle>
+<circle class="pierce" cx="164.37382619819" cy="651.989774345623"><title>Point #700
+Group #78 (8 points)
+X: 164.37382619819
+Y: 651.989774345623
+</title></circle>
+<circle class="pierce" cx="149.575035095394" cy="687.280891377437"><title>Point #701
+Group #78 (8 points)
+X: 149.575035095394
+Y: 687.280891377437
+</title></circle>
+<circle class="pierce" cx="164.065297722087" cy="722.699805088431"><title>Point #702
+Group #78 (8 points)
+X: 164.065297722087
+Y: 722.699805088431
+</title></circle>
+<circle class="pierce" cx="200.207260131836" cy="542.500427246094"><title>Point #703
+Group #79 (8 points)
+X: 200.207260131836
+Y: 542.500427246094
+</title></circle>
+<circle class="pierce" cx="235.626152263644" cy="528.010173557792"><title>Point #704
+Group #79 (8 points)
+X: 235.626152263644
+Y: 528.010173557792
+</title></circle>
+<circle class="pierce" cx="250.424934428048" cy="492.719078105164"><title>Point #705
+Group #79 (8 points)
+X: 250.424934428048
+Y: 492.719078105164
+</title></circle>
+<circle class="pierce" cx="235.934680768625" cy="457.300186002488"><title>Point #706
+Group #79 (8 points)
+X: 235.934680768625
+Y: 457.300186002488
+</title></circle>
+<circle class="pierce" cx="200.643585246098" cy="442.501403808773"><title>Point #707
+Group #79 (8 points)
+X: 200.643585246098
+Y: 442.501403808773
+</title></circle>
+<circle class="pierce" cx="165.224693114291" cy="456.991657497075"><title>Point #708
+Group #79 (8 points)
+X: 165.224693114291
+Y: 456.991657497075
+</title></circle>
+<circle class="pierce" cx="150.425910949886" cy="492.282752949702"><title>Point #709
+Group #79 (8 points)
+X: 150.425910949886
+Y: 492.282752949702
+</title></circle>
+<circle class="pierce" cx="164.916164638188" cy="527.70164508151"><title>Point #710
+Group #79 (8 points)
+X: 164.916164638188
+Y: 527.70164508151
+</title></circle>
+<circle class="pierce" cx="102.282760620117" cy="639.574096679688"><title>Point #711
+Group #80 (8 points)
+X: 102.282760620117
+Y: 639.574096679688
+</title></circle>
+<circle class="pierce" cx="137.701653869224" cy="625.083845688784"><title>Point #712
+Group #80 (8 points)
+X: 137.701653869224
+Y: 625.083845688784
+</title></circle>
+<circle class="pierce" cx="152.500438731027" cy="589.792751353455"><title>Point #713
+Group #80 (8 points)
+X: 152.500438731027
+Y: 589.792751353455
+</title></circle>
+<circle class="pierce" cx="138.010187769002" cy="554.373858133481"><title>Point #714
+Group #80 (8 points)
+X: 138.010187769002
+Y: 554.373858133481
+</title></circle>
+<circle class="pierce" cx="102.719093363774" cy="539.575073242367"><title>Point #715
+Group #80 (8 points)
+X: 102.719093363774
+Y: 539.575073242367
+</title></circle>
+<circle class="pierce" cx="67.300200114667" cy="554.06532423327"><title>Point #716
+Group #80 (8 points)
+X: 67.300200114667
+Y: 554.06532423327
+</title></circle>
+<circle class="pierce" cx="52.501415252865" cy="589.356418568599"><title>Point #717
+Group #80 (8 points)
+X: 52.501415252865
+Y: 589.356418568599
+</title></circle>
+<circle class="pierce" cx="66.991666243768" cy="624.775311817706"><title>Point #718
+Group #80 (8 points)
+X: 66.991666243768
+Y: 624.775311817706
+</title></circle>
+<circle class="pierce" cx="297.280914306641" cy="640.424926757813"><title>Point #719
+Group #81 (8 points)
+X: 297.280914306641
+Y: 640.424926757813
+</title></circle>
+<circle class="pierce" cx="332.699804203851" cy="625.934667674714"><title>Point #720
+Group #81 (8 points)
+X: 332.699804203851
+Y: 625.934667674714
+</title></circle>
+<circle class="pierce" cx="347.498580973458" cy="590.643569987488"><title>Point #721
+Group #81 (8 points)
+X: 347.498580973458
+Y: 590.643569987488
+</title></circle>
+<circle class="pierce" cx="333.008321919239" cy="555.224680119411"><title>Point #722
+Group #81 (8 points)
+X: 333.008321919239
+Y: 555.224680119411
+</title></circle>
+<circle class="pierce" cx="297.717224162114" cy="540.425903320491"><title>Point #723
+Group #81 (8 points)
+X: 297.717224162114
+Y: 540.425903320491
+</title></circle>
+<circle class="pierce" cx="262.298334264904" cy="554.91616240359"><title>Point #724
+Group #81 (8 points)
+X: 262.298334264904
+Y: 554.91616240359
+</title></circle>
+<circle class="pierce" cx="247.499557495296" cy="590.207260090816"><title>Point #725
+Group #81 (8 points)
+X: 247.499557495296
+Y: 590.207260090816
+</title></circle>
+<circle class="pierce" cx="261.989816578395" cy="625.626149988026"><title>Point #726
+Group #81 (8 points)
+X: 261.989816578395
+Y: 625.626149988026
+</title></circle>
+<circle class="pierce" cx="520" cy="763.284973144531"><title>Point #727
+Group #82 (20 points)
+X: 520
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="556.65" cy="763.284973144531"><title>Point #728
+Group #82 (20 points)
+X: 556.65
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="593.3" cy="763.284973144531"><title>Point #729
+Group #82 (20 points)
+X: 593.3
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="629.95" cy="763.284973144531"><title>Point #730
+Group #82 (20 points)
+X: 629.95
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="666.6" cy="763.284973144531"><title>Point #731
+Group #82 (20 points)
+X: 666.6
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="703.25" cy="763.284973144531"><title>Point #732
+Group #82 (20 points)
+X: 703.25
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="739.9" cy="763.284973144531"><title>Point #733
+Group #82 (20 points)
+X: 739.9
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="776.55" cy="763.284973144531"><title>Point #734
+Group #82 (20 points)
+X: 776.55
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="813.2" cy="763.284973144531"><title>Point #735
+Group #82 (20 points)
+X: 813.2
+Y: 763.284973144531
+</title></circle>
+<circle class="pierce" cx="834" cy="747.434973144531"><title>Point #736
+Group #82 (20 points)
+X: 834
+Y: 747.434973144531
+</title></circle>
+<circle class="pierce" cx="816.5" cy="728.284973144531"><title>Point #737
+Group #82 (20 points)
+X: 816.5
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="797.35" cy="745.784973144531"><title>Point #738
+Group #82 (20 points)
+X: 797.35
+Y: 745.784973144531
+</title></circle>
+<circle class="pierce" cx="774" cy="732.484973144531"><title>Point #739
+Group #82 (20 points)
+X: 774
+Y: 732.484973144531
+</title></circle>
+<circle class="pierce" cx="741.55" cy="728.284973144531"><title>Point #740
+Group #82 (20 points)
+X: 741.55
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="704.9" cy="728.284973144531"><title>Point #741
+Group #82 (20 points)
+X: 704.9
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="668.25" cy="728.284973144531"><title>Point #742
+Group #82 (20 points)
+X: 668.25
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="631.6" cy="728.284973144531"><title>Point #743
+Group #82 (20 points)
+X: 631.6
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="594.95" cy="728.284973144531"><title>Point #744
+Group #82 (20 points)
+X: 594.95
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="558.3" cy="728.284973144531"><title>Point #745
+Group #82 (20 points)
+X: 558.3
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="521.65" cy="728.284973144531"><title>Point #746
+Group #82 (20 points)
+X: 521.65
+Y: 728.284973144531
+</title></circle>
+<circle class="pierce" cx="556.549499511719" cy="755.784973144531"><title>Point #747
+Group #83 (1 points)
+X: 556.549499511719
+Y: 755.784973144531
+</title></circle>
+<circle class="pierce" cx="400" cy="10"><title>Point #748
+Group #84 (20 points)
+X: 400
+Y: 10
+</title></circle>
+<circle class="pierce" cx="400" cy="46.65"><title>Point #749
+Group #84 (20 points)
+X: 400
+Y: 46.65
+</title></circle>
+<circle class="pierce" cx="400" cy="83.3"><title>Point #750
+Group #84 (20 points)
+X: 400
+Y: 83.3
+</title></circle>
+<circle class="pierce" cx="400" cy="119.95"><title>Point #751
+Group #84 (20 points)
+X: 400
+Y: 119.95
+</title></circle>
+<circle class="pierce" cx="400" cy="156.6"><title>Point #752
+Group #84 (20 points)
+X: 400
+Y: 156.6
+</title></circle>
+<circle class="pierce" cx="400" cy="193.25"><title>Point #753
+Group #84 (20 points)
+X: 400
+Y: 193.25
+</title></circle>
+<circle class="pierce" cx="400" cy="229.9"><title>Point #754
+Group #84 (20 points)
+X: 400
+Y: 229.9
+</title></circle>
+<circle class="pierce" cx="400" cy="266.55"><title>Point #755
+Group #84 (20 points)
+X: 400
+Y: 266.55
+</title></circle>
+<circle class="pierce" cx="400" cy="303.2"><title>Point #756
+Group #84 (20 points)
+X: 400
+Y: 303.2
+</title></circle>
+<circle class="pierce" cx="415.85" cy="324"><title>Point #757
+Group #84 (20 points)
+X: 415.85
+Y: 324
+</title></circle>
+<circle class="pierce" cx="435" cy="306.5"><title>Point #758
+Group #84 (20 points)
+X: 435
+Y: 306.5
+</title></circle>
+<circle class="pierce" cx="417.5" cy="287.35"><title>Point #759
+Group #84 (20 points)
+X: 417.5
+Y: 287.35
+</title></circle>
+<circle class="pierce" cx="430.8" cy="264"><title>Point #760
+Group #84 (20 points)
+X: 430.8
+Y: 264
+</title></circle>
+<circle class="pierce" cx="435" cy="231.55"><title>Point #761
+Group #84 (20 points)
+X: 435
+Y: 231.55
+</title></circle>
+<circle class="pierce" cx="435" cy="194.9"><title>Point #762
+Group #84 (20 points)
+X: 435
+Y: 194.9
+</title></circle>
+<circle class="pierce" cx="435" cy="158.25"><title>Point #763
+Group #84 (20 points)
+X: 435
+Y: 158.25
+</title></circle>
+<circle class="pierce" cx="435" cy="121.6"><title>Point #764
+Group #84 (20 points)
+X: 435
+Y: 121.6
+</title></circle>
+<circle class="pierce" cx="435" cy="84.95"><title>Point #765
+Group #84 (20 points)
+X: 435
+Y: 84.95
+</title></circle>
+<circle class="pierce" cx="435" cy="48.3"><title>Point #766
+Group #84 (20 points)
+X: 435
+Y: 48.3
+</title></circle>
+<circle class="pierce" cx="435" cy="11.65"><title>Point #767
+Group #84 (20 points)
+X: 435
+Y: 11.65
+</title></circle>
+<circle class="pierce" cx="407.5" cy="46.549476623535"><title>Point #768
+Group #85 (1 points)
+X: 407.5
+Y: 46.549476623535
+</title></circle>
+<circle class="pierce" cx="199.170974731445" cy="389.998199462891"><title>Point #769
+Group #86 (34 points)
+X: 199.170974731445
+Y: 389.998199462891
+</title></circle>
+<circle class="pierce" cx="234.097167213337" cy="386.915452155478"><title>Point #770
+Group #86 (34 points)
+X: 234.097167213337
+Y: 386.915452155478
+</title></circle>
+<circle class="pierce" cx="267.862221566131" cy="377.467523451452"><title>Point #771
+Group #86 (34 points)
+X: 267.862221566131
+Y: 377.467523451452
+</title></circle>
+<circle class="pierce" cx="299.316309360563" cy="361.976151231287"><title>Point #772
+Group #86 (34 points)
+X: 299.316309360563
+Y: 361.976151231287
+</title></circle>
+<circle class="pierce" cx="327.388299361812" cy="340.968875596087"><title>Point #773
+Group #86 (34 points)
+X: 327.388299361812
+Y: 340.968875596087
+</title></circle>
+<circle class="pierce" cx="351.122233619028" cy="315.16107412216"><title>Point #774
+Group #86 (34 points)
+X: 351.122233619028
+Y: 315.16107412216
+</title></circle>
+<circle class="pierce" cx="369.709881466798" cy="285.431600535653"><title>Point #775
+Group #86 (34 points)
+X: 369.709881466798
+Y: 285.431600535653
+</title></circle>
+<circle class="pierce" cx="382.518262851092" cy="252.792856402982"><title>Point #776
+Group #86 (34 points)
+X: 382.518262851092
+Y: 252.792856402982
+</title></circle>
+<circle class="pierce" cx="389.111203705828" cy="218.356315009725"><title>Point #777
+Group #86 (34 points)
+X: 389.111203705828
+Y: 218.356315009725
+</title></circle>
+<circle class="pierce" cx="389.264189351264" cy="183.294671626227"><title>Point #778
+Group #86 (34 points)
+X: 389.264189351264
+Y: 183.294671626227
+</title></circle>
+<circle class="pierce" cx="382.972010046087" cy="148.801908155681"><title>Point #779
+Group #86 (34 points)
+X: 382.972010046087
+Y: 148.801908155681
+</title></circle>
+<circle class="pierce" cx="370.448938394836" cy="116.052634443718"><title>Point #780
+Group #86 (34 points)
+X: 370.448938394836
+Y: 116.052634443718
+</title></circle>
+<circle class="pierce" cx="352.121432582826" cy="86.162087728172"><title>Point #781
+Group #86 (34 points)
+X: 352.121432582826
+Y: 86.162087728172
+</title></circle>
+<circle class="pierce" cx="328.613613839064" cy="60.148154727682"><title>Point #782
+Group #86 (34 points)
+X: 328.613613839064
+Y: 60.148154727682
+</title></circle>
+<circle class="pierce" cx="300.726012736349" cy="38.896708730307"><title>Point #783
+Group #86 (34 points)
+X: 300.726012736349
+Y: 38.896708730307
+</title></circle>
+<circle class="pierce" cx="269.408308082742" cy="23.131442241187"><title>Point #784
+Group #86 (34 points)
+X: 269.408308082742
+Y: 23.131442241187
+</title></circle>
+<circle class="pierce" cx="235.726986748776" cy="13.389222502256"><title>Point #785
+Group #86 (34 points)
+X: 235.726986748776
+Y: 13.389222502256
+</title></circle>
+<circle class="pierce" cx="200.829025424432" cy="10.001809120858"><title>Point #786
+Group #86 (34 points)
+X: 200.829025424432
+Y: 10.001809120858
+</title></circle>
+<circle class="pierce" cx="165.90283294254" cy="13.084556428271"><title>Point #787
+Group #86 (34 points)
+X: 165.90283294254
+Y: 13.084556428271
+</title></circle>
+<circle class="pierce" cx="132.137778589746" cy="22.532485132297"><title>Point #788
+Group #86 (34 points)
+X: 132.137778589746
+Y: 22.532485132297
+</title></circle>
+<circle class="pierce" cx="100.683690795315" cy="38.023857352462"><title>Point #789
+Group #86 (34 points)
+X: 100.683690795315
+Y: 38.023857352462
+</title></circle>
+<circle class="pierce" cx="72.611700794065" cy="59.031132987662"><title>Point #790
+Group #86 (34 points)
+X: 72.611700794065
+Y: 59.031132987662
+</title></circle>
+<circle class="pierce" cx="48.877766536849" cy="84.838934461589"><title>Point #791
+Group #86 (34 points)
+X: 48.877766536849
+Y: 84.838934461589
+</title></circle>
+<circle class="pierce" cx="30.290118689079" cy="114.568408048096"><title>Point #792
+Group #86 (34 points)
+X: 30.290118689079
+Y: 114.568408048096
+</title></circle>
+<circle class="pierce" cx="17.481737304785" cy="147.207152180767"><title>Point #793
+Group #86 (34 points)
+X: 17.481737304785
+Y: 147.207152180767
+</title></circle>
+<circle class="pierce" cx="10.888796450049" cy="181.643693574024"><title>Point #794
+Group #86 (34 points)
+X: 10.888796450049
+Y: 181.643693574024
+</title></circle>
+<circle class="pierce" cx="10.735810818318" cy="216.705337112797"><title>Point #795
+Group #86 (34 points)
+X: 10.735810818318
+Y: 216.705337112797
+</title></circle>
+<circle class="pierce" cx="17.027990151794" cy="251.19810057818"><title>Point #796
+Group #86 (34 points)
+X: 17.027990151794
+Y: 251.19810057818
+</title></circle>
+<circle class="pierce" cx="29.551061829913" cy="283.94737427987"><title>Point #797
+Group #86 (34 points)
+X: 29.551061829913
+Y: 283.94737427987
+</title></circle>
+<circle class="pierce" cx="47.878567666446" cy="313.83792098038"><title>Point #798
+Group #86 (34 points)
+X: 47.878567666446
+Y: 313.83792098038
+</title></circle>
+<circle class="pierce" cx="71.38638643155" cy="339.851853961583"><title>Point #799
+Group #86 (34 points)
+X: 71.38638643155
+Y: 339.851853961583
+</title></circle>
+<circle class="pierce" cx="99.2739875517" cy="361.103299936079"><title>Point #800
+Group #86 (34 points)
+X: 99.2739875517
+Y: 361.103299936079
+</title></circle>
+<circle class="pierce" cx="130.59169221824" cy="376.868566399505"><title>Point #801
+Group #86 (34 points)
+X: 130.59169221824
+Y: 376.868566399505
+</title></circle>
+<circle class="pierce" cx="164.273013560199" cy="386.610786110804"><title>Point #802
+Group #86 (34 points)
+X: 164.273013560199
+Y: 386.610786110804
+</title></circle>
+<circle class="pierce" cx="199.356414794922" cy="347.498596191406"><title>Point #803
+Group #87 (8 points)
+X: 199.356414794922
+Y: 347.498596191406
+</title></circle>
+<circle class="pierce" cx="234.775317716323" cy="333.008338033909"><title>Point #804
+Group #87 (8 points)
+X: 234.775317716323
+Y: 333.008338033909
+</title></circle>
+<circle class="pierce" cx="249.574104349923" cy="297.717231791688"><title>Point #805
+Group #87 (8 points)
+X: 249.574104349923
+Y: 297.717231791688
+</title></circle>
+<circle class="pierce" cx="235.083846221305" cy="262.298328899419"><title>Point #806
+Group #87 (8 points)
+X: 235.083846221305
+Y: 262.298328899419
+</title></circle>
+<circle class="pierce" cx="199.792739909184" cy="247.499542236507"><title>Point #807
+Group #87 (8 points)
+X: 199.792739909184
+Y: 247.499542236507
+</title></circle>
+<circle class="pierce" cx="164.373836987783" cy="261.989800394005"><title>Point #808
+Group #87 (8 points)
+X: 164.373836987783
+Y: 261.989800394005
+</title></circle>
+<circle class="pierce" cx="149.575050354183" cy="297.280906636226"><title>Point #809
+Group #87 (8 points)
+X: 149.575050354183
+Y: 297.280906636226
+</title></circle>
+<circle class="pierce" cx="164.065308511681" cy="332.699809557627"><title>Point #810
+Group #87 (8 points)
+X: 164.065308511681
+Y: 332.699809557627
+</title></circle>
+<circle class="pierce" cx="200.207260131836" cy="152.500442504883"><title>Point #811
+Group #88 (8 points)
+X: 200.207260131836
+Y: 152.500442504883
+</title></circle>
+<circle class="pierce" cx="235.62615765844" cy="138.010186581983"><title>Point #812
+Group #88 (8 points)
+X: 235.62615765844
+Y: 138.010186581983
+</title></circle>
+<circle class="pierce" cx="250.424942057443" cy="102.719085734559"><title>Point #813
+Group #88 (8 points)
+X: 250.424942057443
+Y: 102.719085734559
+</title></circle>
+<circle class="pierce" cx="235.934686163422" cy="67.300188237086"><title>Point #814
+Group #88 (8 points)
+X: 235.934686163422
+Y: 67.300188237086
+</title></circle>
+<circle class="pierce" cx="200.643585246098" cy="52.501403808773"><title>Point #815
+Group #88 (8 points)
+X: 200.643585246098
+Y: 52.501403808773
+</title></circle>
+<circle class="pierce" cx="165.224687719494" cy="66.991659731672"><title>Point #816
+Group #88 (8 points)
+X: 165.224687719494
+Y: 66.991659731672
+</title></circle>
+<circle class="pierce" cx="150.425903320491" cy="102.282760579097"><title>Point #817
+Group #88 (8 points)
+X: 150.425903320491
+Y: 102.282760579097
+</title></circle>
+<circle class="pierce" cx="164.916159243391" cy="137.701658105701"><title>Point #818
+Group #88 (8 points)
+X: 164.916159243391
+Y: 137.701658105701
+</title></circle>
+<circle class="pierce" cx="102.282760620117" cy="249.574096679688"><title>Point #819
+Group #89 (8 points)
+X: 102.282760620117
+Y: 249.574096679688
+</title></circle>
+<circle class="pierce" cx="137.701659264021" cy="235.083843454186"><title>Point #820
+Group #89 (8 points)
+X: 137.701659264021
+Y: 235.083843454186
+</title></circle>
+<circle class="pierce" cx="152.500446360421" cy="199.792743724061"><title>Point #821
+Group #89 (8 points)
+X: 152.500446360421
+Y: 199.792743724061
+</title></circle>
+<circle class="pierce" cx="138.010193163799" cy="164.373845109289"><title>Point #822
+Group #89 (8 points)
+X: 138.010193163799
+Y: 164.373845109289
+</title></circle>
+<circle class="pierce" cx="102.719093363774" cy="149.575057983577"><title>Point #823
+Group #89 (8 points)
+X: 102.719093363774
+Y: 149.575057983577
+</title></circle>
+<circle class="pierce" cx="67.300194719871" cy="164.065311209079"><title>Point #824
+Group #89 (8 points)
+X: 67.300194719871
+Y: 164.065311209079
+</title></circle>
+<circle class="pierce" cx="52.50140762347" cy="199.356410939204"><title>Point #825
+Group #89 (8 points)
+X: 52.50140762347
+Y: 199.356410939204
+</title></circle>
+<circle class="pierce" cx="66.991660848971" cy="234.775309583108"><title>Point #826
+Group #89 (8 points)
+X: 66.991660848971
+Y: 234.775309583108
+</title></circle>
+<circle class="pierce" cx="297.280914306641" cy="250.424942016602"><title>Point #827
+Group #90 (8 points)
+X: 297.280914306641
+Y: 250.424942016602
+</title></circle>
+<circle class="pierce" cx="332.699809598647" cy="235.934680698905"><title>Point #828
+Group #90 (8 points)
+X: 332.699809598647
+Y: 235.934680698905
+</title></circle>
+<circle class="pierce" cx="347.498588602853" cy="200.643577616883"><title>Point #829
+Group #90 (8 points)
+X: 347.498588602853
+Y: 200.643577616883
+</title></circle>
+<circle class="pierce" cx="333.008327314036" cy="165.224682354009"><title>Point #830
+Group #90 (8 points)
+X: 333.008327314036
+Y: 165.224682354009
+</title></circle>
+<circle class="pierce" cx="297.717224162114" cy="150.425903320491"><title>Point #831
+Group #90 (8 points)
+X: 297.717224162114
+Y: 150.425903320491
+</title></circle>
+<circle class="pierce" cx="262.298328870107" cy="164.916164638188"><title>Point #832
+Group #90 (8 points)
+X: 262.298328870107
+Y: 164.916164638188
+</title></circle>
+<circle class="pierce" cx="247.499549865902" cy="200.20726772021"><title>Point #833
+Group #90 (8 points)
+X: 247.499549865902
+Y: 200.20726772021
+</title></circle>
+<circle class="pierce" cx="261.989811183598" cy="235.626163012217"><title>Point #834
+Group #90 (8 points)
+X: 261.989811183598
+Y: 235.626163012217
+</title></circle>
+<circle class="pierce" cx="1363" cy="10"><title>Point #835
+Group #91 (20 points)
+X: 1363
+Y: 10
+</title></circle>
+<circle class="pierce" cx="1363" cy="46.65"><title>Point #836
+Group #91 (20 points)
+X: 1363
+Y: 46.65
+</title></circle>
+<circle class="pierce" cx="1363" cy="83.3"><title>Point #837
+Group #91 (20 points)
+X: 1363
+Y: 83.3
+</title></circle>
+<circle class="pierce" cx="1363" cy="119.95"><title>Point #838
+Group #91 (20 points)
+X: 1363
+Y: 119.95
+</title></circle>
+<circle class="pierce" cx="1363" cy="156.6"><title>Point #839
+Group #91 (20 points)
+X: 1363
+Y: 156.6
+</title></circle>
+<circle class="pierce" cx="1363" cy="193.25"><title>Point #840
+Group #91 (20 points)
+X: 1363
+Y: 193.25
+</title></circle>
+<circle class="pierce" cx="1363" cy="229.9"><title>Point #841
+Group #91 (20 points)
+X: 1363
+Y: 229.9
+</title></circle>
+<circle class="pierce" cx="1363" cy="266.55"><title>Point #842
+Group #91 (20 points)
+X: 1363
+Y: 266.55
+</title></circle>
+<circle class="pierce" cx="1363" cy="303.2"><title>Point #843
+Group #91 (20 points)
+X: 1363
+Y: 303.2
+</title></circle>
+<circle class="pierce" cx="1378.85" cy="324"><title>Point #844
+Group #91 (20 points)
+X: 1378.85
+Y: 324
+</title></circle>
+<circle class="pierce" cx="1398" cy="306.5"><title>Point #845
+Group #91 (20 points)
+X: 1398
+Y: 306.5
+</title></circle>
+<circle class="pierce" cx="1380.5" cy="287.35"><title>Point #846
+Group #91 (20 points)
+X: 1380.5
+Y: 287.35
+</title></circle>
+<circle class="pierce" cx="1393.8" cy="264"><title>Point #847
+Group #91 (20 points)
+X: 1393.8
+Y: 264
+</title></circle>
+<circle class="pierce" cx="1398" cy="231.55"><title>Point #848
+Group #91 (20 points)
+X: 1398
+Y: 231.55
+</title></circle>
+<circle class="pierce" cx="1398" cy="194.9"><title>Point #849
+Group #91 (20 points)
+X: 1398
+Y: 194.9
+</title></circle>
+<circle class="pierce" cx="1398" cy="158.25"><title>Point #850
+Group #91 (20 points)
+X: 1398
+Y: 158.25
+</title></circle>
+<circle class="pierce" cx="1398" cy="121.6"><title>Point #851
+Group #91 (20 points)
+X: 1398
+Y: 121.6
+</title></circle>
+<circle class="pierce" cx="1398" cy="84.95"><title>Point #852
+Group #91 (20 points)
+X: 1398
+Y: 84.95
+</title></circle>
+<circle class="pierce" cx="1398" cy="48.3"><title>Point #853
+Group #91 (20 points)
+X: 1398
+Y: 48.3
+</title></circle>
+<circle class="pierce" cx="1398" cy="11.65"><title>Point #854
+Group #91 (20 points)
+X: 1398
+Y: 11.65
+</title></circle>
+<circle class="pierce" cx="1370.5" cy="46.549476623535"><title>Point #855
+Group #92 (1 points)
+X: 1370.5
+Y: 46.549476623535
+</title></circle><path class="route" d="
+	M 0 0
+	L 164.916159243391 137.701658105701
+	L 152.500446360421 199.792743724061
+	L 199.792739909184 247.499542236507
+	L 297.280914306641 250.424942016602
+	L 382.518262851092 252.792856402982
+	L 488 232.785003662109
+	L 513 229.10275344939
+	L 571.789996835957 269.029705196667
+	L 485.5 317.83447265625
+	L 425.000000005333 372.5
+	L 400 376.182250212719
+	L 200.207260131836 542.500427246094
+	L 152.500438731027 589.792751353455
+	L 199.792739909184 637.499511718929
+	L 347.498580973458 590.643569987488
+	L 389.264178430794 573.294653087834
+	L 443 556.784973144531
+	L 468 553.102717991103
+	L 495.5 558.634976196289
+	L 561.5 563
+	L 529.015100035453 584.015100035453
+	L 436.549468994141 632.784973144531
+	L 436.65 640.284973144531
+	L 438.5 693.284973144531
+	L 442.182250212719 718.284973144531
+	L 468 753.284973144531
+	L 498.542753466784 759.427570448011
+	L 556.549499511719 755.784973144531
+	L 594.95 728.284973144531
+	L 622.784973144531 675.284973144531
+	L 655.26986612186 654.26986612186
+	L 749.000000010666 640
+	L 755.14259731288 609.457246538842
+	L 745.784973144531 545
+	L 784.284973144531 559.311113738111
+	L 832.784973144531 563
+	L 836.467223357251 588
+	L 820.549499511719 625.5
+	L 820.65 633
+	L 822.5 686
+	L 826.182250212719 711
+	L 882.5 764
+	L 953.530701252208 765.375438998234
+	L 1066.785034179688 746
+	L 1063.102793848388 721
+	L 1006.784973144531 668
+	L 1003.102734029114 643
+	L 1017.070007324219 545
+	L 1055.569946289062 559.311141481365
+	L 1140.28503418502 558.5
+	L 1218.28503418502 558.5
+	L 1193.285034179688 600
+	L 1183.285034179688 642.582112887235
+	L 1158.285034179688 742.784973144531
+	L 1183.285034179688 739.102722931812
+	L 1236.285034179688 742.784973144531
+	L 1261.285034179688 739.102722931812
+	L 1314.285034179688 742.784973144531
+	L 1339.285034179688 739.102722931812
+	L 1374.285034190353 700
+	L 1350.898602345244 658
+	L 1296.28503418502 558.5
+	L 1339.285034179688 529.128863525393
+	L 1416.785034179688 490.549468994141
+	L 1444.285034179688 492.3
+	L 1461.785034179688 490.549468994141
+	L 1454.285034179688 454
+	L 1433 402
+	L 1408 406.795477278148
+	L 1370.5 370.549468994141
+	L 1363 370.65
+	L 1304.210003191889 269.029705280694
+	L 1460.5 46.549476623535
+	L 1453 46.65
+	L 1415.5 46.549476623535
+	L 1408 46.65
+	L 1370.5 46.549476623535
+	L 1363 46.65
+	L 1299.296552504889 48.310974108305
+	L 1153 55
+	L 1104.885009765625 75.310974121094
+	L 1025.214952587154 211.135983704542
+	L 943 230
+	L 878.033321082114 234.000000073892
+	L 894.885070800781 75.310974121094
+	L 733 55
+	L 669.296613540045 48.310974108305
+	L 523 55
+	L 470.000000005333 48.5
+	L 445 52.182250212719
+	L 407.5 46.549476623535
+	L 400 46.65 Z">
+</path>
+</g></g></svg>
+<!--
+Route Length     : 6412.223292915953
+-->
+</body></html>
